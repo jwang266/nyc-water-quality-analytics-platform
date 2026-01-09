@@ -1,0 +1,73 @@
+<section class="hero">
+  <div class="container hero-content">
+    <div class="hero-text">
+      <p class="tagline">NYC · Drinking Water Dashboard</p>
+      <h1>Borough Water Quality at a Glance</h1>
+      <p class="hero-subtitle">
+        A full-stack web application using Node.js,
+        Express, MongoDB, and Handlebars to visualize NYC drinking water quality.
+      </p>
+
+      <div class="hero-actions">
+        <a href="/boroughs" class="btn btn-primary">
+          View Borough Overview
+        </a>
+        <a href="/waterSamples" class="btn btn-outline">
+          Browse Water Samples
+        </a>
+      </div>
+
+      <ul class="hero-highlights">
+        <li><span class="stat-label">5</span> boroughs covered</li>
+        <li><span class="stat-label">5,000</span> water samples tracked (demo subset)</li>
+      </ul>
+      <div style="height: 1rem;"></div>
+      <p class="disclaimer">* All data sourced from NYC Open Data.</p>
+      <p class="disclaimer">* Full dataset supports 160,000+ samples.</p>
+    </div>
+
+    <aside class="hero-card">
+      <h2>This Week's Best Borough</h2>
+      <ul class="snapshot-list">
+        {{#each boroughSnapshots}}
+        <li><span>{{this.name}}</span><strong>{{this.voteCount}} votes</strong></li>
+        {{/each}}
+      </ul>
+      <p class="card-note">
+        Vote counts this week. Cast your vote to support your favorite borough!
+      </p>
+      {{#if isAuthenticated}}
+      <p>
+        <a href="/votes/best" class="btn btn-primary">Vote</a>
+      </p>
+      {{else}}
+      <p>
+        <a href="/users/login?redirect=/votes/best" class="btn btn-outline">Sign in to vote</a>
+      </p>
+      {{/if}}
+    </aside>
+  </div>
+</section>
+
+<section class="info-section">
+  <div class="container info-grid">
+    <div class="info-item">
+      <h3>Track Borough Trends</h3>
+      <p>
+        View trends of water quality indicators for each borough over the last year.
+      </p>
+    </div>
+    <div class="info-item">
+      <h3>Explore Sample Details</h3>
+      <p>
+        Drill into individual samples with detailed measurements and associated boroughs.
+      </p>
+    </div>
+    <div class="info-item">
+      <h3>Understand Water Quality</h3>
+      <p>
+        Learn how water quality varies across NYC boroughs and identify areas for improvement.
+      </p>
+    </div>
+  </div>
+</section>

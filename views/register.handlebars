@@ -1,0 +1,121 @@
+<div class="page-bg"></div>
+
+<div class="card-container">
+
+  <div class="left-panel">
+    <video class="left-video" autoplay muted loop playsinline>
+      <source src="/public/css/videos/loginSideVideo.mp4" type="video/mp4">
+    </video>
+  </div>
+
+  <div class="right-panel">
+
+    <h1>Create an account</h1>
+
+    <p class="login-link">
+      Already have an account?
+      <a href="/users/login">Log in</a>
+    </p>
+
+    {{#if error}}
+    <p class="error-text">{{error}}</p>
+    {{/if}}
+    {{#if message}}
+    <p class="message-text">{{message}}</p>
+    {{#if loginLink}}
+    <p><a href="{{loginLink}}" class="btn btn-outline">Go to Login</a></p>
+    {{/if}}
+    {{#if resendLink}}
+    <p><a href="{{resendLink}}" class="btn btn-outline">Resend verification</a></p>
+    {{/if}}
+    {{/if}}
+    {{#if verifyUrl}}
+    <p>Verification link (dev): <a href="{{verifyUrl}}">{{verifyUrl}}</a></p>
+    {{/if}}
+
+    <form method="POST" action="/users/register">
+
+      <div class="row">
+        <input type="text" name="fname" placeholder="First name" required>
+        <input type="text" name="lname" placeholder="Last name" required>
+      </div>
+
+      <input type="email" name="email" placeholder="Email" required>
+
+      <input type="password" name="password" placeholder="Enter your password" required>
+
+      <label class="terms">
+        <input type="checkbox" required>
+        I agree to the <a href="#!" id="showTerms">Terms & Conditions</a>
+      </label>
+
+      <button class="primary-btn">Create account</button>
+    </form>
+
+    <div id="termsModal" class="modal hidden">
+      <div class="modal-content">
+        <span id="closeTerms" class="close">&times;</span>
+        <h2 style="text-align:center; color:#000;">Terms & Conditions</h2>
+        <p style="text-align:left;">This is the GitHub jwang266 local version project for educational purposes
+          only.</p>
+        <p style="text-align:left;">All functionality is provided for learning and academic use.</p>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+<style>
+  .modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+
+  .modal.hidden {
+    display: none;
+  }
+
+  .modal-content {
+    background: #fff;
+    padding: 2rem;
+    max-width: 600px;
+    width: 90%;
+    border-radius: 5px;
+    position: relative;
+  }
+
+  .close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    cursor: pointer;
+    font-size: 1.5rem;
+  }
+</style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const modal = document.getElementById('termsModal');
+    const showBtn = document.getElementById('showTerms');
+    const closeBtn = document.getElementById('closeTerms');
+
+    showBtn.addEventListener('click', e => {
+      e.preventDefault();
+      modal.classList.remove('hidden');
+    });
+
+    closeBtn.addEventListener('click', () => modal.classList.add('hidden'));
+    modal.addEventListener('click', e => {
+      if (e.target === modal) modal.classList.add('hidden');
+    });
+  });
+</script>

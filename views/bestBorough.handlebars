@@ -1,0 +1,71 @@
+<section class="bb-container bb-mt-4">
+  <h1 class="bb-title bb-mb-3">Best Borough of the Week</h1>
+  <p class="text-muted bb-mb-3">Week starting (UTC, starts Monday) {{weekStart}}</p>
+
+  {{!-- server-driven toast for this page --}}
+  {{#if toast}}
+  <div id="server-flash-global" {{#if (eq toast.type "error" )}} data-error="{{toast.message}}" {{else}}
+    data-message="{{toast.message}}" {{/if}}>
+  </div>
+  {{/if}}
+
+  {{!-- Winner summary --}}
+  {{#if bestBorough}}
+  <div class="bb-card">
+    <div class="bb-card-body">
+      <h3 class="bb-card-title">{{bestBorough.name}}</h3>
+      <p class="bb-card-text">{{bestBorough.description}}</p>
+      <p class="bb-card-meta"><strong>Total votes this week:</strong> {{bestBorough.voteCount}}</p>
+    </div>
+  </div>
+  {{else}}
+  <p class="bb-helptext">No votes have been cast this week yet. Be the first to vote below!</p>
+  {{/if}}
+
+  <hr class="bb-hr">
+
+  <h2 class="bb-section-title">Cast Your Vote</h2>
+
+  {{#if isAuthenticated}}
+
+  {{#if userHasVoted}}
+  <p class="bb-helptext">
+    You have already voted this week. Here is the borough you chose:
+  </p>
+  {{else}}
+  <p class="bb-helptext">
+    Select the borough you think deserves to be Best Borough this week. You can vote once per week.
+  </p>
+  {{/if}}
+
+  <div class="bb-grid">
+    {{#each boroughs}}
+
+    <div class="bb-mini-card">
+      <div class="bb-card-body">
+        <h5 class="bb-mini-title">{{this.name}}</h5>
+        <div class="bb-btn-row">
+          {{#if ../userHasVoted}}
+          <button class="btn btn-success" disabled>✓ Voted this week</button>
+          {{else}}
+          <form method="POST" action="/votes">
+            <input type="hidden" name="boroughId" value="{{this._id}}">
+            <button class="btn btn-outline" type="submit">
+              Vote for {{this.name}}
+            </button>
+          </form>
+          {{/if}}
+        </div>
+      </div>
+    </div>
+
+    {{/each}}
+  </div>
+
+  {{else}}
+  <p class="bb-helptext">
+    You need to be signed in to vote for the Best Borough.
+  </p>
+  <a href="/users/login?redirect=/votes/best" class="btn btn-primary">Sign in to vote</a>
+  {{/if}}
+</section>

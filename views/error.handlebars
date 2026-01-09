@@ -1,0 +1,15 @@
+<main class="page error-page">
+  <h1>{{title}}</h1>
+
+  {{#if error}}
+    <p>{{error}}</p>
+  {{else}}
+    <p>An unexpected error occurred.</p>
+  {{/if}}
+
+  {{#if link}}
+    <p><a href="{{link}}">Go back</a></p>
+  {{else}}
+    <p><a href="/">Go to Home</a></p>
+  {{/if}}
+</main>

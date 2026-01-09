@@ -1,0 +1,3202 @@
+[
+  {
+    "sample_site": "1S03",
+    "sample_station": "SS - Shaft 3 of City Tunnel No.1 - E/S Goulden Ave, S/O Sedgwick Ave, OPP JPR GH7",
+    "latitude": 40.8919592715,
+    "longitude": -73.8527934698,
+    "borough": "Bronx",
+    "neighborhood": "Wakefield-Woodlawn"
+  },
+  {
+    "sample_site": "1S04",
+    "sample_station": "SS - Shaft 4 of City Tunnel No.1 - IFO 2780 Reservoir Ave, E/S Reservoir Ave, 1st SS N/O Strong St (@ intersection of Reservoir Ave & Goulden)",
+    "latitude": 40.8708736067,
+    "longitude": -73.8976100334,
+    "borough": "Bronx",
+    "neighborhood": "Bedford Park"
+  },
+  {
+    "sample_site": "1S03A",
+    "sample_station": "SS - Shaft 3A of City Tunnel No.2 - S/S E 233rd St, W/O Bronxwood Ave IFO 862 E 233rd St.",
+    "latitude": 40.8922759629,
+    "longitude": -73.8536210359,
+    "borough": "Bronx",
+    "neighborhood": "Wakefield-Woodlawn"
+  },
+  {
+    "sample_site": "1S07",
+    "sample_station": "SS - Shaft 7 of City Tunnel No.1 - NE/S W 167th St, 1st SE/O Sedgwick Ave IFO 1260 Sedgwick Ave",
+    "latitude": 40.8397610232,
+    "longitude": -73.9285759473,
+    "borough": "Bronx",
+    "neighborhood": "Highbridge"
+  },
+  {
+    "sample_site": "1S03B",
+    "sample_station": "SS - Shaft 3B of City Tunnel No.3 - W/S Jerome Ave, S/O access road to Mosholu Golf Course (SW corner of entrance to park)",
+    "latitude": 40.8821490632,
+    "longitude": -73.8889821738,
+    "borough": "Bronx",
+    "neighborhood": "Bedford Park"
+  },
+  {
+    "sample_site": "1SCL1",
+    "sample_station": "Jerome Park Reservoir (W205th St & Goulden Ave, Bx) - Croton Distribution Chamber - low pressure service tunnel, Tap in Gatehouse #5, treated water",
+    "latitude": 40.8781316124,
+    "longitude": -73.8927062502,
+    "borough": "Bronx",
+    "neighborhood": "Bedford Park"
+  },
+  {
+    "sample_site": "1SCH3",
+    "sample_station": "Jerome Park Reservoir (W205th St & Goulden Ave, Bx) - Croton Distribution Chamber - high pressure service tunnel, Tap #3 in Gatehouse #5, treated water",
+    "latitude": 40.8781316124,
+    "longitude": -73.8927062502,
+    "borough": "Bronx",
+    "neighborhood": "Bedford Park"
+  },
+  {
+    "sample_site": "1SCH4",
+    "sample_station": "Jerome Park Reservoir (W205th St & Goulden Ave, Bx) - Croton Distribution Chamber - high pressure service tunnel, Tap in Gatehouse #5, treated water",
+    "latitude": 40.8781316124,
+    "longitude": -73.8927062502,
+    "borough": "Bronx",
+    "neighborhood": "Bedford Park"
+  },
+  {
+    "sample_site": "10150",
+    "sample_station": "SS - W/S Zerega Ave, 1st SS S/O Hermany Ave, 12\" OPP NYC Sanitation",
+    "latitude": 40.8251818109,
+    "longitude": -73.8432757772,
+    "borough": "Bronx",
+    "neighborhood": "Castle Hill-Unionport"
+  },
+  {
+    "sample_site": "10250",
+    "sample_station": "SS - W/S Nelson Ave, 1st SS N/O W 168th St (OPP school-1248 Nelson Ave), 12\"",
+    "latitude": 40.8387512582,
+    "longitude": -73.9247136923,
+    "borough": "Bronx",
+    "neighborhood": "Highbridge"
+  },
+  {
+    "sample_site": "10550",
+    "sample_station": "SS - W/S Stadium Ave, 1St SS N/O Randolph Pl, 12\"",
+    "latitude": 40.8418582907,
+    "longitude": -73.8203986812,
+    "borough": "Bronx",
+    "neighborhood": "Pelham Bay-Country Club-City Island"
+  },
+  {
+    "sample_site": "10750",
+    "sample_station": "SS - N/S Bartow Ave, 2nd SS W/O Co-op City Blvd, 20\"",
+    "latitude": 40.8695869884,
+    "longitude": -73.8287157276,
+    "borough": "Bronx",
+    "neighborhood": "Co-op City"
+  },
+  {
+    "sample_site": "10850",
+    "sample_station": "SS - E/S Riverdale Ave, 1st SS S/O W 260th St (IFO church), OPP 5977 Riverdale Ave, 12\"",
+    "latitude": 40.907981506,
+    "longitude": -73.9036849325,
+    "borough": "Bronx",
+    "neighborhood": "Riverdale-Spuyten Duyvil"
+  },
+  {
+    "sample_site": "11050",
+    "sample_station": "SS - IFO 1675 W/S University Ave, 2nd SS S/O W 176th St, IFO 1669 University Ave, 12\"",
+    "latitude": 40.848594982,
+    "longitude": -73.9184060747,
+    "borough": "Bronx",
+    "neighborhood": "University Heights (South)-Morris Heights"
+  },
+  {
+    "sample_site": "11150",
+    "sample_station": "SS - IFO 71E N/S E 183rd St, 1st SS W/O Morris Ave, 12\"",
+    "latitude": 40.8582134672,
+    "longitude": -73.9021049354,
+    "borough": "Bronx",
+    "neighborhood": "Fordham Heights"
+  },
+  {
+    "sample_site": "11250",
+    "sample_station": "SS - IFO 925 N/S E Tremont Ave, 1st SS E/O Daly Ave, 20\"",
+    "latitude": 40.8418269351,
+    "longitude": -73.8836824613,
+    "borough": "Bronx",
+    "neighborhood": "West Farms"
+  },
+  {
+    "sample_site": "11350",
+    "sample_station": "SS - W/S Metropolitan Ave, 2nd SS N/O Parkchester Rd (IFO Macy's), 20\"",
+    "latitude": 40.8363454998,
+    "longitude": -73.8611307993,
+    "borough": "Bronx",
+    "neighborhood": "Parkchester"
+  },
+  {
+    "sample_site": "11450",
+    "sample_station": "SS - IFO 920 S/S Co - op City Blvd, 2nd SS W/O Dreiser Loop, 20\"",
+    "latitude": 40.8783286411,
+    "longitude": -73.8304325669,
+    "borough": "Bronx",
+    "neighborhood": "Co-op City"
+  },
+  {
+    "sample_site": "11550",
+    "sample_station": "SS - IFO 1058 S/S E Gun Hill Rd, 1st SS E/O Hone Ave, 12\"",
+    "latitude": 40.8742860259,
+    "longitude": -73.8570198206,
+    "borough": "Bronx",
+    "neighborhood": "Williamsbridge-Olinville"
+  },
+  {
+    "sample_site": "11750",
+    "sample_station": "SS - IFO 250 E/S City Island Ave, BTW Carroll & Schofield Sts, 20\"",
+    "latitude": 40.8455841428,
+    "longitude": -73.7857739534,
+    "borough": "Bronx",
+    "neighborhood": "Pelham Bay-Country Club-City Island"
+  },
+  {
+    "sample_site": "11900",
+    "sample_station": "SS - S/S E 177th St, BTW Walton & Morris Aves, 36\"",
+    "latitude": 40.8497817837,
+    "longitude": -73.9088621417,
+    "borough": "Bronx",
+    "neighborhood": "Mount Hope"
+  },
+  {
+    "sample_site": "12000",
+    "sample_station": "SS - OPP 1540 W/S Jerome Ave, 1st SS S/O Goble Pl, 48\"",
+    "latitude": 40.8433121784,
+    "longitude": -73.9156440595,
+    "borough": "Bronx",
+    "neighborhood": "Mount Eden-Claremont (West)"
+  },
+  {
+    "sample_site": "12150",
+    "sample_station": "SS - IFO 963 N/S E 233rd St, 2nd SS W/O Gunther Ave, 12\"",
+    "latitude": 40.891005453,
+    "longitude": -73.8495693788,
+    "borough": "Bronx",
+    "neighborhood": "Eastchester-Edenwald-Baychester"
+  },
+  {
+    "sample_site": "12250",
+    "sample_station": "SS - OPP 1134 N/S E 225th St, 2nd SS W/O Schieffelin Ave, 12\"",
+    "latitude": 40.8834902293,
+    "longitude": -73.8472791134,
+    "borough": "Bronx",
+    "neighborhood": "Eastchester-Edenwald-Baychester"
+  },
+  {
+    "sample_site": "12550",
+    "sample_station": "SS - IFO 352 S/S E Gun Hill Rd, 1st SS W/O Decatur Ave, 20\"",
+    "latitude": 40.8786822078,
+    "longitude": -73.8727297637,
+    "borough": "Bronx",
+    "neighborhood": "Norwood"
+  },
+  {
+    "sample_site": "13050",
+    "sample_station": "SS - IFO 2431 W/S Eastchester Rd, 2nd SS S/O Mace Ave, 12\"",
+    "latitude": 40.8619282545,
+    "longitude": -73.8434567081,
+    "borough": "Bronx",
+    "neighborhood": "Pelham Gardens"
+  },
+  {
+    "sample_site": "13150",
+    "sample_station": "SS - IFO 2805 W/S Grand Concourse, 2nd SS S/O E 197th St, 20\"",
+    "latitude": 40.8690985058,
+    "longitude": -73.892366494,
+    "borough": "Bronx",
+    "neighborhood": "Bedford Park"
+  },
+  {
+    "sample_site": "13350",
+    "sample_station": "SS - N/S E Fordham Rd, 1st SS E/O Washington Ave, 20\"",
+    "latitude": 40.8603915519,
+    "longitude": -73.8886642088,
+    "borough": "Bronx",
+    "neighborhood": "Belmont"
+  },
+  {
+    "sample_site": "13550",
+    "sample_station": "SS - IFO 2015 W/S University Ave, 1st SS S/O W 180th St, 12\"",
+    "latitude": 40.8554181813,
+    "longitude": -73.9108064541,
+    "borough": "Bronx",
+    "neighborhood": "University Heights (South)-Morris Heights"
+  },
+  {
+    "sample_site": "13600",
+    "sample_station": "SS - E/S Southern Blvd, BTW E 180th & E 181st Sts, 36\"",
+    "latitude": 40.8460872693,
+    "longitude": -73.8842243967,
+    "borough": "Bronx",
+    "neighborhood": "West Farms"
+  },
+  {
+    "sample_site": "13700",
+    "sample_station": "SS - W/S Southern Blvd, BTW Garden & E 182nd Sts, 48\"",
+    "latitude": 40.8489706974,
+    "longitude": -73.882975979,
+    "borough": "Bronx",
+    "neighborhood": "Belmont"
+  },
+  {
+    "sample_site": "13850",
+    "sample_station": "SS - IFO 1778 E/S Jerome Ave, 1st SS S/O E 176th St, 12\"",
+    "latitude": 40.8484061439,
+    "longitude": -73.9116941801,
+    "borough": "Bronx",
+    "neighborhood": "Mount Hope"
+  },
+  {
+    "sample_site": "13900",
+    "sample_station": "SS - S/S E 180th St, BTW Webster & Valentine Aves, IFO School 48\"",
+    "latitude": 40.8521038587,
+    "longitude": -73.8990378166,
+    "borough": "Bronx",
+    "neighborhood": "Mount Hope"
+  },
+  {
+    "sample_site": "14000",
+    "sample_station": "SS - IFO 960 S/S E 156th St, BTW Kelly & Beck Sts, 48\"",
+    "latitude": 40.815997593,
+    "longitude": -73.8995405724,
+    "borough": "Bronx",
+    "neighborhood": "Longwood"
+  },
+  {
+    "sample_site": "14100",
+    "sample_station": "SS -OPP 1540 W/S Jerome Ave, 2nd SS S/O Goble Pl, 48\"",
+    "latitude": 40.8432682842,
+    "longitude": -73.9156730289,
+    "borough": "Bronx",
+    "neighborhood": "Mount Eden-Claremont (West)"
+  },
+  {
+    "sample_site": "14200",
+    "sample_station": "SS - E/S Southern Blvd, BTW E 172nd & E 173rd Sts, OPP 1571 Southern Blvd, 36\"",
+    "latitude": 40.8354093255,
+    "longitude": -73.8887674497,
+    "borough": "Bronx",
+    "neighborhood": "Crotona Park East"
+  },
+  {
+    "sample_site": "14350",
+    "sample_station": "SS - OPP 3748 W/S Third Ave, 1st SS N/O St Paul's Pl, 20\"",
+    "latitude": 40.8363249627,
+    "longitude": -73.9027370412,
+    "borough": "Bronx",
+    "neighborhood": "Claremont Village-Claremont (East)"
+  },
+  {
+    "sample_site": "14450",
+    "sample_station": "SS - OPP 958 W/S Gerard Ave, 2nd SS S/O E 164th St, 12\"",
+    "latitude": 40.8294653353,
+    "longitude": -73.9238605798,
+    "borough": "Bronx",
+    "neighborhood": "Concourse-Concourse Village"
+  },
+  {
+    "sample_site": "14650",
+    "sample_station": "SS - E/S Concourse Village East, 1st SS N/O E 158th St, 12\"",
+    "latitude": 40.8242717983,
+    "longitude": -73.9190465287,
+    "borough": "Bronx",
+    "neighborhood": "Concourse-Concourse Village"
+  },
+  {
+    "sample_site": "14850",
+    "sample_station": "SS - W/S Jackson Ave, 1st SS S/O St Mary's St, 20\"",
+    "latitude": 40.8085797007,
+    "longitude": -73.9108872836,
+    "borough": "Bronx",
+    "neighborhood": "Mott Haven-Port Morris"
+  },
+  {
+    "sample_site": "14950",
+    "sample_station": "SS - N/S E 135th St, 2nd SS W/O Willis Ave, 12\"",
+    "latitude": 40.8077171048,
+    "longitude": -73.9252798024,
+    "borough": "Bronx",
+    "neighborhood": "Mott Haven-Port Morris"
+  },
+  {
+    "sample_site": "15050",
+    "sample_station": "SS - W/S Trinity Ave, 2nd SS S/O E 163rd St (IFO school), 16\"",
+    "latitude": 40.8223408062,
+    "longitude": -73.9062549467,
+    "borough": "Bronx",
+    "neighborhood": "Morrisania"
+  },
+  {
+    "sample_site": "15150",
+    "sample_station": "SS - IFO 1420 E/S Grand Concourse, 1st SS S/O E 171st St, 12\"",
+    "latitude": 40.8393825977,
+    "longitude": -73.9130830953,
+    "borough": "Bronx",
+    "neighborhood": "Mount Eden-Claremont (West)"
+  },
+  {
+    "sample_site": "15250",
+    "sample_station": "SS - IFO 4315 W/S Third Ave, 1st SS N/O E 179th St, 20\"",
+    "latitude": 40.8496490382,
+    "longitude": -73.8947871958,
+    "borough": "Bronx",
+    "neighborhood": "Tremont"
+  },
+  {
+    "sample_site": "15300",
+    "sample_station": "SS - W/S Bailey Ave, BTW W 231st & W 233rd Sts, 48\"",
+    "latitude": 40.878241732,
+    "longitude": -73.9023538876,
+    "borough": "Bronx",
+    "neighborhood": "Kingsbridge Heights-Van Cortlandt Village"
+  },
+  {
+    "sample_site": "15450",
+    "sample_station": "SS - IFO 79E N/S East Gun Hill Rd, 1st SS W/O Rochambeau Ave, IFO 83 E. Gun Hill Rd, 20\"",
+    "latitude": 40.8817718444,
+    "longitude": -73.8795767676,
+    "borough": "Bronx",
+    "neighborhood": "Norwood"
+  },
+  {
+    "sample_site": "15550",
+    "sample_station": "SS - IFO 2499 W/S Grand Ave, 1st SS S/O W 190th St, OPP 24-84 Grand Ave 12\"",
+    "latitude": 40.8642738593,
+    "longitude": -73.9022153211,
+    "borough": "Bronx",
+    "neighborhood": "University Heights (North)-Fordham"
+  },
+  {
+    "sample_site": "16150",
+    "sample_station": "SS - W/S Bronxdale Ave, 2nd SS S/O Rhinelander Ave, 12\"",
+    "latitude": 40.8481194657,
+    "longitude": -73.8604303098,
+    "borough": "Bronx",
+    "neighborhood": "Pelham Parkway-Van Nest"
+  },
+  {
+    "sample_site": "16250",
+    "sample_station": "SS - IFO 251 N/S E 204th St, 1st SS E/O Valentine Ave, 12\"",
+    "latitude": 40.87427834,
+    "longitude": -73.884464583,
+    "borough": "Bronx",
+    "neighborhood": "Bedford Park"
+  },
+  {
+    "sample_site": "16450",
+    "sample_station": "SS - IFO 3902 E/S White Plains Rd, 1st SS N/O E 222nd St, 20\"",
+    "latitude": 40.8859068833,
+    "longitude": -73.8613780759,
+    "borough": "Bronx",
+    "neighborhood": "Williamsbridge-Olinville"
+  },
+  {
+    "sample_site": "16650",
+    "sample_station": "SS - IFO 1541 N/S Westchester Ave, BTW Boynton & Ward Aves,  20\"",
+    "latitude": 40.828794592,
+    "longitude": -73.8779418131,
+    "borough": "Bronx",
+    "neighborhood": "Soundview-Bruckner-Bronx River"
+  },
+  {
+    "sample_site": "16950",
+    "sample_station": "SS - W/S Westchester Ave, 1st SS N/O St Peters Ave, 20\"",
+    "latitude": 40.8387917375,
+    "longitude": -73.8444724689,
+    "borough": "Bronx",
+    "neighborhood": "Westchester Square"
+  },
+  {
+    "sample_site": "17050",
+    "sample_station": "SS - IFO 4740 E/S White Plains Rd, 1st SS N/O St Ouen St, 20\"",
+    "latitude": 40.9044763904,
+    "longitude": -73.8495895339,
+    "borough": "Bronx",
+    "neighborhood": "Wakefield-Woodlawn"
+  },
+  {
+    "sample_site": "17250",
+    "sample_station": "SS - N/S Allerton Ave, 1st SS E/O Throop Ave, 12\"",
+    "latitude": 40.8654402633,
+    "longitude": -73.8508311478,
+    "borough": "Bronx",
+    "neighborhood": "Pelham Gardens"
+  },
+  {
+    "sample_site": "17350",
+    "sample_station": "SS - N/S W 232nd St, 1st SS E/O Arlington Ave, 12\"",
+    "latitude": 40.8839860839,
+    "longitude": -73.912250865,
+    "borough": "Bronx",
+    "neighborhood": "Riverdale-Spuyten Duyvil"
+  },
+  {
+    "sample_site": "17450",
+    "sample_station": "SS - IFO 2548 E/S White Plains Rd, 2nd SS N/O Mace Ave, 20\"",
+    "latitude": 40.8642526668,
+    "longitude": -73.8672620264,
+    "borough": "Bronx",
+    "neighborhood": "Allerton"
+  },
+  {
+    "sample_site": "17550",
+    "sample_station": "SS - IFO 309 N/S E 149th St, 2nd SS W/O Courtlandt Ave, 12\"",
+    "latitude": 40.8170022658,
+    "longitude": -73.9208148023,
+    "borough": "Bronx",
+    "neighborhood": "Melrose"
+  },
+  {
+    "sample_site": "17650",
+    "sample_station": "SS - IFO 1871 N/S Lafayette Ave, 1st SS W/O Underhill Ave, 12\"",
+    "latitude": 40.8218087938,
+    "longitude": -73.8605649808,
+    "borough": "Bronx",
+    "neighborhood": "Soundview-Clason Point"
+  },
+  {
+    "sample_site": "17750",
+    "sample_station": "SS - IFO 835 W/S Hunts Point Ave, 1st SS S/O Gilbert Pl, 12\"",
+    "latitude": 40.8175053993,
+    "longitude": -73.8886275724,
+    "borough": "Bronx",
+    "neighborhood": "Hunts Point"
+  },
+  {
+    "sample_site": "17950",
+    "sample_station": "SS - W/S Kingsbridge Ave, 1st SS N/O W 232nd St, 12\"",
+    "latitude": 40.8812303995,
+    "longitude": -73.9052859215,
+    "borough": "Bronx",
+    "neighborhood": "Kingsbridge-Marble Hill"
+  },
+  {
+    "sample_site": "18000",
+    "sample_station": "SS -S/S of Westbound Bronx & Pelham Pkwy, on Center Median W/O Eastchester Rd, 36\"",
+    "latitude": 40.8579052751,
+    "longitude": -73.848129553,
+    "borough": "Bronx",
+    "neighborhood": "Morris Park"
+  },
+  {
+    "sample_site": "18100",
+    "sample_station": "SS - IFO 2208 S/S Starling Ave, BTW Castle Hill & Glebe Aves, 48\"",
+    "latitude": 40.8363391446,
+    "longitude": -73.8516191661,
+    "borough": "Bronx",
+    "neighborhood": "Westchester Square"
+  },
+  {
+    "sample_site": "18200",
+    "sample_station": "SS - IFO 653 E/S River Ave, BTW E 150th & E 151st Sts, 36\"",
+    "latitude": 40.8223020881,
+    "longitude": -73.9288837331,
+    "borough": "Bronx",
+    "neighborhood": "Concourse-Concourse Village"
+  },
+  {
+    "sample_site": "18300",
+    "sample_station": "SS - E/S Southern Blvd, BTW St Mary's & E 142nd Sts, 36\"",
+    "latitude": 40.8076112338,
+    "longitude": -73.9079301191,
+    "borough": "Bronx",
+    "neighborhood": "Mott Haven-Port Morris"
+  },
+  {
+    "sample_site": "18450",
+    "sample_station": "SS - W/S West Farms Rd, 2nd SS S/O E 167th St, OPP 1096 West Farms Rd, 12\"",
+    "latitude": 40.8262080415,
+    "longitude": -73.890593092,
+    "borough": "Bronx",
+    "neighborhood": "Longwood"
+  },
+  {
+    "sample_site": "18500",
+    "sample_station": "SS - S/S E 164th St, BTW River & Gerard Aves, 48\"",
+    "latitude": 40.8305111137,
+    "longitude": -73.9239244266,
+    "borough": "Bronx",
+    "neighborhood": "Concourse-Concourse Village"
+  },
+  {
+    "sample_site": "18650",
+    "sample_station": "SS - N/S Dewey Ave, BTW Quincy & Swinton Aves, 12\"",
+    "latitude": 40.821366407,
+    "longitude": -73.8222894105,
+    "borough": "Bronx",
+    "neighborhood": "Throgs Neck-Schuylerville"
+  },
+  {
+    "sample_site": "18750",
+    "sample_station": "SS - IFO 4977 W/S Henry Hudson Pkwy, 2nd SS S/O W 252nd St, 20\"",
+    "latitude": 40.8980933309,
+    "longitude": -73.9081628886,
+    "borough": "Bronx",
+    "neighborhood": "Riverdale-Spuyten Duyvil"
+  },
+  {
+    "sample_site": "18800",
+    "sample_station": "SS - IFO 750 S/S E 169th St, BTW Boston Rd & Tinton Ave, 36\"",
+    "latitude": 40.8309430229,
+    "longitude": -73.9000455855,
+    "borough": "Bronx",
+    "neighborhood": "Morrisania"
+  },
+  {
+    "sample_site": "18900",
+    "sample_station": "SS - IFO 3453 W/S Jerome Ave, btw W Gun Hill Rd & E 208th St, 36 inch",
+    "latitude": 40.8817666074,
+    "longitude": -73.8824842945,
+    "borough": "Bronx",
+    "neighborhood": "Norwood"
+  },
+  {
+    "sample_site": "19000",
+    "sample_station": "SS - IFO 758 S/S E 233rd St, BTW Barnes & Byron Aves, 1st E/O Byron Ave 48\"",
+    "latitude": 40.8926045732,
+    "longitude": -73.8552009005,
+    "borough": "Bronx",
+    "neighborhood": "Wakefield-Woodlawn"
+  },
+  {
+    "sample_site": "20050",
+    "sample_station": "SS - N/S Ave U, 1st SS W/O E 65th St, 12\"",
+    "latitude": 40.6167601116,
+    "longitude": -73.9119826198,
+    "borough": "Brooklyn",
+    "neighborhood": "Marine Park-Mill Basin-Bergen Beach"
+  },
+  {
+    "sample_site": "20150",
+    "sample_station": "SS - E/S W 23rd St, 1st SS N/O Mermaid Ave, 12\"",
+    "latitude": 40.5764119084,
+    "longitude": -73.9900790096,
+    "borough": "Brooklyn",
+    "neighborhood": "Coney Island-Sea Gate"
+  },
+  {
+    "sample_site": "20300",
+    "sample_station": "SS - N/S Luquer St, BTW Columbia &  Hicks Sts, 20\"",
+    "latitude": 40.6787736891,
+    "longitude": -74.0041316785,
+    "borough": "Brooklyn",
+    "neighborhood": "Carroll Gardens-Cobble Hill-Gowanus-Red Hook"
+  },
+  {
+    "sample_site": "20350",
+    "sample_station": "SS - OPP 74 S/S Sullivan St, 2nd SS E/O Van Brunt St, 20\"",
+    "latitude": 40.6773541244,
+    "longitude": -74.0116593054,
+    "borough": "Brooklyn",
+    "neighborhood": "Carroll Gardens-Cobble Hill-Gowanus-Red Hook"
+  },
+  {
+    "sample_site": "20650",
+    "sample_station": "SS - W/S 21st Ave, 2nd SS S/O Cropsey Ave, 12\"",
+    "latitude": 40.5981237004,
+    "longitude": -74.0015232016,
+    "borough": "Brooklyn",
+    "neighborhood": "Bath Beach"
+  },
+  {
+    "sample_site": "20750",
+    "sample_station": "SS - S/S Park Ave, BTW Emerson Pl & Steuben St, 16\"",
+    "latitude": 40.6959857228,
+    "longitude": -73.9628774171,
+    "borough": "Brooklyn",
+    "neighborhood": "Clinton Hill"
+  },
+  {
+    "sample_site": "20850",
+    "sample_station": "SS - E/S Union Ave, 1st SS N/O Frost St, IFO 568 Union Ave, 20\"",
+    "latitude": 40.7176269611,
+    "longitude": -73.9521189003,
+    "borough": "Brooklyn",
+    "neighborhood": "Williamsburg"
+  },
+  {
+    "sample_site": "20900",
+    "sample_station": "SS - S/S Sands St. BTW Gold St. and Manhattan Brg. Ent. Ramp, OPP 177 Sands St, 48\"",
+    "latitude": 40.699701444,
+    "longitude": -73.9834428529,
+    "borough": "Brooklyn",
+    "neighborhood": "Downtown Brooklyn-DUMBO-Boerum Hill"
+  },
+  {
+    "sample_site": "20950",
+    "sample_station": "SS - E/S Clinton St, 2nd SS N/O Pierrepont St, IFO 33 Clinton St, 20\"",
+    "latitude": 40.6954973584,
+    "longitude": -73.9917850571,
+    "borough": "Brooklyn",
+    "neighborhood": "Brooklyn Heights"
+  },
+  {
+    "sample_site": "21000",
+    "sample_station": "SS - N/S Pacific St, BTW Buffalo & Rochester Aves, 48\"",
+    "latitude": 40.6764613528,
+    "longitude": -73.9268256709,
+    "borough": "Brooklyn",
+    "neighborhood": "Crown Heights (North)"
+  },
+  {
+    "sample_site": "21050",
+    "sample_station": "SS - N/S Bergen St, 2nd SS E/O Buffalo Ave, OPP 1770 Bergen St, 12\"",
+    "latitude": 40.6746996997,
+    "longitude": -73.9233667219,
+    "borough": "Brooklyn",
+    "neighborhood": "Crown Heights (North)"
+  },
+  {
+    "sample_site": "21100",
+    "sample_station": "SS - S/S Willoughby Ave, BTW Clinton & Vanderbilt Aves, 66\"",
+    "latitude": 40.6914695683,
+    "longitude": -73.9687144248,
+    "borough": "Brooklyn",
+    "neighborhood": "Clinton Hill"
+  },
+  {
+    "sample_site": "21150",
+    "sample_station": "SS - IFO 413 E/S Classon Ave, BTW Greene & Lexington Aves, 20\"",
+    "latitude": 40.6869543047,
+    "longitude": -73.9595363121,
+    "borough": "Brooklyn",
+    "neighborhood": "Bedford-Stuyvesant (West)"
+  },
+  {
+    "sample_site": "21250",
+    "sample_station": "SS - IFO 747 N/S Lafayette Ave, 2nd SS W/O Throop Ave, 12\"",
+    "latitude": 40.690858736,
+    "longitude": -73.9432746774,
+    "borough": "Brooklyn",
+    "neighborhood": "Bedford-Stuyvesant (West)"
+  },
+  {
+    "sample_site": "21350",
+    "sample_station": "SS - IFO 1135 W/S Decatur St, 2nd SS N/O Evergreen Ave, 12\"",
+    "latitude": 40.6876882337,
+    "longitude": -73.90868345,
+    "borough": "Brooklyn",
+    "neighborhood": "Bushwick (East)"
+  },
+  {
+    "sample_site": "21400",
+    "sample_station": "SS - IFO 312 E/S Jefferson St, BTW Irving & Knickerbocker Aves, 60\"",
+    "latitude": 40.7045919212,
+    "longitude": -73.9259111508,
+    "borough": "Brooklyn",
+    "neighborhood": "Bushwick (West)"
+  },
+  {
+    "sample_site": "21450",
+    "sample_station": "SS - IFO 53 E/S Knickerbocker Ave, 1st SS N/O Grattan St, 20\"",
+    "latitude": 40.7061015947,
+    "longitude": -73.9303927046,
+    "borough": "Brooklyn",
+    "neighborhood": "East Williamsburg"
+  },
+  {
+    "sample_site": "21550",
+    "sample_station": "SS - E/S Eldert La, 2nd SS N/O Stanley Ave, IFO 943 Eldert Ln, 12\"",
+    "latitude": 40.6667513036,
+    "longitude": -73.8620714511,
+    "borough": "Brooklyn",
+    "neighborhood": "East New York-City Line"
+  },
+  {
+    "sample_site": "21650",
+    "sample_station": "SS - IFO 307 E/S 7th Ave, 1st SS N/O 8th St, 12\"",
+    "latitude": 40.6675652604,
+    "longitude": -73.980905913,
+    "borough": "Brooklyn",
+    "neighborhood": "Park Slope"
+  },
+  {
+    "sample_site": "21750",
+    "sample_station": "SS - E/S 7th Ave, 1st SS N/O 52nd St, IFO 5115 7th Ave, 12\"",
+    "latitude": 40.6414747508,
+    "longitude": -74.0068102159,
+    "borough": "Brooklyn",
+    "neighborhood": "Sunset Park (Central)"
+  },
+  {
+    "sample_site": "21850",
+    "sample_station": "SS - IFO 37 E/S 7th Ave, 1st SS S/O St Johns Pl, 12\"",
+    "latitude": 40.6763115307,
+    "longitude": -73.974100451,
+    "borough": "Brooklyn",
+    "neighborhood": "Park Slope"
+  },
+  {
+    "sample_site": "21900",
+    "sample_station": "SS - N/S Eastern Pkwy (S/S of svc. Rd), BTW New York & Brooklyn Aves, IFO 645 Eastern Pkwy.  Median BTW Svc & Main 48\"",
+    "latitude": 40.6698078072,
+    "longitude": -73.9463710972,
+    "borough": "Brooklyn",
+    "neighborhood": "Crown Heights (North)"
+  },
+  {
+    "sample_site": "21950",
+    "sample_station": "SS - IFO 992 W/S Nostrand Ave, 2nd SS S/O Sullivan Pl, 12\"",
+    "latitude": 40.664416437,
+    "longitude": -73.9511262007,
+    "borough": "Brooklyn",
+    "neighborhood": "Crown Heights (South)"
+  },
+  {
+    "sample_site": "22050",
+    "sample_station": "SS - IFO 130 E/S Humboldt St, 2nd SS S/O Boerum St, 20\"",
+    "latitude": 40.7054954936,
+    "longitude": -73.9411089926,
+    "borough": "Brooklyn",
+    "neighborhood": "East Williamsburg"
+  },
+  {
+    "sample_site": "22250",
+    "sample_station": "SS - IFO 9002 W/S Ft Hamilton Pkwy, 1st SS S/O 90th St, 12\"",
+    "latitude": 40.618130196,
+    "longitude": -74.0265721657,
+    "borough": "Brooklyn",
+    "neighborhood": "Bay Ridge"
+  },
+  {
+    "sample_site": "22300",
+    "sample_station": "SS-E/S 8th Ave BTW 8th & 9th Sts, 72\"",
+    "latitude": 40.6661952358,
+    "longitude": -73.9787363214,
+    "borough": "Brooklyn",
+    "neighborhood": "Park Slope"
+  },
+  {
+    "sample_site": "22350",
+    "sample_station": "SS - E/S 5th Ave, BTW 49th St & 50th Sts, IFO 4915 5th Ave, 12\"",
+    "latitude": 40.6453172185,
+    "longitude": -74.0099780814,
+    "borough": "Brooklyn",
+    "neighborhood": "Sunset Park (Central)"
+  },
+  {
+    "sample_site": "22400",
+    "sample_station": "SS - N/S 65 St, BTW 16th & 17th Aves, IFO 1641 65th St, 60\"",
+    "latitude": 40.6214460614,
+    "longitude": -73.9937573742,
+    "borough": "Brooklyn",
+    "neighborhood": "Bensonhurst"
+  },
+  {
+    "sample_site": "22550",
+    "sample_station": "SS - E/S Stillwell Ave, 1st SS N/O Ave S, IFO P.S. 97 OPP 870-86 Stillwell Ave, 20\"",
+    "latitude": 40.6008209839,
+    "longitude": -73.9859197191,
+    "borough": "Brooklyn",
+    "neighborhood": "Gravesend (West)"
+  },
+  {
+    "sample_site": "22600",
+    "sample_station": "SS - E/S Ft Hamilton Pkwy, BTW 49th & 50th Sts, OPP 4918 Ft. Hamilton Pkwy, 72\"",
+    "latitude": 40.637983569,
+    "longitude": -73.9981047692,
+    "borough": "Brooklyn",
+    "neighborhood": "Borough Park"
+  },
+  {
+    "sample_site": "22650",
+    "sample_station": "SS - IFO 5601 E/S Ft Hamilton Pkwy, 1st SS S/O E 56th St, IFO 5517 Ft. Hamilton Pkwy, 20\"",
+    "latitude": 40.6348874326,
+    "longitude": -74.0027238175,
+    "borough": "Brooklyn",
+    "neighborhood": "Borough Park"
+  },
+  {
+    "sample_site": "22700",
+    "sample_station": "SS - N/S Church Ave, BTW Ocean Pkwy & E 5th St, 48\"",
+    "latitude": 40.644645278,
+    "longitude": -73.9753307122,
+    "borough": "Brooklyn",
+    "neighborhood": "Kensington"
+  },
+  {
+    "sample_site": "22750",
+    "sample_station": "SS - W/S Dahill Rd, 2nd SS S/O 15th Ave, OPP 339 Dahill Rd, 12\"",
+    "latitude": 40.6391291452,
+    "longitude": -73.9798799423,
+    "borough": "Brooklyn",
+    "neighborhood": "Borough Park"
+  },
+  {
+    "sample_site": "22850",
+    "sample_station": "SS - N/S Beverly Rd, 1st SS E/O E 48th St, IFO 4805 Bevery Rd 16\"",
+    "latitude": 40.646293597,
+    "longitude": -73.9314821111,
+    "borough": "Brooklyn",
+    "neighborhood": "East Flatbush-Rugby"
+  },
+  {
+    "sample_site": "22900",
+    "sample_station": "SS -  W/S Washington Park, BTW Willoughby & Myrtle Aves, OPP 175 Washington Pk, 66\"",
+    "latitude": 40.6919374234,
+    "longitude": -73.9736869015,
+    "borough": "Brooklyn",
+    "neighborhood": "Fort Greene"
+  },
+  {
+    "sample_site": "22950",
+    "sample_station": "SS - N/S Myrtle Ave, 2nd SS E/O N Portland Ave, 20\"",
+    "latitude": 40.6933951993,
+    "longitude": -73.97504943,
+    "borough": "Brooklyn",
+    "neighborhood": "Fort Greene"
+  },
+  {
+    "sample_site": "23000",
+    "sample_station": "SS - E/S Ocean Pkwy (E/S of Svc Rd), BTW Ave H & Ave I, 60\"",
+    "latitude": 40.6277033876,
+    "longitude": -73.970790562,
+    "borough": "Brooklyn",
+    "neighborhood": "Mapleton-Midwood (West)"
+  },
+  {
+    "sample_site": "23150",
+    "sample_station": "SS - E/S Ocean Pkwy, 2nd SS N/O Ave M, IFO 1257 Ocean Pkwy, 12\"",
+    "latitude": 40.6176844048,
+    "longitude": -73.9689038937,
+    "borough": "Brooklyn",
+    "neighborhood": "Mapleton-Midwood (West)"
+  },
+  {
+    "sample_site": "23200",
+    "sample_station": "SS - N/S Caton Ave, BTW E 18th St & St Pauls Pl, 48\"",
+    "latitude": 40.6514793284,
+    "longitude": -73.9633130181,
+    "borough": "Brooklyn",
+    "neighborhood": "Flatbush"
+  },
+  {
+    "sample_site": "23250",
+    "sample_station": "SS - E/S Ocean Ave, 2nd SS S/O Albemarle Rd, 20\"",
+    "latitude": 40.6462824139,
+    "longitude": -73.9601879952,
+    "borough": "Brooklyn",
+    "neighborhood": "Flatbush"
+  },
+  {
+    "sample_site": "23350",
+    "sample_station": "SS - W/S Ocean Ave, 2nd SS S/O Ditmas Ave, OPP 985 Ocean Ave, 12\"",
+    "latitude": 40.6384730534,
+    "longitude": -73.9589207506,
+    "borough": "Brooklyn",
+    "neighborhood": "Flatbush (West)-Ditmas Park-Parkville"
+  },
+  {
+    "sample_site": "23450",
+    "sample_station": "SS - N/S Jefferson Ave, 2nd SS W/O Lewis Ave, OPP 518 Jefferson Ave,  20\"",
+    "latitude": 40.6848472026,
+    "longitude": -73.9370636794,
+    "borough": "Brooklyn",
+    "neighborhood": "Bedford-Stuyvesant (East)"
+  },
+  {
+    "sample_site": "23550",
+    "sample_station": "SS - E/S Nostrand Ave, 2nd SS N/O Ave K, 20\"",
+    "latitude": 40.6255262829,
+    "longitude": -73.9465363657,
+    "borough": "Brooklyn",
+    "neighborhood": "Flatlands"
+  },
+  {
+    "sample_site": "23650",
+    "sample_station": "SS - E/S Nostrand Ave, 2nd SS N/O Ave W, 20\"",
+    "latitude": 40.5968240417,
+    "longitude": -73.9410824089,
+    "borough": "Brooklyn",
+    "neighborhood": "Sheepshead Bay-Manhattan Beach-Gerritsen Beach"
+  },
+  {
+    "sample_site": "23750",
+    "sample_station": "SS - E/S Ocean Ave, 2nd SS N/O Ave R, IFO 2233 Ocean Ave,  20\"",
+    "latitude": 40.6071965285,
+    "longitude": -73.9527455201,
+    "borough": "Brooklyn",
+    "neighborhood": "Madison"
+  },
+  {
+    "sample_site": "23850",
+    "sample_station": "SS - W/S Ocean Pkwy, 2nd SS S/O Ave V,  IFO 2252 Ocean Pkwy (@ Gravesend Neck, 1st S/O), 20\"",
+    "latitude": 40.5943113912,
+    "longitude": -73.9651520008,
+    "borough": "Brooklyn",
+    "neighborhood": "Gravesend (East)-Homecrest"
+  },
+  {
+    "sample_site": "23900",
+    "sample_station": "SS - S/S Atlantic Ave, BTW Schenck Ave & Barbey St, 48\"",
+    "latitude": 40.6767575637,
+    "longitude": -73.8888518042,
+    "borough": "Brooklyn",
+    "neighborhood": "East New York (North)"
+  },
+  {
+    "sample_site": "23950",
+    "sample_station": "SS - S/S Liberty Ave, 1st SS E/O Sheridan Ave,  IFO 1146 Liberty Ave, 12\"",
+    "latitude": 40.6786747245,
+    "longitude": -73.8668166067,
+    "borough": "Brooklyn",
+    "neighborhood": "East New York-City Line"
+  },
+  {
+    "sample_site": "24050",
+    "sample_station": "SS - IFO 2940 W/S Ocean Ave, 2nd SS S/O Ave Y, 16\"",
+    "latitude": 40.5896230319,
+    "longitude": -73.9496867363,
+    "borough": "Brooklyn",
+    "neighborhood": "Sheepshead Bay-Manhattan Beach-Gerritsen Beach"
+  },
+  {
+    "sample_site": "24150",
+    "sample_station": "SS - IFO 2220 S/S Atlantic Ave, 2nd SS E/O Hopkinson Ave (Thomas S. Boyland St), 20\"",
+    "latitude": 40.676292004,
+    "longitude": -73.9123042259,
+    "borough": "Brooklyn",
+    "neighborhood": "Ocean Hill"
+  },
+  {
+    "sample_site": "24250",
+    "sample_station": "SS - W/S 20th Ave, 1st SS S/O 58th St, 12\"",
+    "latitude": 40.6204896099,
+    "longitude": -73.9818451338,
+    "borough": "Brooklyn",
+    "neighborhood": "Mapleton-Midwood (West)"
+  },
+  {
+    "sample_site": "24300",
+    "sample_station": "SS - E/S Ocean Pkwy, BTW Ave Z & Belt Pkwy, (median BTW Main & Svc Rd of Ocean Pkwy), 30\"",
+    "latitude": 40.5858686968,
+    "longitude": -73.9661932895,
+    "borough": "Brooklyn",
+    "neighborhood": "Gravesend (South)"
+  },
+  {
+    "sample_site": "24350",
+    "sample_station": "SS - W/S Brighton 11th St, 2nd SS S/O Cass Pl, IFO 82 Brighton 11th St, 12\"",
+    "latitude": 40.580716474,
+    "longitude": -73.9572642697,
+    "borough": "Brooklyn",
+    "neighborhood": "Brighton Beach"
+  },
+  {
+    "sample_site": "24450",
+    "sample_station": "SS - E/S Brooklyn Ave, 2nd SS S/O Linden Blvd, IFO 887 Brooklyn Ave, 20\"",
+    "latitude": 40.6520890257,
+    "longitude": -73.9438013707,
+    "borough": "Brooklyn",
+    "neighborhood": "East Flatbush-Erasmus"
+  },
+  {
+    "sample_site": "24550",
+    "sample_station": "SS - OPP 4106 N/S Glenwood Rd, 1st SS W/O E 42nd St, 12\"",
+    "latitude": 40.6347656401,
+    "longitude": -73.9365200313,
+    "borough": "Brooklyn",
+    "neighborhood": "East Flatbush-Farragut"
+  },
+  {
+    "sample_site": "24650",
+    "sample_station": "SS - N/S Linden Blvd, 1st SS E/O Bristol St, 12\"",
+    "latitude": 40.6546986762,
+    "longitude": -73.9085880496,
+    "borough": "Brooklyn",
+    "neighborhood": "Brownsville"
+  },
+  {
+    "sample_site": "24700",
+    "sample_station": "SS - S/S Ave P, BTW Coney Island Ave & E 12th St, (E/O Coney Island Ave), 60\"",
+    "latitude": 40.6099255555,
+    "longitude": -73.9620392829,
+    "borough": "Brooklyn",
+    "neighborhood": "Gravesend (East)-Homecrest"
+  },
+  {
+    "sample_site": "24750",
+    "sample_station": "SS - IFO 1660 W/S E 13th St, 2nd SS N/O Quentin Rd, 20\"",
+    "latitude": 40.6087611501,
+    "longitude": -73.9602283786,
+    "borough": "Brooklyn",
+    "neighborhood": "Gravesend (East)-Homecrest"
+  },
+  {
+    "sample_site": "24850",
+    "sample_station": "SS - N/S New Lots Ave, 1st SS W/O Shepherd Ave, 16\"",
+    "latitude": 40.6678440034,
+    "longitude": -73.8794186957,
+    "borough": "Brooklyn",
+    "neighborhood": "East New York-New Lots"
+  },
+  {
+    "sample_site": "24950",
+    "sample_station": "SS - IFO 1169 N/S East New York Ave, 2nd SS W/O Ralph Ave, 12\"",
+    "latitude": 40.666742855,
+    "longitude": -73.9237651664,
+    "borough": "Brooklyn",
+    "neighborhood": "Crown Heights (North)"
+  },
+  {
+    "sample_site": "25050",
+    "sample_station": "SS - W/S Pennsylvania Ave, 1st SS N/O Hegeman Ave, IFO 718 Penn. Ave, 20\"",
+    "latitude": 40.6600639259,
+    "longitude": -73.8918459545,
+    "borough": "Brooklyn",
+    "neighborhood": "East New York-New Lots"
+  },
+  {
+    "sample_site": "25100",
+    "sample_station": "SS - IFO 630 W/S Howard Ave, BTW Sutter & East New York Aves, 60\"",
+    "latitude": 40.6664931015,
+    "longitude": -73.9197606948,
+    "borough": "Brooklyn",
+    "neighborhood": "Brownsville"
+  },
+  {
+    "sample_site": "25150",
+    "sample_station": "SS - E/O Mother Gaston Blvd, 2nd SS N/O Livonia Ave, 12\"",
+    "latitude": 40.6636658548,
+    "longitude": -73.9051695183,
+    "borough": "Brooklyn",
+    "neighborhood": "Brownsville"
+  },
+  {
+    "sample_site": "25250",
+    "sample_station": "SS - S/S Foster Ave, 2nd SS E/O E 101st St, 20\"",
+    "latitude": 40.6504747113,
+    "longitude": -73.902225963,
+    "borough": "Brooklyn",
+    "neighborhood": "East New York-New Lots"
+  },
+  {
+    "sample_site": "25350",
+    "sample_station": "SS - W/S Remsen Ave, 1st SS N/O Ave M, 20\"",
+    "latitude": 40.6338000586,
+    "longitude": -73.8989681727,
+    "borough": "Brooklyn",
+    "neighborhood": "Canarsie"
+  },
+  {
+    "sample_site": "25400",
+    "sample_station": "SS - S/S Pacific St, BTW Franklin & Classon Aves, 48\"",
+    "latitude": 40.6783396915,
+    "longitude": -73.9554315185,
+    "borough": "Brooklyn",
+    "neighborhood": "Crown Heights (North)"
+  },
+  {
+    "sample_site": "25450",
+    "sample_station": "SS - IFO 1030 S/S Park Pl, 2nd SS E/O Brooklyn Ave, 12\"",
+    "latitude": 40.673001356,
+    "longitude": -73.943506165,
+    "borough": "Brooklyn",
+    "neighborhood": "Crown Heights (North)"
+  },
+  {
+    "sample_site": "25550",
+    "sample_station": "SS - E/S Bedford Ave, 2nd SS S/O Montgomery St, 20\"",
+    "latitude": 40.6652504212,
+    "longitude": -73.9569217441,
+    "borough": "Brooklyn",
+    "neighborhood": "Crown Heights (South)"
+  },
+  {
+    "sample_site": "25900",
+    "sample_station": "SS - S/S Kings Highway, BTW E 35th & E 36th Sts, 60\"",
+    "latitude": 40.6209338666,
+    "longitude": -73.9401930017,
+    "borough": "Brooklyn",
+    "neighborhood": "Flatlands"
+  },
+  {
+    "sample_site": "25950",
+    "sample_station": "SS - E/S Flatbush Ave, 2nd SS N/O Ave R, IFO 2185 Flatbush Ave, 16\"",
+    "latitude": 40.6168028693,
+    "longitude": -73.9302985224,
+    "borough": "Brooklyn",
+    "neighborhood": "Flatlands"
+  },
+  {
+    "sample_site": "26300",
+    "sample_station": "SS - W/S Vermont St, BTW Jamaica & Sunnyside Aves, 48\"",
+    "latitude": 40.6796983894,
+    "longitude": -73.8959746933,
+    "borough": "Brooklyn",
+    "neighborhood": "Cypress Hills"
+  },
+  {
+    "sample_site": "26500",
+    "sample_station": "SS - IFO 336 W/S 6th Ave, BTW 3rd and 4th St, 66\"",
+    "latitude": 40.6711802157,
+    "longitude": -73.981420378,
+    "borough": "Brooklyn",
+    "neighborhood": "Park Slope"
+  },
+  {
+    "sample_site": "26550",
+    "sample_station": "SS - E/S 4th Ave, 1st SS S/O Sackett St, 20\"",
+    "latitude": 40.6778803875,
+    "longitude": -73.9825433511,
+    "borough": "Brooklyn",
+    "neighborhood": "Park Slope"
+  },
+  {
+    "sample_site": "26700",
+    "sample_station": "SS - IFO 426 S/S Sterling Pl, BTW Underhill & Washington Aves, 72\"",
+    "latitude": 40.6747471052,
+    "longitude": -73.9642195159,
+    "borough": "Brooklyn",
+    "neighborhood": "Prospect Heights"
+  },
+  {
+    "sample_site": "26750",
+    "sample_station": "SS - IFO 1110 N/S President St, 2nd SS E/O Bedford Ave, 12\"",
+    "latitude": 40.6683124606,
+    "longitude": -73.953996323,
+    "borough": "Brooklyn",
+    "neighborhood": "Crown Heights (South)"
+  },
+  {
+    "sample_site": "26850",
+    "sample_station": "SS - W/S W 37th St, 2nd SS n/O Neptune Ave, 12\"",
+    "latitude": 40.5784846067,
+    "longitude": -74.0036034904,
+    "borough": "Brooklyn",
+    "neighborhood": "Coney Island-Sea Gate"
+  },
+  {
+    "sample_site": "26950",
+    "sample_station": "SS - IFO 1058 N/S Metropolitan Ave, 2nd SS W/O Vandervoort Ave, 20\"",
+    "latitude": 40.7144865597,
+    "longitude": -73.9345827718,
+    "borough": "Brooklyn",
+    "neighborhood": "East Williamsburg"
+  },
+  {
+    "sample_site": "27000",
+    "sample_station": "SS - IFO 383 W/S Hooper St, BTW S 1st & S 2nd Sts, 72\"",
+    "latitude": 40.7081036233,
+    "longitude": -73.9545531784,
+    "borough": "Brooklyn",
+    "neighborhood": "Williamsburg"
+  },
+  {
+    "sample_site": "27350",
+    "sample_station": "SS - OPP 1035 S/S Clarkson Ave, 1st SS W/O E 93rd St, 12\"",
+    "latitude": 40.6589391619,
+    "longitude": -73.9233379721,
+    "borough": "Brooklyn",
+    "neighborhood": "East Flatbush-Remsen Village"
+  },
+  {
+    "sample_site": "27450",
+    "sample_station": "SS - IFO 1915 E/S Ocean Ave, 2nd SS N/O Ave O, 20\"",
+    "latitude": 40.6151817475,
+    "longitude": -73.9542562547,
+    "borough": "Brooklyn",
+    "neighborhood": "Midwood"
+  },
+  {
+    "sample_site": "27550",
+    "sample_station": "SS - N/S Farragut Rd, BTW E 81st & E 82nd Sts, 12\"",
+    "latitude": 40.6393773503,
+    "longitude": -73.9158658376,
+    "borough": "Brooklyn",
+    "neighborhood": "Canarsie"
+  },
+  {
+    "sample_site": "27600",
+    "sample_station": "SS - E/S Palmetto St, BTW Bushwick & Evergreen Aves, IFO 80 Palmetto St, 60\"",
+    "latitude": 40.6913602239,
+    "longitude": -73.9189951482,
+    "borough": "Brooklyn",
+    "neighborhood": "Bushwick (East)"
+  },
+  {
+    "sample_site": "27650",
+    "sample_station": "SS - IFO 59 E/S Patchen Ave, 1st SS S/O Lexington Ave, 20\"",
+    "latitude": 40.6902158004,
+    "longitude": -73.927441613,
+    "borough": "Brooklyn",
+    "neighborhood": "Bedford-Stuyvesant (East)"
+  },
+  {
+    "sample_site": "27750",
+    "sample_station": "SS - IFO 165 N/S S 1st St, 2nd SS W/O Driggs Ave, 20\"",
+    "latitude": 40.7137108054,
+    "longitude": -73.9610350906,
+    "borough": "Brooklyn",
+    "neighborhood": "Williamsburg"
+  },
+  {
+    "sample_site": "27850",
+    "sample_station": "SS - IFO 136 S/S Kent St, 2nd SS E/O Franklin St, 20\"",
+    "latitude": 40.7307565105,
+    "longitude": -73.9555407855,
+    "borough": "Brooklyn",
+    "neighborhood": "Greenpoint"
+  },
+  {
+    "sample_site": "28050",
+    "sample_station": "SS - IFO 579 N/S Macon St, 2nd SS W/O Patchen Ave, 20\"",
+    "latitude": 40.6836040909,
+    "longitude": -73.9281518926,
+    "borough": "Brooklyn",
+    "neighborhood": "Bedford-Stuyvesant (East)"
+  },
+  {
+    "sample_site": "28450",
+    "sample_station": "SS - IFO 2323 NE/S 60th St, 2nd SS W/O McDonald Ave, IFO 2323 60th St, 16\"",
+    "latitude": 40.6149906032,
+    "longitude": -73.975453329,
+    "borough": "Brooklyn",
+    "neighborhood": "Mapleton-Midwood (West)"
+  },
+  {
+    "sample_site": "28550",
+    "sample_station": "SS - E/S W 5th St, 2nd SS S/O Neptune Ave, IFO 2925 W 5th St, 12\"",
+    "latitude": 40.5780778324,
+    "longitude": -73.9722774114,
+    "borough": "Brooklyn",
+    "neighborhood": "Coney Island-Sea Gate"
+  },
+  {
+    "sample_site": "28950",
+    "sample_station": "SS - W/S 14th Ave, 1st SS N/O 52nd St, 20\"",
+    "latitude": 40.6321643294,
+    "longitude": -73.9916127139,
+    "borough": "Brooklyn",
+    "neighborhood": "Borough Park"
+  },
+  {
+    "sample_site": "29050",
+    "sample_station": "SS - N/S 81st St, 1st SS E/O 19th Ave, 12\"",
+    "latitude": 40.608608797,
+    "longitude": -73.9971259911,
+    "borough": "Brooklyn",
+    "neighborhood": "Bensonhurst"
+  },
+  {
+    "sample_site": "29300",
+    "sample_station": "SS - E/S 5th Ave, BTW 24th & 25th Sts, 66\"",
+    "latitude": 40.6594394594,
+    "longitude": -73.9952964418,
+    "borough": "Brooklyn",
+    "neighborhood": "Green-Wood Cemetery"
+  },
+  {
+    "sample_site": "29350",
+    "sample_station": "SS - W/S 4th Ave, BTW 28th & 29th Sts, 20\"",
+    "latitude": 40.6587588501,
+    "longitude": -74.0000144169,
+    "borough": "Brooklyn",
+    "neighborhood": "Sunset Park (West)"
+  },
+  {
+    "sample_site": "29450",
+    "sample_station": "SS - IFO 4011 E/S 7th Ave, 1st SS S/O 40th St, 12\"",
+    "latitude": 40.6478346181,
+    "longitude": -74.0002126143,
+    "borough": "Brooklyn",
+    "neighborhood": "Sunset Park (Central)"
+  },
+  {
+    "sample_site": "29500",
+    "sample_station": "SS - W/S Ridge Blvd, BTW Bay Ridge Ave & 68th St, 48\"",
+    "latitude": 40.6371264232,
+    "longitude": -74.0285037609,
+    "borough": "Brooklyn",
+    "neighborhood": "Bay Ridge"
+  },
+  {
+    "sample_site": "29550",
+    "sample_station": "SS - N/S Bay Ridge Ave, 2nd SS W/O 4th Ave, IFO 335 Bay Ridge Ave 12\"",
+    "latitude": 40.6353513608,
+    "longitude": -74.0250009272,
+    "borough": "Brooklyn",
+    "neighborhood": "Bay Ridge"
+  },
+  {
+    "sample_site": "29850",
+    "sample_station": "SS - IFO 1425 E/S Pennsylvania Ave, 2nd SS S/O Schroeders Ave, 20\"",
+    "latitude": 40.6469024044,
+    "longitude": -73.8804691498,
+    "borough": "Brooklyn",
+    "neighborhood": "Spring Creek-Starrett City"
+  },
+  {
+    "sample_site": "3ISL3",
+    "sample_station": "SS - Wards Island, DEP Water Pollution Control Plant, BTW 1st & 2nd security gates, OPP traffic circle",
+    "latitude": 40.7855936545,
+    "longitude": -73.9238565833,
+    "borough": "Manhattan",
+    "neighborhood": "Randall's Island"
+  },
+  {
+    "sample_site": "3ISL4",
+    "sample_station": "SS - Randalls Island, OPP exit ramp to Qns, next to golf driving range, S/O of Police Launch Repair Shop",
+    "latitude": 40.7989917169,
+    "longitude": -73.9254304572,
+    "borough": "Manhattan",
+    "neighborhood": "Randall's Island"
+  },
+  {
+    "sample_site": "30050",
+    "sample_station": "SS - IFO 8 E/S Centre Market Place, 2nd SS N/O Grand St, 12\"",
+    "latitude": 40.719997389,
+    "longitude": -73.9977452912,
+    "borough": "Manhattan",
+    "neighborhood": "SoHo-Little Italy-Hudson Square"
+  },
+  {
+    "sample_site": "30150",
+    "sample_station": "SS - E/S 1st Ave, 1st SS S/O E 3rd St,  OPP 49 1st Ave, 12\"",
+    "latitude": 40.7243471705,
+    "longitude": -73.9874630007,
+    "borough": "Manhattan",
+    "neighborhood": "East Village"
+  },
+  {
+    "sample_site": "30250",
+    "sample_station": "SS - OPP 280 N/S Madison St, 2nd SS W/O Montgomery St, 12\"",
+    "latitude": 40.713038642,
+    "longitude": -73.9864154448,
+    "borough": "Manhattan",
+    "neighborhood": "Chinatown-Two Bridges"
+  },
+  {
+    "sample_site": "30350",
+    "sample_station": "SS - IFO 90 E/S Pitt St, 2nd SS N/O Rivington St, 12\"",
+    "latitude": 40.7187718507,
+    "longitude": -73.9820600626,
+    "borough": "Manhattan",
+    "neighborhood": "Lower East Side"
+  },
+  {
+    "sample_site": "30450",
+    "sample_station": "SS - N/S Water St, 2nd SS E/O Catherine Slip, 12\"",
+    "latitude": 40.7099789375,
+    "longitude": -73.9952964825,
+    "borough": "Manhattan",
+    "neighborhood": "Chinatown-Two Bridges"
+  },
+  {
+    "sample_site": "30550",
+    "sample_station": "SS - E/S Water St, 1st SS S/O Maiden La (IFO Wall St Plaza), 20\"",
+    "latitude": 40.7059660295,
+    "longitude": -74.0060665952,
+    "borough": "Manhattan",
+    "neighborhood": "Financial District-Battery Park City"
+  },
+  {
+    "sample_site": "30750",
+    "sample_station": "SS - IFO 269 N/S W 140th St, 2nd SS E/O Frederick Douglass Blvd (8th Ave), 12\"",
+    "latitude": 40.8194337066,
+    "longitude": -73.9434902433,
+    "borough": "Manhattan",
+    "neighborhood": "Harlem (North)"
+  },
+  {
+    "sample_site": "30850",
+    "sample_station": "SS - IFO 230 S/S E 125th St, 2nd SS E/O 3rd Ave, 12\"",
+    "latitude": 40.8030237398,
+    "longitude": -73.9344957601,
+    "borough": "Manhattan",
+    "neighborhood": "East Harlem (North)"
+  },
+  {
+    "sample_site": "30950",
+    "sample_station": "SS - W/S South End Ave, 2nd SS N/O West Thames St, 20\"",
+    "latitude": 40.7089127777,
+    "longitude": -74.0172195041,
+    "borough": "Manhattan",
+    "neighborhood": "Financial District-Battery Park City"
+  },
+  {
+    "sample_site": "31050",
+    "sample_station": "SS - IFO 370 W/S Greenwich St, 1st SS N/O Franklin St, 20\"",
+    "latitude": 40.719579736,
+    "longitude": -74.0104221008,
+    "borough": "Manhattan",
+    "neighborhood": "Tribeca-Civic Center"
+  },
+  {
+    "sample_site": "31200",
+    "sample_station": "SS - W/S Amsterdam Ave, BTW W 177th & W 178th Sts, IFO 2374 Amsterdam Ave, 48\"",
+    "latitude": 40.8459966685,
+    "longitude": -73.9325848153,
+    "borough": "Manhattan",
+    "neighborhood": "Washington Heights (South)"
+  },
+  {
+    "sample_site": "31350",
+    "sample_station": "SS - E/S Bedford St, 1st SS S/O Grove St, IFO 90 Bedford St, 12\"",
+    "latitude": 40.7323294808,
+    "longitude": -74.0053148812,
+    "borough": "Manhattan",
+    "neighborhood": "West Village"
+  },
+  {
+    "sample_site": "31450",
+    "sample_station": "SS - IFO 22 N/S Howard St, BTW Crosby & Lafayette Sts, 12\"",
+    "latitude": 40.7194923749,
+    "longitude": -74.0003427131,
+    "borough": "Manhattan",
+    "neighborhood": "SoHo-Little Italy-Hudson Square"
+  },
+  {
+    "sample_site": "31550",
+    "sample_station": "SS - OPP 329 S/S W 18th St, 2nd SS E/O 9th Ave, 12\"",
+    "latitude": 40.7426965177,
+    "longitude": -74.0019270796,
+    "borough": "Manhattan",
+    "neighborhood": "Chelsea-Hudson Yards"
+  },
+  {
+    "sample_site": "31650",
+    "sample_station": "SS - N/S E 77th St, 2nd SS W/O 3rd Ave, 12\"",
+    "latitude": 40.7733837397,
+    "longitude": -73.9590649866,
+    "borough": "Manhattan",
+    "neighborhood": "Upper East Side-Carnegie Hill"
+  },
+  {
+    "sample_site": "31750",
+    "sample_station": "SS - IFO 427 N/S W 26th St, 2nd SS W/O 9th Ave, 12\"",
+    "latitude": 40.7489627911,
+    "longitude": -74.0011116036,
+    "borough": "Manhattan",
+    "neighborhood": "Chelsea-Hudson Yards"
+  },
+  {
+    "sample_site": "31850",
+    "sample_station": "SS - IFO 82 S/S Warren St, 2nd SS E/O Greenwich St, 12\"",
+    "latitude": 40.7153033797,
+    "longitude": -74.0106414762,
+    "borough": "Manhattan",
+    "neighborhood": "Tribeca-Civic Center"
+  },
+  {
+    "sample_site": "31950",
+    "sample_station": "SS - IFO 313 N/S W 47th St, 2nd SS W/O 8th Ave, 12\"",
+    "latitude": 40.7610610955,
+    "longitude": -73.9888458471,
+    "borough": "Manhattan",
+    "neighborhood": "Hell's Kitchen"
+  },
+  {
+    "sample_site": "32050",
+    "sample_station": "SS - IFO 49 N/S W 96th St, 2nd SS W/O Central Park West, 12\"",
+    "latitude": 40.7926899543,
+    "longitude": -73.9668322296,
+    "borough": "Manhattan",
+    "neighborhood": "Upper West Side (Central)"
+  },
+  {
+    "sample_site": "32150",
+    "sample_station": "SS - W/S St Nicholas Ave, 1st SS N/O 174th St, IFO 1281 St. Nicholas Ave, 12\"",
+    "latitude": 40.8449918859,
+    "longitude": -73.9370531253,
+    "borough": "Manhattan",
+    "neighborhood": "Washington Heights (South)"
+  },
+  {
+    "sample_site": "32200",
+    "sample_station": "SS - S/S W 150th St, BTW Convent & St Nicholas Aves, IFO 408 W 150th St 30\"",
+    "latitude": 40.8275800181,
+    "longitude": -73.9434724848,
+    "borough": "Manhattan",
+    "neighborhood": "Hamilton Heights-Sugar Hill"
+  },
+  {
+    "sample_site": "32350",
+    "sample_station": "SS - IFO 116 E/S Ave C, 2nd SS N/O E 7th St, 12\"",
+    "latitude": 40.7243925202,
+    "longitude": -73.9785734417,
+    "borough": "Manhattan",
+    "neighborhood": "East Village"
+  },
+  {
+    "sample_site": "32400",
+    "sample_station": "SS - E/S 1st Ave, BTW E 29th & E 30th Sts, 48\"",
+    "latitude": 40.7411321092,
+    "longitude": -73.9752408567,
+    "borough": "Manhattan",
+    "neighborhood": "Murray Hill-Kips Bay"
+  },
+  {
+    "sample_site": "32550",
+    "sample_station": "SS - IFO 271 W/S Ave C, 1st SS S/O E 16th St, 20\"",
+    "latitude": 40.7297523109,
+    "longitude": -73.9750069527,
+    "borough": "Manhattan",
+    "neighborhood": "Stuyvesant Town-Peter Cooper Village"
+  },
+  {
+    "sample_site": "32650",
+    "sample_station": "SS - IFO 14 S/S W 18th St, 2nd SS W/O 5th Ave, 12\"",
+    "latitude": 40.7390046401,
+    "longitude": -73.9931581641,
+    "borough": "Manhattan",
+    "neighborhood": "Midtown South-Flatiron-Union Square"
+  },
+  {
+    "sample_site": "32750",
+    "sample_station": "SS - S/S E 57th St, 2nd SS E/O 3rd Ave, 12\"",
+    "latitude": 40.7594976103,
+    "longitude": -73.9660221427,
+    "borough": "Manhattan",
+    "neighborhood": "East Midtown-Turtle Bay"
+  },
+  {
+    "sample_site": "32850",
+    "sample_station": "SS - IFO 138 S/S E 37th St, 2nd SS E/O Lexington Ave, 12\"",
+    "latitude": 40.74804393,
+    "longitude": -73.9778981599,
+    "borough": "Manhattan",
+    "neighborhood": "Murray Hill-Kips Bay"
+  },
+  {
+    "sample_site": "32950",
+    "sample_station": "SS - W/S 1st Ave, 1st SS S/O E 25th St, IFO 421 1st Ave, 12\"",
+    "latitude": 40.7379652131,
+    "longitude": -73.9779339798,
+    "borough": "Manhattan",
+    "neighborhood": "Murray Hill-Kips Bay"
+  },
+  {
+    "sample_site": "33050",
+    "sample_station": "SS - N/S W 62nd St, 2nd SS E/O Amsterdam Ave, 12\"",
+    "latitude": 40.7718804302,
+    "longitude": -73.9850134592,
+    "borough": "Manhattan",
+    "neighborhood": "Upper West Side-Lincoln Square"
+  },
+  {
+    "sample_site": "33100",
+    "sample_station": "SS - E/S 10th Ave/Harlem River Dr. (SS S/O Dyckman St on bike path in park), 30\"",
+    "latitude": 40.8585749165,
+    "longitude": -73.9226704378,
+    "borough": "Manhattan",
+    "neighborhood": "Inwood"
+  },
+  {
+    "sample_site": "33150",
+    "sample_station": "SS - IFO 200 W/S Nagle Ave, 2nd SS N/O Dyckman St, 12\"",
+    "latitude": 40.8622944287,
+    "longitude": -73.9233349349,
+    "borough": "Manhattan",
+    "neighborhood": "Inwood"
+  },
+  {
+    "sample_site": "33250",
+    "sample_station": "SS - IFO 925 W/S West End Ave, 1st SS N/O W 105th St, 12\"",
+    "latitude": 40.8012870371,
+    "longitude": -73.9689626023,
+    "borough": "Manhattan",
+    "neighborhood": "Upper West Side-Manhattan Valley"
+  },
+  {
+    "sample_site": "33300",
+    "sample_station": "SS - S/S W 125th St, BTW 7th & 8th Aves (IFO Lane Bryant Store), 48\"",
+    "latitude": 40.8092205082,
+    "longitude": -73.9491920111,
+    "borough": "Manhattan",
+    "neighborhood": "Harlem (South)"
+  },
+  {
+    "sample_site": "33450",
+    "sample_station": "SS - IFO 135 N/S W 112th St, 2nd SS W/O St Nicholas Ave, 12\"",
+    "latitude": 40.8004200537,
+    "longitude": -73.9536521925,
+    "borough": "Manhattan",
+    "neighborhood": "Harlem (South)"
+  },
+  {
+    "sample_site": "33550",
+    "sample_station": "SS - IFO 115 N/S E 67th St, 2nd SS W/O Lexington Ave, 12\"",
+    "latitude": 40.7675971039,
+    "longitude": -73.9652129553,
+    "borough": "Manhattan",
+    "neighborhood": "Upper East Side-Carnegie Hill"
+  },
+  {
+    "sample_site": "33600",
+    "sample_station": "SS - W/S 2nd Ave, BTW E 42nd St & 43rd Sts, IFO 801 2nd Ave, 48\"",
+    "latitude": 40.7501286952,
+    "longitude": -73.9721625036,
+    "borough": "Manhattan",
+    "neighborhood": "Murray Hill-Kips Bay"
+  },
+  {
+    "sample_site": "33700",
+    "sample_station": "SS - IFO 69 W/S St Nicholas Ave, BTW W 113th & W 114th Sts, 48\"",
+    "latitude": 40.8014022635,
+    "longitude": -73.9526618353,
+    "borough": "Manhattan",
+    "neighborhood": "Harlem (South)"
+  },
+  {
+    "sample_site": "33850",
+    "sample_station": "SS - IFO 155 N/S E 85th St, 1st SS E/O Lexington Ave, 12\"",
+    "latitude": 40.7785836432,
+    "longitude": -73.9553644244,
+    "borough": "Manhattan",
+    "neighborhood": "Upper East Side-Carnegie Hill"
+  },
+  {
+    "sample_site": "33950",
+    "sample_station": "SS - N/S E 104th St, 2nd SS E/O 3rd Ave, 12\"",
+    "latitude": 40.7897498664,
+    "longitude": -73.9442413129,
+    "borough": "Manhattan",
+    "neighborhood": "East Harlem (South)"
+  },
+  {
+    "sample_site": "34050",
+    "sample_station": "SS - IFO 611 N/S W 181st St, 1st SS W/O St Nicholas Ave, 12\"",
+    "latitude": 40.849667333,
+    "longitude": -73.9343052439,
+    "borough": "Manhattan",
+    "neighborhood": "Washington Heights (North)"
+  },
+  {
+    "sample_site": "34150",
+    "sample_station": "SS - N/S W 151st St, 2nd SS W/O Amsterdam Ave, IFO 529 151st St, 12\"",
+    "latitude": 40.829700274,
+    "longitude": -73.9462675191,
+    "borough": "Manhattan",
+    "neighborhood": "Hamilton Heights-Sugar Hill"
+  },
+  {
+    "sample_site": "34200",
+    "sample_station": "SS - S/S W 97th St, BTW Columbus & Amsterdam Ave, 36\"",
+    "latitude": 40.7937716452,
+    "longitude": -73.9677743005,
+    "borough": "Manhattan",
+    "neighborhood": "Upper West Side (Central)"
+  },
+  {
+    "sample_site": "34300",
+    "sample_station": "SS - S/S W 40th St, BTW Broadway & 7th Ave, 48\"",
+    "latitude": 40.7545916192,
+    "longitude": -73.9877316234,
+    "borough": "Manhattan",
+    "neighborhood": "Midtown-Times Square"
+  },
+  {
+    "sample_site": "34350",
+    "sample_station": "SS - E/S 6th Ave, BTW W 37th & W 38th Sts, IFO 1016 6th Ave, 20\"",
+    "latitude": 40.752044294,
+    "longitude": -73.9859743782,
+    "borough": "Manhattan",
+    "neighborhood": "Midtown-Times Square"
+  },
+  {
+    "sample_site": "34550",
+    "sample_station": "SS - IFO 133 N/S 128th St, 2nd SS W/O Lenox Ave, 12\"",
+    "latitude": 40.8104815186,
+    "longitude": -73.9457628437,
+    "borough": "Manhattan",
+    "neighborhood": "Harlem (North)"
+  },
+  {
+    "sample_site": "34650",
+    "sample_station": "SS - IFO 1066 E/S St Nicholas Ave, BTW W 163rd & W 164th Sts, 12\"",
+    "latitude": 40.8372423731,
+    "longitude": -73.9399515716,
+    "borough": "Manhattan",
+    "neighborhood": "Washington Heights (South)"
+  },
+  {
+    "sample_site": "34700",
+    "sample_station": "SS - S/S W 165th St, BTW Edgecombe & Amsterdam Aves, 30\"",
+    "latitude": 40.8372600505,
+    "longitude": -73.9370712825,
+    "borough": "Manhattan",
+    "neighborhood": "Washington Heights (South)"
+  },
+  {
+    "sample_site": "34850",
+    "sample_station": "SS - OPP 40 N/S W 53rd St, 2nd SS E/O 6th Ave, IFO MOMA 12\"",
+    "latitude": 40.7613284875,
+    "longitude": -73.9778323856,
+    "borough": "Manhattan",
+    "neighborhood": "Midtown-Times Square"
+  },
+  {
+    "sample_site": "34950",
+    "sample_station": "SS - IFO 686 S/S Academy St, 2nd SS W/O Broadway St, 12\"",
+    "latitude": 40.867107381,
+    "longitude": -73.9256216233,
+    "borough": "Manhattan",
+    "neighborhood": "Inwood"
+  },
+  {
+    "sample_site": "35000",
+    "sample_station": "SS - S/S W 93rd St, btw Columbus Ave & Central Park West, 30\"",
+    "latitude": 40.7900220991,
+    "longitude": -73.9669130079,
+    "borough": "Manhattan",
+    "neighborhood": "Upper West Side (Central)"
+  },
+  {
+    "sample_site": "35050",
+    "sample_station": "SS - IFO 565 N/S W 125th St, 1st SS W/O Old Broadway, 20\"",
+    "latitude": 40.8153254931,
+    "longitude": -73.9577891939,
+    "borough": "Manhattan",
+    "neighborhood": "Manhattanville-West Harlem"
+  },
+  {
+    "sample_site": "35100",
+    "sample_station": "SS - E/S Central Park West, BTW W 93rd & W 94th Sts, 30\"",
+    "latitude": 40.7899915652,
+    "longitude": -73.9657429531,
+    "borough": "Manhattan",
+    "neighborhood": "Central Park"
+  },
+  {
+    "sample_site": "35150",
+    "sample_station": "SS - IFO 21 E/S Bennett Ave, 2nd SS N/O W 181st St, 20\"",
+    "latitude": 40.8513947663,
+    "longitude": -73.9361108685,
+    "borough": "Manhattan",
+    "neighborhood": "Washington Heights (North)"
+  },
+  {
+    "sample_site": "35200",
+    "sample_station": "SS - S/S W 65th St, BTW Broadway & Central Park West, 36\"",
+    "latitude": 40.772266766,
+    "longitude": -73.980518467,
+    "borough": "Manhattan",
+    "neighborhood": "Upper West Side-Lincoln Square"
+  },
+  {
+    "sample_site": "35350",
+    "sample_station": "SS - IFO 541 N/S W 207th (Emerson) St, 1st SS E/O Sherman Ave, 12\"",
+    "latitude": 40.8655581559,
+    "longitude": -73.919712125,
+    "borough": "Manhattan",
+    "neighborhood": "Inwood"
+  },
+  {
+    "sample_site": "35450",
+    "sample_station": "SS - IFO 500 N/S E 76th St, 2nd SS E/O York Ave, 12\"",
+    "latitude": 40.7689833479,
+    "longitude": -73.9505981901,
+    "borough": "Manhattan",
+    "neighborhood": "Upper East Side-Lenox Hill-Roosevelt Island"
+  },
+  {
+    "sample_site": "35550",
+    "sample_station": "SS - N/S Washington Square S, 1st SS W/O Washington Square E (OPP 70 Washington Square E), 12\"",
+    "latitude": 40.729711061,
+    "longitude": -73.9967383138,
+    "borough": "Manhattan",
+    "neighborhood": "Greenwich Village"
+  },
+  {
+    "sample_site": "35650",
+    "sample_station": "SS - N/S W 25th St, 2nd SS W/O Broadway,  OPP 28 W 25th St 12\"",
+    "latitude": 40.743700724,
+    "longitude": -73.990541289,
+    "borough": "Manhattan",
+    "neighborhood": "Midtown South-Flatiron-Union Square"
+  },
+  {
+    "sample_site": "35750",
+    "sample_station": "SS - N/S W 83rd St, 2nd SS W/O Central Park West, 12\"",
+    "latitude": 40.7837516269,
+    "longitude": -73.9715670772,
+    "borough": "Manhattan",
+    "neighborhood": "Upper West Side (Central)"
+  },
+  {
+    "sample_site": "35800",
+    "sample_station": "SS - N/S E 85th St, BTW 5th & Madison Aves,  OPP 16 E 85th St, 36\"",
+    "latitude": 40.7803473007,
+    "longitude": -73.9595264994,
+    "borough": "Manhattan",
+    "neighborhood": "Upper East Side-Carnegie Hill"
+  },
+  {
+    "sample_site": "35900",
+    "sample_station": "SS - IFO 168 W/S 5th Ave, BTW E 21st & E 22nd Sts, 48\"",
+    "latitude": 40.7406458033,
+    "longitude": -73.990382942,
+    "borough": "Manhattan",
+    "neighborhood": "Midtown South-Flatiron-Union Square"
+  },
+  {
+    "sample_site": "36000",
+    "sample_station": "SS - S/S E 68th St, BTW 5th & Madison Aves, 36\"",
+    "latitude": 40.769546745,
+    "longitude": -73.9682445204,
+    "borough": "Manhattan",
+    "neighborhood": "Upper East Side-Carnegie Hill"
+  },
+  {
+    "sample_site": "36100",
+    "sample_station": "SS - IFO 1212 E/S 6th Ave, BTW W 47th & W 48th Sts, 20\"",
+    "latitude": 40.7583291166,
+    "longitude": -73.9814177268,
+    "borough": "Manhattan",
+    "neighborhood": "Midtown-Times Square"
+  },
+  {
+    "sample_site": "36200",
+    "sample_station": "SS - W/S 5th Ave, BTW W 8th St & Washington Square N, 48\"",
+    "latitude": 40.7317531618,
+    "longitude": -73.9968464589,
+    "borough": "Manhattan",
+    "neighborhood": "Greenwich Village"
+  },
+  {
+    "sample_site": "36350",
+    "sample_station": "SS - IFO 165 N/S E 112th St, 1st SS E/O Lexington Ave, 12\"",
+    "latitude": 40.7958644032,
+    "longitude": -73.9427662514,
+    "borough": "Manhattan",
+    "neighborhood": "East Harlem (North)"
+  },
+  {
+    "sample_site": "36500",
+    "sample_station": "SS - E/S Broadway, BTW Howard & Grand Sts, 30\"",
+    "latitude": 40.7200358314,
+    "longitude": -74.0012085246,
+    "borough": "Manhattan",
+    "neighborhood": "SoHo-Little Italy-Hudson Square"
+  },
+  {
+    "sample_site": "36600",
+    "sample_station": "SS - IFO 87 E/S Bowery, BTW Hester & Canal Sts, 36\"",
+    "latitude": 40.7169424041,
+    "longitude": -73.9954619301,
+    "borough": "Manhattan",
+    "neighborhood": "Chinatown-Two Bridges"
+  },
+  {
+    "sample_site": "36700",
+    "sample_station": "SS - S/S South St, BTW Rutgers Slip & Jefferson Sts, 30\"",
+    "latitude": 40.7100827548,
+    "longitude": -73.9884467869,
+    "borough": "Manhattan",
+    "neighborhood": "Chinatown-Two Bridges"
+  },
+  {
+    "sample_site": "36950",
+    "sample_station": "SS - W/S Main St. Roosevelt Island (north of bridge) - 2nd SS N/O FDNY SOC circle",
+    "latitude": 40.7678931,
+    "longitude": -73.9433606898,
+    "borough": "Manhattan",
+    "neighborhood": "Upper East Side-Lenox Hill-Roosevelt Island"
+  },
+  {
+    "sample_site": "37300",
+    "sample_station": "SS - IFO 3401 W/S Broadway, BTW W 138th & W 139th Sts, 36\"",
+    "latitude": 40.8221720374,
+    "longitude": -73.9537996307,
+    "borough": "Manhattan",
+    "neighborhood": "Hamilton Heights-Sugar Hill"
+  },
+  {
+    "sample_site": "37450",
+    "sample_station": "SS -OPP 532 N/S W 111st St, 2nd SS W/O Amsterdam Ave, 12\"",
+    "latitude": 40.804519287,
+    "longitude": -73.9653236951,
+    "borough": "Manhattan",
+    "neighborhood": "Morningside Heights"
+  },
+  {
+    "sample_site": "37950",
+    "sample_station": "SS - IFO 325 N/S E 12th St, 2nd SS E/O 2nd Ave, 12\"",
+    "latitude": 40.7305884151,
+    "longitude": -73.9847196647,
+    "borough": "Manhattan",
+    "neighborhood": "East Village"
+  },
+  {
+    "sample_site": "38150",
+    "sample_station": "SS - IFO 121 N/S W 72nd St, 2nd SS W/O Columbus Ave, 12\"",
+    "latitude": 40.7778960632,
+    "longitude": -73.979596099,
+    "borough": "Manhattan",
+    "neighborhood": "Upper West Side-Lincoln Square"
+  },
+  {
+    "sample_site": "38250",
+    "sample_station": "SS - IFO 309 N/S E 87th St, 2nd SS W/O 1st Ave, 12\"",
+    "latitude": 40.7782714472,
+    "longitude": -73.9503746578,
+    "borough": "Manhattan",
+    "neighborhood": "Upper East Side-Yorkville"
+  },
+  {
+    "sample_site": "38300",
+    "sample_station": "SS - E/S Amsterdam Ave, BTW W 179th & W 180th Sts (IFO DEP Pump Station), 36\"",
+    "latitude": 40.8472667744,
+    "longitude": -73.9314088359,
+    "borough": "Manhattan",
+    "neighborhood": "Highbridge Park"
+  },
+  {
+    "sample_site": "38650",
+    "sample_station": "SS - OPP 238 N/S W 112th St, 2nd SS E/O 8th Ave (Fredrick Douglass), 12\"",
+    "latitude": 40.8013074264,
+    "longitude": -73.9557537244,
+    "borough": "Manhattan",
+    "neighborhood": "Harlem (South)"
+  },
+  {
+    "sample_site": "39200",
+    "sample_station": "SS - E/S Amsterdam Ave, BTW W 61st & W 62nd Sts, 48\"",
+    "latitude": 40.771897065,
+    "longitude": -73.9863528937,
+    "borough": "Manhattan",
+    "neighborhood": "Upper West Side-Lincoln Square"
+  },
+  {
+    "sample_site": "39400",
+    "sample_station": "SS - S/S W 62nd St, BTW Columbus Ave & Broadway, 48\"",
+    "latitude": 40.7716083762,
+    "longitude": -73.9826956886,
+    "borough": "Manhattan",
+    "neighborhood": "Upper West Side-Lincoln Square"
+  },
+  {
+    "sample_site": "39550",
+    "sample_station": "SS - W/S Park Ave, 1st SS S/O E 95th St, 12\"",
+    "latitude": 40.7858316881,
+    "longitude": -73.9533445707,
+    "borough": "Manhattan",
+    "neighborhood": "Upper East Side-Carnegie Hill"
+  },
+  {
+    "sample_site": "39650",
+    "sample_station": "SS - IFO 229 N/S E 49th St, 2nd SS W/O 2nd Ave, 12\"",
+    "latitude": 40.7547475581,
+    "longitude": -73.9699877047,
+    "borough": "Manhattan",
+    "neighborhood": "East Midtown-Turtle Bay"
+  },
+  {
+    "sample_site": "39750",
+    "sample_station": "SS - IFO 321 N/S E 71st St, 2nd SS W/O 1st Ave, 12\"",
+    "latitude": 40.7675946237,
+    "longitude": -73.9577905649,
+    "borough": "Manhattan",
+    "neighborhood": "Upper East Side-Lenox Hill-Roosevelt Island"
+  },
+  {
+    "sample_site": "39800",
+    "sample_station": "SS - W/S Broadway, BTW W 76th & W 77th Sts, 36\"",
+    "latitude": 40.7821094912,
+    "longitude": -73.9811149965,
+    "borough": "Manhattan",
+    "neighborhood": "Upper West Side (Central)"
+  },
+  {
+    "sample_site": "39950",
+    "sample_station": "SS - IFO 601 W/S West End Ave, 1st SS N/O W 89th St, 12\"",
+    "latitude": 40.7910454787,
+    "longitude": -73.9764321079,
+    "borough": "Manhattan",
+    "neighborhood": "Upper West Side (Central)"
+  },
+  {
+    "sample_site": "3SC26",
+    "sample_station": "Shaft 26 of New Croton Aqueduct, 179th St Pumping Station.",
+    "latitude": 40.8469540775,
+    "longitude": -73.9317452995,
+    "borough": "Manhattan",
+    "neighborhood": "Washington Heights (South)"
+  },
+  {
+    "sample_site": "4ISL5",
+    "sample_station": "SS - Rikers Island, traffic island OPP James A. Thomas Ctr, 14-14 Hazen St",
+    "latitude": 40.7972073469,
+    "longitude": -73.8877983302,
+    "borough": "Bronx",
+    "neighborhood": "Rikers Island"
+  },
+  {
+    "sample_site": "40150",
+    "sample_station": "SS - N/S 27th Ave, 1st SS E/O 2nd St, IFO 2-07 27th Ave, 12\"",
+    "latitude": 40.7753159561,
+    "longitude": -73.9350068268,
+    "borough": "Queens",
+    "neighborhood": "Old Astoria-Hallets Point"
+  },
+  {
+    "sample_site": "40200",
+    "sample_station": "SS - S/S 19th Ave, BTW 41st & Steinway Sts, IFO 40-14 19th Ave, 60\"",
+    "latitude": 40.7779058098,
+    "longitude": -73.8990600493,
+    "borough": "Queens",
+    "neighborhood": "Astoria (North)-Ditmars-Steinway"
+  },
+  {
+    "sample_site": "40250",
+    "sample_station": "SS - IFO 22-26 W/S Steinway St, 2nd SS S/O Ditmars Blvd, 12\"",
+    "latitude": 40.772255503,
+    "longitude": -73.9068995002,
+    "borough": "Queens",
+    "neighborhood": "Astoria (North)-Ditmars-Steinway"
+  },
+  {
+    "sample_site": "40300",
+    "sample_station": "SS - IFO 12 - 23 SE/S Jackson Ave, BTW 48th & 49th Aves, 72\"",
+    "latitude": 40.7438110281,
+    "longitude": -73.9499997466,
+    "borough": "Queens",
+    "neighborhood": "Long Island City-Hunters Point"
+  },
+  {
+    "sample_site": "40350",
+    "sample_station": "SS - N/S 41st Ave, 2nd SS W/O 21st St, 12\"",
+    "latitude": 40.7544108103,
+    "longitude": -73.943141152,
+    "borough": "Queens",
+    "neighborhood": "Queensbridge-Ravenswood-Dutch Kills"
+  },
+  {
+    "sample_site": "40450",
+    "sample_station": "SS - OPP 33-02 N/S 48th Ave, 1st SS E/O 33rd St, 12\"",
+    "latitude": 40.7408458091,
+    "longitude": -73.9321679554,
+    "borough": "Queens",
+    "neighborhood": "Sunnyside"
+  },
+  {
+    "sample_site": "40550",
+    "sample_station": "SS - W/S 61st (Bush) St, 1st SS S/O 47th Ave, 12\"",
+    "latitude": 40.7394584441,
+    "longitude": -73.9034702562,
+    "borough": "Queens",
+    "neighborhood": "Woodside"
+  },
+  {
+    "sample_site": "40600",
+    "sample_station": "SS - E/S 89th St, BTW Northern Blvd & 32nd Ave, 72\"",
+    "latitude": 40.7568424401,
+    "longitude": -73.8789002436,
+    "borough": "Queens",
+    "neighborhood": "Jackson Heights"
+  },
+  {
+    "sample_site": "40650",
+    "sample_station": "SS - IFO 30-12 W/S 94th St, 1st SS S/O 30th Ave, 12\"",
+    "latitude": 40.7609334458,
+    "longitude": -73.8750087093,
+    "borough": "Queens",
+    "neighborhood": "East Elmhurst"
+  },
+  {
+    "sample_site": "40750",
+    "sample_station": "SS - N/S Northern Blvd, 1st SS W/O 78th St, 12\"",
+    "latitude": 40.7552253567,
+    "longitude": -73.8893922309,
+    "borough": "Queens",
+    "neighborhood": "Jackson Heights"
+  },
+  {
+    "sample_site": "40800",
+    "sample_station": "SS - E/S 62nd St, BTW 37th Ave & Broadway, 48\"",
+    "latitude": 40.7493095435,
+    "longitude": -73.9004640183,
+    "borough": "Queens",
+    "neighborhood": "Woodside"
+  },
+  {
+    "sample_site": "40850",
+    "sample_station": "SS - IFO 4205 E/S 77th St, 1st SS S/O Woodside Ave, 12\"",
+    "latitude": 40.7433089359,
+    "longitude": -73.8878818834,
+    "borough": "Queens",
+    "neighborhood": "Elmhurst"
+  },
+  {
+    "sample_site": "40950",
+    "sample_station": "SS - W/S 94th St, 2nd SS S/O 41st Rd , Case St, 12\"",
+    "latitude": 40.7454137319,
+    "longitude": -73.8716923629,
+    "borough": "Queens",
+    "neighborhood": "Elmhurst"
+  },
+  {
+    "sample_site": "41050",
+    "sample_station": "SS - IFO 86-31 W/S 57th Ave, 2nd SS S/O Seabury Ave, 12\"",
+    "latitude": 40.7330474822,
+    "longitude": -73.8756672023,
+    "borough": "Queens",
+    "neighborhood": "Elmhurst"
+  },
+  {
+    "sample_site": "41100",
+    "sample_station": "SS - IFO 94-03 S/S Alstyne Ave, BTW Junction Blvd & 94th St, 48\"",
+    "latitude": 40.7425710655,
+    "longitude": -73.8700450251,
+    "borough": "Queens",
+    "neighborhood": "Elmhurst"
+  },
+  {
+    "sample_site": "41150",
+    "sample_station": "SS - OPP 110-08 W/S Colonial Ave, 2nd SS S/O Horace Harding Expwy, 12\"",
+    "latitude": 40.7371211434,
+    "longitude": -73.8485311555,
+    "borough": "Queens",
+    "neighborhood": "Forest Hills"
+  },
+  {
+    "sample_site": "41250",
+    "sample_station": "SS - SW/S LIE (service Rd), 1st SS E/O 71st St, 12\"",
+    "latitude": 40.7257720269,
+    "longitude": -73.8900400189,
+    "borough": "Queens",
+    "neighborhood": "Maspeth"
+  },
+  {
+    "sample_site": "41300",
+    "sample_station": "SS - S/S Cypress Ave, BTW Dekalb Ave & Stockholm St, 60\"",
+    "latitude": 40.7063588579,
+    "longitude": -73.9168597321,
+    "borough": "Brooklyn",
+    "neighborhood": "Bushwick (West)"
+  },
+  {
+    "sample_site": "41350",
+    "sample_station": "SS - W/S Menahan St, 1st SS N/O Onderdonk Ave, 12\"",
+    "latitude": 40.7056397635,
+    "longitude": -73.9096218639,
+    "borough": "Queens",
+    "neighborhood": "Ridgewood"
+  },
+  {
+    "sample_site": "41450",
+    "sample_station": "SS - OPP 18-20 W/S Decatur St, 2nd SS S/O Forest Ave, 12\"",
+    "latitude": 40.6980079072,
+    "longitude": -73.8980846884,
+    "borough": "Queens",
+    "neighborhood": "Ridgewood"
+  },
+  {
+    "sample_site": "41550",
+    "sample_station": "SS - IFO 98-05 N/S 63rd Rd, 1st SS E/O 98th St, 12\"",
+    "latitude": 40.7319606925,
+    "longitude": -73.8591004404,
+    "borough": "Queens",
+    "neighborhood": "Rego Park"
+  },
+  {
+    "sample_site": "41600",
+    "sample_station": "SS - IFO 93-29 N/S Queens Blvd, BTW 62nd Dr & 62nd Ave, 72\"",
+    "latitude": 40.7314989224,
+    "longitude": -73.8654409561,
+    "borough": "Queens",
+    "neighborhood": "Rego Park"
+  },
+  {
+    "sample_site": "41650",
+    "sample_station": "SS - IFO 106-15 N/S Queens Blvd (service Rd), 2nd SS E/O Yellowstone Blvd, 20\"",
+    "latitude": 40.7228457329,
+    "longitude": -73.8465216458,
+    "borough": "Queens",
+    "neighborhood": "Forest Hills"
+  },
+  {
+    "sample_site": "41750",
+    "sample_station": "SS - OPP 104-41 SW/S Ditmars Blvd, BTW 24th Rd & 25th Ave, 12\"",
+    "latitude": 40.7671179289,
+    "longitude": -73.8657588811,
+    "borough": "Queens",
+    "neighborhood": "East Elmhurst"
+  },
+  {
+    "sample_site": "41850",
+    "sample_station": "SS - IFO 67-02 W/S Bell Blvd, 1st SS S/O 67th Ave, 12\"",
+    "latitude": 40.7441180179,
+    "longitude": -73.7599937818,
+    "borough": "Queens",
+    "neighborhood": "Oakland Gardens-Hollis Hills"
+  },
+  {
+    "sample_site": "41900",
+    "sample_station": "SS - W/S Fresh Meadow La, Corner N/O Booth Memorial Ave, 20\"",
+    "latitude": 40.7421192936,
+    "longitude": -73.7968029483,
+    "borough": "Queens",
+    "neighborhood": "Kissena Park"
+  },
+  {
+    "sample_site": "41950",
+    "sample_station": "SS - IFO 170-05 N/S 45th Ave, 1st SS E/O 170th St, 12\"",
+    "latitude": 40.755832069,
+    "longitude": -73.7967899935,
+    "borough": "Queens",
+    "neighborhood": "East Flushing"
+  },
+  {
+    "sample_site": "42100",
+    "sample_station": "SS - S/S Metropolitan Ave, 1st SS E/O 80th St, 48\"",
+    "latitude": 40.713228154,
+    "longitude": -73.8712096364,
+    "borough": "Queens",
+    "neighborhood": "St. John Cemetery"
+  },
+  {
+    "sample_site": "42150",
+    "sample_station": "SS - IFO 68-78 W/S 76th St, 1st N/O 69th Rd, 12\"",
+    "latitude": 40.708802803,
+    "longitude": -73.8754815802,
+    "borough": "Queens",
+    "neighborhood": "Middle Village"
+  },
+  {
+    "sample_site": "42300",
+    "sample_station": "SS - S/S 48th Ave, BTW 42nd & 43rd Sts, 72\"",
+    "latitude": 40.7396212291,
+    "longitude": -73.9227832391,
+    "borough": "Queens",
+    "neighborhood": "Sunnyside"
+  },
+  {
+    "sample_site": "42350",
+    "sample_station": "SS - IFO 41-18 W/S 39th St, 2nd SS S/O Skillman Ave, 12\"",
+    "latitude": 40.7470723502,
+    "longitude": -73.925618496,
+    "borough": "Queens",
+    "neighborhood": "Sunnyside"
+  },
+  {
+    "sample_site": "42700",
+    "sample_station": "SS - OPP 64-65 W/S 210th St, N/O 67th Ave, 48\"",
+    "latitude": 40.7425644705,
+    "longitude": -73.7653150954,
+    "borough": "Queens",
+    "neighborhood": "Cunningham Park"
+  },
+  {
+    "sample_site": "42750",
+    "sample_station": "SS - IFO 64-50A W/S 188th St, 2nd SS S/O 64th Ave, 20\"",
+    "latitude": 40.7362343821,
+    "longitude": -73.784638857,
+    "borough": "Queens",
+    "neighborhood": "Fresh Meadows-Utopia"
+  },
+  {
+    "sample_site": "42850",
+    "sample_station": "SS - IFO 82-28 W/S Parsons Blvd, BTW Goethals Ave & Village Rd",
+    "latitude": 40.7176175626,
+    "longitude": -73.8084574479,
+    "borough": "Queens",
+    "neighborhood": "Kew Gardens Hills"
+  },
+  {
+    "sample_site": "42950",
+    "sample_station": "SS - IFO 80-56 W/S 193rd St, 1st SS N/O 81st Ave, 12\"",
+    "latitude": 40.7286523769,
+    "longitude": -73.7769205624,
+    "borough": "Queens",
+    "neighborhood": "Jamaica Estates-Holliswood"
+  },
+  {
+    "sample_site": "43050",
+    "sample_station": "SS - S/S Park Lane S, 1st SS W/O 102nd St, 20\"",
+    "latitude": 40.6987146866,
+    "longitude": -73.8472299541,
+    "borough": "Queens",
+    "neighborhood": "Richmond Hill"
+  },
+  {
+    "sample_site": "43150",
+    "sample_station": "SS - W/S 88th St, 2nd SS S/O 149th Ave, 12\"",
+    "latitude": 40.6691728,
+    "longitude": -73.8473336663,
+    "borough": "Queens",
+    "neighborhood": "Howard Beach-Lindenwood"
+  },
+  {
+    "sample_site": "43250",
+    "sample_station": "SS - IFO 87-48 W/S 78th St, 1st SS N/O 88th Ave, 12\"",
+    "latitude": 40.6898914122,
+    "longitude": -73.8634443124,
+    "borough": "Queens",
+    "neighborhood": "Woodhaven"
+  },
+  {
+    "sample_site": "43550",
+    "sample_station": "SS - W/S 125th St, 1st SS S/O 15th Ave, 20\"",
+    "latitude": 40.7845321388,
+    "longitude": -73.8431042437,
+    "borough": "Queens",
+    "neighborhood": "College Point"
+  },
+  {
+    "sample_site": "43600",
+    "sample_station": "SS - E/S Union St, BTW Northern Blvd & 35th Ave, 72\"",
+    "latitude": 40.7650693113,
+    "longitude": -73.8278257199,
+    "borough": "Queens",
+    "neighborhood": "Flushing-Willets Point"
+  },
+  {
+    "sample_site": "43650",
+    "sample_station": "SS - E/S Whitestone Expy (service Rd), 2nd SS S/O Downing St, 12\"",
+    "latitude": 40.7684004473,
+    "longitude": -73.8365717525,
+    "borough": "Queens",
+    "neighborhood": "Flushing-Willets Point"
+  },
+  {
+    "sample_site": "43750",
+    "sample_station": "SS - N/S 20th Ave, 2nd SS W/O Whitestone Expy, 12\"",
+    "latitude": 40.7817486558,
+    "longitude": -73.8293605484,
+    "borough": "Queens",
+    "neighborhood": "College Point"
+  },
+  {
+    "sample_site": "43900",
+    "sample_station": "SS - N/S 39th Ave, BTW 215th Pl & 216th St, IFO 215-37 39th Ave 24\"",
+    "latitude": 40.7660430335,
+    "longitude": -73.7679868243,
+    "borough": "Queens",
+    "neighborhood": "Bayside"
+  },
+  {
+    "sample_site": "43950",
+    "sample_station": "SS - N/S 26th Ave, BTW 210th Pl & 211st St (IFO Sony Theatres), 12\"",
+    "latitude": 40.7779353607,
+    "longitude": -73.7788135504,
+    "borough": "Queens",
+    "neighborhood": "Bay Terrace-Clearview"
+  },
+  {
+    "sample_site": "44150",
+    "sample_station": "SS - IFO 20-44 W/S 21st St, 2nd SS N/O 21st Ave, 20\"",
+    "latitude": 40.7831437053,
+    "longitude": -73.9137306508,
+    "borough": "Queens",
+    "neighborhood": "Astoria (North)-Ditmars-Steinway"
+  },
+  {
+    "sample_site": "44250",
+    "sample_station": "SS - IFO 50-33 N/S Broadway, 2nd SS E/O 49th St, 12\"",
+    "latitude": 40.754883848,
+    "longitude": -73.9101397777,
+    "borough": "Queens",
+    "neighborhood": "Astoria (East)-Woodside (North)"
+  },
+  {
+    "sample_site": "44350",
+    "sample_station": "SS - IFO 21-55 N/S 34th Ave, 1st SS W/O 24th St, 12\"",
+    "latitude": 40.7621726634,
+    "longitude": -73.9324458507,
+    "borough": "Queens",
+    "neighborhood": "Queensbridge-Ravenswood-Dutch Kills"
+  },
+  {
+    "sample_site": "44450",
+    "sample_station": "SS - IFO 223-03 N/S Manor Rd, 2nd SS W/O 229th St, 12\"",
+    "latitude": 40.7327274461,
+    "longitude": -73.743530729,
+    "borough": "Queens",
+    "neighborhood": "Bellerose"
+  },
+  {
+    "sample_site": "44550",
+    "sample_station": "SS - N/S 17th Ave, 1st SS E/O 201st St, 12\"",
+    "latitude": 40.7825497395,
+    "longitude": -73.7923392243,
+    "borough": "Queens",
+    "neighborhood": "Bay Terrace-Clearview"
+  },
+  {
+    "sample_site": "44700",
+    "sample_station": "SS - N/S Jewel Ave, BTW 172nd & 173rd Sts, 60\"",
+    "latitude": 40.731445532,
+    "longitude": -73.7971494067,
+    "borough": "Queens",
+    "neighborhood": "Pomonok-Electchester-Hillcrest"
+  },
+  {
+    "sample_site": "44750",
+    "sample_station": "SS - IFO 67-02 W/S Parsons Blvd, 2nd SS N/O Jewel Ave, 12\"",
+    "latitude": 40.7345620337,
+    "longitude": -73.8107505463,
+    "borough": "Queens",
+    "neighborhood": "Pomonok-Electchester-Hillcrest"
+  },
+  {
+    "sample_site": "44950",
+    "sample_station": "SS - W/S Selfridge St, 1st SS N/O Olcott St, 12\"",
+    "latitude": 40.7134032005,
+    "longitude": -73.8567481073,
+    "borough": "Queens",
+    "neighborhood": "Forest Hills"
+  },
+  {
+    "sample_site": "45000",
+    "sample_station": "SS - W/S Douglaston Pkwy, BTW 67th & 68th Aves, 48\"",
+    "latitude": 40.751122957,
+    "longitude": -73.7399084194,
+    "borough": "Queens",
+    "neighborhood": "Alley Pond Park"
+  },
+  {
+    "sample_site": "45050",
+    "sample_station": "SS - IFO 253-38 S/S 61st Ave, 1st SS W/O 255th St, 20\"",
+    "latitude": 40.7578899537,
+    "longitude": -73.7250465269,
+    "borough": "Queens",
+    "neighborhood": "Douglaston-Little Neck"
+  },
+  {
+    "sample_site": "45250",
+    "sample_station": "SS - E/S Beach 58th St, 2nd SS N/O Beach Channel Dr, 12\"",
+    "latitude": 40.5958917672,
+    "longitude": -73.7881342169,
+    "borough": "Queens",
+    "neighborhood": "Rockaway Beach-Arverne-Edgemere"
+  },
+  {
+    "sample_site": "45650",
+    "sample_station": "SS - IFO 107-02 W/S 109th St, 1st SS S/O 107th Ave, 12\"",
+    "latitude": 40.6817058521,
+    "longitude": -73.8318627517,
+    "borough": "Queens",
+    "neighborhood": "South Ozone Park"
+  },
+  {
+    "sample_site": "45700",
+    "sample_station": "SS - E/S Cross Bay Blvd, BTW 156th Ave & Belt Pkwy, 48\"",
+    "latitude": 40.6648577616,
+    "longitude": -73.8410752166,
+    "borough": "Queens",
+    "neighborhood": "Howard Beach-Lindenwood"
+  },
+  {
+    "sample_site": "45750",
+    "sample_station": "SS - N/S 161st Ave, 2nd SS W/O 83rd St, 12\"",
+    "latitude": 40.6544466673,
+    "longitude": -73.8491333229,
+    "borough": "Queens",
+    "neighborhood": "Howard Beach-Lindenwood"
+  },
+  {
+    "sample_site": "45850",
+    "sample_station": "SS - N/S Sutter Ave, 1st SS E/O 91st St,  IFO 91-01 Sutter Ave, 12\"",
+    "latitude": 40.6765790974,
+    "longitude": -73.8459359241,
+    "borough": "Queens",
+    "neighborhood": "Ozone Park"
+  },
+  {
+    "sample_site": "46100",
+    "sample_station": "SS - IFO 691 S/S Empire Ave, BTW Virginia St & Harris St, 12\" (branch from 48\" into regulator)",
+    "latitude": 40.607092466,
+    "longitude": -73.7432822771,
+    "borough": "Queens",
+    "neighborhood": "Far Rockaway-Bayswater"
+  },
+  {
+    "sample_site": "46150",
+    "sample_station": "SS - IFO 20-23 S/S Seagirt Blvd, 2nd SS W/O Beach 20th St, 12\"",
+    "latitude": 40.5949996126,
+    "longitude": -73.7549521379,
+    "borough": "Queens",
+    "neighborhood": "Far Rockaway-Bayswater"
+  },
+  {
+    "sample_site": "46250",
+    "sample_station": "SS - S/S Beach Channel Dr, 2nd SS E/O Beach 126th St, 12\"",
+    "latitude": 40.5817655248,
+    "longitude": -73.8478574761,
+    "borough": "Queens",
+    "neighborhood": "Breezy Point-Belle Harbor-Rockaway Park-Broad Channel"
+  },
+  {
+    "sample_site": "46350",
+    "sample_station": "SS - S/S Astoria Blvd, 1st SS W/O 110th St, 12\"",
+    "latitude": 40.7601152888,
+    "longitude": -73.8604703284,
+    "borough": "Queens",
+    "neighborhood": "East Elmhurst"
+  },
+  {
+    "sample_site": "46450",
+    "sample_station": "SS - IFO 150-03 N/S Northern Blvd, 1st SS E/O 150th St, 12\"",
+    "latitude": 40.76529819,
+    "longitude": -73.8143706754,
+    "borough": "Queens",
+    "neighborhood": "Murray Hill-Broadway Flushing"
+  },
+  {
+    "sample_site": "46850",
+    "sample_station": "SS - IFO 63-01 NW/S Eliot Ave, BTW 63rd & 64th Sts, 12\"",
+    "latitude": 40.7156412876,
+    "longitude": -73.8992264913,
+    "borough": "Queens",
+    "neighborhood": "Maspeth"
+  },
+  {
+    "sample_site": "46950",
+    "sample_station": "SS - IFO 118-40 S/S Metropolitan Ave, 2nd SS E/O 118th St IFO 118-18",
+    "latitude": 40.7065180338,
+    "longitude": -73.8333583112,
+    "borough": "Queens",
+    "neighborhood": "Kew Gardens"
+  },
+  {
+    "sample_site": "47150",
+    "sample_station": "SS - IFO 147-19 N/S 7th Ave, 2nd SS W/O 149th St, 12\"",
+    "latitude": 40.7938013939,
+    "longitude": -73.8207125188,
+    "borough": "Queens",
+    "neighborhood": "Whitestone-Beechhurst"
+  },
+  {
+    "sample_site": "47500",
+    "sample_station": "SS - IFO 20-10 W/S Cross Bay Blvd, BTW W 20th & W22nd Rd, 36\"",
+    "latitude": 40.5984563429,
+    "longitude": -73.8209561801,
+    "borough": "Queens",
+    "neighborhood": "Breezy Point-Belle Harbor-Rockaway Park-Broad Channel"
+  },
+  {
+    "sample_site": "47550",
+    "sample_station": "SS - E/S Beach 105th St, 2nd SS N/O Shore Front Pkwy, 12\"",
+    "latitude": 40.58207954,
+    "longitude": -73.8254677975,
+    "borough": "Queens",
+    "neighborhood": "Breezy Point-Belle Harbor-Rockaway Park-Broad Channel"
+  },
+  {
+    "sample_site": "47650",
+    "sample_station": "SS - N/S Rockaway Point Blvd, 2nd SS W/O Beach 199th St, 20\" (end of divided h'way)",
+    "latitude": 40.5608349771,
+    "longitude": -73.9087200811,
+    "borough": "Queens",
+    "neighborhood": "Breezy Point-Belle Harbor-Rockaway Park-Broad Channel"
+  },
+  {
+    "sample_site": "47750",
+    "sample_station": "SS - IFO 80 - 29 E/S Little Neck Pkwy, 2nd SS N/O 81st Ave, 20\"",
+    "latitude": 40.7425653577,
+    "longitude": -73.7168709382,
+    "borough": "Queens",
+    "neighborhood": "Glen Oaks-Floral Park-New Hyde Park"
+  },
+  {
+    "sample_site": "47850",
+    "sample_station": "SS - IFO 246-35 N/S Van Zandt Ave, 1st SS W/O 248th St, 12\"",
+    "latitude": 40.7625838526,
+    "longitude": -73.7369577296,
+    "borough": "Queens",
+    "neighborhood": "Douglaston-Little Neck"
+  },
+  {
+    "sample_site": "48600",
+    "sample_station": "SS - W/S Rockaway Blvd, BTW S Conduit Ave & 157th St, 48\"",
+    "latitude": 40.6664423495,
+    "longitude": -73.7799366431,
+    "borough": "Queens",
+    "neighborhood": "Springfield Gardens (South)-Brookville"
+  },
+  {
+    "sample_site": "48700",
+    "sample_station": "SS - IFO 160-05 N/S Cross Island Pkwy (service Rd), BTW 160th & 161st Sts, 20\"",
+    "latitude": 40.7865278085,
+    "longitude": -73.8022358087,
+    "borough": "Queens",
+    "neighborhood": "Whitestone-Beechhurst"
+  },
+  {
+    "sample_site": "49200",
+    "sample_station": "SS - S/S Jewel Ave, BTW Main St & 141st Sts, 72\"",
+    "latitude": 40.7301195433,
+    "longitude": -73.8236584764,
+    "borough": "Queens",
+    "neighborhood": "Kew Gardens Hills"
+  },
+  {
+    "sample_site": "50050",
+    "sample_station": "SS - N/S Hylan Blvd, 2nd SS W/O Edgewater St, 12\"",
+    "latitude": 40.6153873117,
+    "longitude": -74.0636668477,
+    "borough": "Staten Island",
+    "neighborhood": "Rosebank-Shore Acres-Park Hill"
+  },
+  {
+    "sample_site": "50200",
+    "sample_station": "SS - IFO 93 N/S Austin Place, BTW Victory Blvd & Ward Ave, 84\"",
+    "latitude": 40.6313284533,
+    "longitude": -74.0857272358,
+    "borough": "Staten Island",
+    "neighborhood": "West New Brighton-Silver Lake-Grymes Hill"
+  },
+  {
+    "sample_site": "50250",
+    "sample_station": "SS - IFO 937 N/S Victory Blvd, 2nd SS E/O Highland Ave, 20\"",
+    "latitude": 40.6218361549,
+    "longitude": -74.0971016951,
+    "borough": "Staten Island",
+    "neighborhood": "West New Brighton-Silver Lake-Grymes Hill"
+  },
+  {
+    "sample_site": "50300",
+    "sample_station": "SS - W/S Clove Rd, 1st S/O of Genesee St, SI, 72\" (formerly site 00023)",
+    "latitude": 40.6150791672,
+    "longitude": -74.102620731,
+    "borough": "Staten Island",
+    "neighborhood": "Westerleigh-Castleton Corners"
+  },
+  {
+    "sample_site": "50600",
+    "sample_station": "SS - N/S Victory Blvd, BTW Pike St & W/O Westervelt Ave, IFO 199 Victory Blvd, 20\"",
+    "latitude": 40.6362493404,
+    "longitude": -74.0826890154,
+    "borough": "Staten Island",
+    "neighborhood": "St. George-New Brighton"
+  },
+  {
+    "sample_site": "50650",
+    "sample_station": "SS - E/S York Ave, 1st SS N/O Pauw St, 8\"",
+    "latitude": 40.640645413,
+    "longitude": -74.0878435012,
+    "borough": "Staten Island",
+    "neighborhood": "St. George-New Brighton"
+  },
+  {
+    "sample_site": "50750",
+    "sample_station": "SS - E/S Woodhull Ave, 1st SS S/O Albourne Ave, 8\"",
+    "latitude": 40.5308805911,
+    "longitude": -74.1965724785,
+    "borough": "Staten Island",
+    "neighborhood": "Annadale-Huguenot-Prince's Bay-Woodrow"
+  },
+  {
+    "sample_site": "50850",
+    "sample_station": "SS - IFO 512 W/S Arlene St,1st SS N/O Dawson Ct, 12\"",
+    "latitude": 40.6051018768,
+    "longitude": -74.1659996079,
+    "borough": "Staten Island",
+    "neighborhood": "New Springville-Willowbrook-Bulls Head-Travis"
+  },
+  {
+    "sample_site": "51050",
+    "sample_station": "SS - IFO 163 E/S Tysens La, 2nd SS N/O Coverly St, 12\"",
+    "latitude": 40.5704403098,
+    "longitude": -74.1274460192,
+    "borough": "Staten Island",
+    "neighborhood": "Oakwood-Richmondtown"
+  },
+  {
+    "sample_site": "51100",
+    "sample_station": "SS - IFO 1759 NW/S Hylan Blvd, BTW Seaview & Liberty Aves, 48\"",
+    "latitude": 40.5862261499,
+    "longitude": -74.0925603314,
+    "borough": "Staten Island",
+    "neighborhood": "Grasmere-Arrochar-South Beach-Dongan Hills"
+  },
+  {
+    "sample_site": "51150",
+    "sample_station": "SS - IFO 650 S/S Tysens La, 2nd SS E/O Falcon Ave, 12\"",
+    "latitude": 40.5620668176,
+    "longitude": -74.1134838844,
+    "borough": "Staten Island",
+    "neighborhood": "Oakwood-Richmondtown"
+  },
+  {
+    "sample_site": "51250",
+    "sample_station": "SS - N/S Clarke Ave, 2nd SS W/O Amber St, 8\"",
+    "latitude": 40.5668408848,
+    "longitude": -74.1378050417,
+    "borough": "Staten Island",
+    "neighborhood": "Oakwood-Richmondtown"
+  },
+  {
+    "sample_site": "51350",
+    "sample_station": "SS - W/S Clove Rd, 1st SS S/O Tyler Ave (also 1st S/O Broadway), 12\"",
+    "latitude": 40.6225463734,
+    "longitude": -74.1128770667,
+    "borough": "Staten Island",
+    "neighborhood": "Westerleigh-Castleton Corners"
+  },
+  {
+    "sample_site": "51450",
+    "sample_station": "SS - IFO 119 E/S Justin Ave, BTW Hooper & O'Gorman Aves, 12\"",
+    "latitude": 40.555476139,
+    "longitude": -74.1342081368,
+    "borough": "Staten Island",
+    "neighborhood": "Oakwood-Richmondtown"
+  },
+  {
+    "sample_site": "51550",
+    "sample_station": "SS - W/S Huguenot Ave, 1st SS S/O Sinclair Ave, 12\"",
+    "latitude": 40.5414508017,
+    "longitude": -74.1966251582,
+    "borough": "Staten Island",
+    "neighborhood": "Annadale-Huguenot-Prince's Bay-Woodrow"
+  },
+  {
+    "sample_site": "51850",
+    "sample_station": "SS - IFO 67 N/S Hill St, 2nd SS W/O Tompkins Ave, 12\"",
+    "latitude": 40.6212531451,
+    "longitude": -74.0808044985,
+    "borough": "Staten Island",
+    "neighborhood": "Tompkinsville-Stapleton-Clifton-Fox Hills"
+  },
+  {
+    "sample_site": "51900",
+    "sample_station": "SS - N/S Vanderbilt Ave, BTW Bay St & Tompkins Ave, 66\"",
+    "latitude": 40.6215648757,
+    "longitude": -74.0744145457,
+    "borough": "Staten Island",
+    "neighborhood": "Tompkinsville-Stapleton-Clifton-Fox Hills"
+  },
+  {
+    "sample_site": "51950",
+    "sample_station": "SS - N/S Sobel Ct, 1st SS E/O Bowen St, 12\"",
+    "latitude": 40.6137855336,
+    "longitude": -74.0832879019,
+    "borough": "Staten Island",
+    "neighborhood": "Rosebank-Shore Acres-Park Hill"
+  },
+  {
+    "sample_site": "52000",
+    "sample_station": "SS - W/S Clove Rd, Corner of S/O Richmond Terrace, 24\"",
+    "latitude": 40.6369364659,
+    "longitude": -74.1268560094,
+    "borough": "Staten Island",
+    "neighborhood": "Port Richmond"
+  },
+  {
+    "sample_site": "52050",
+    "sample_station": "SS - IFO 218 W/S Nicholas Ave, 1st SS S/O Charles Ave, 12\"",
+    "latitude": 40.6347792004,
+    "longitude": -74.1408817239,
+    "borough": "Staten Island",
+    "neighborhood": "Port Richmond"
+  },
+  {
+    "sample_site": "52150",
+    "sample_station": "SS - N/S Goethals Rd N, BTW Domain & Cooke Sts, 12\"",
+    "latitude": 40.6168430668,
+    "longitude": -74.158983362,
+    "borough": "Staten Island",
+    "neighborhood": "Mariner's Harbor-Arlington-Graniteville"
+  },
+  {
+    "sample_site": "52350",
+    "sample_station": "SS - OPP 133 W/S Giffords La, 1st SS N/O Dewey Ave, 12\"",
+    "latitude": 40.5545456488,
+    "longitude": -74.1518394348,
+    "borough": "Staten Island",
+    "neighborhood": "Great Kills-Eltingville"
+  },
+  {
+    "sample_site": "52450",
+    "sample_station": "SS - OPP 526 N/S Travis Ave, 1st SS E/O Merrymount St, 12\"",
+    "latitude": 40.5907193897,
+    "longitude": -74.1580138269,
+    "borough": "Staten Island",
+    "neighborhood": "New Springville-Willowbrook-Bulls Head-Travis"
+  },
+  {
+    "sample_site": "52550",
+    "sample_station": "SS - IFO 43 N/S Dongan Hills Ave, 2nd SS N/O Jefferson St, 12\"",
+    "latitude": 40.5880776243,
+    "longitude": -74.1005990124,
+    "borough": "Staten Island",
+    "neighborhood": "Grasmere-Arrochar-South Beach-Dongan Hills"
+  },
+  {
+    "sample_site": "53500",
+    "sample_station": "SS - E/S Targee St, S/O Baltic Ave, IFO 935 Targee St, 48\"",
+    "latitude": 40.605995548,
+    "longitude": -74.0908698837,
+    "borough": "Staten Island",
+    "neighborhood": "Grasmere-Arrochar-South Beach-Dongan Hills"
+  },
+  {
+    "sample_site": "53550",
+    "sample_station": "SS - IFO 130 W/S Lamport Blvd, 2nd SS S/O Kramer St, 8\"",
+    "latitude": 40.5954184374,
+    "longitude": -74.0778205749,
+    "borough": "Staten Island",
+    "neighborhood": "Grasmere-Arrochar-South Beach-Dongan Hills"
+  },
+  {
+    "sample_site": "55450",
+    "sample_station": "SS - W/S Seguine Ave, 1st SS S/O Kingsland St, 12\"",
+    "latitude": 40.5167743173,
+    "longitude": -74.1969410099,
+    "borough": "Staten Island",
+    "neighborhood": "Annadale-Huguenot-Prince's Bay-Woodrow"
+  },
+  {
+    "sample_site": "56000",
+    "sample_station": "SS - N/S Hylan Blvd, opposite Holten Ave, 24\"",
+    "latitude": 40.5202140617,
+    "longitude": -74.1950520536,
+    "borough": "Staten Island",
+    "neighborhood": "Annadale-Huguenot-Prince's Bay-Woodrow"
+  },
+  {
+    "sample_site": "56200",
+    "sample_station": "SS - IFO 855 E/S Bloomingdale Rd, BTW Wirt & Candon Aves, 20\"",
+    "latitude": 40.5469448667,
+    "longitude": -74.2199108942,
+    "borough": "Staten Island",
+    "neighborhood": "Arden Heights-Rossville"
+  },
+  {
+    "sample_site": "56300",
+    "sample_station": "SS - E/S Richmond Ave, 1st SS S/O Vedder Ave, 20\"",
+    "latitude": 40.6219407803,
+    "longitude": -74.1503573329,
+    "borough": "Staten Island",
+    "neighborhood": "Mariner's Harbor-Arlington-Graniteville"
+  },
+  {
+    "sample_site": "56400",
+    "sample_station": "SS - IFO 328 S/S Henderson Ave, BTW Westbury & Brentwood Aves, 20\"",
+    "latitude": 40.6392077376,
+    "longitude": -74.1036162806,
+    "borough": "Staten Island",
+    "neighborhood": "West New Brighton-Silver Lake-Grymes Hill"
+  },
+  {
+    "sample_site": "57200",
+    "sample_station": "SS - W/S Richmond Ave, BTW Genesee & Scranton Aves, 48\"",
+    "latitude": 40.5529555296,
+    "longitude": -74.1682234863,
+    "borough": "Staten Island",
+    "neighborhood": "Great Kills-Eltingville"
+  },
+  {
+    "sample_site": "57750",
+    "sample_station": "SS - IFO 264 W/S Lockman Ave, 2nd SS S/O Brabant St, 12\"",
+    "latitude": 40.6307195401,
+    "longitude": -74.1618193304,
+    "borough": "Staten Island",
+    "neighborhood": "Mariner's Harbor-Arlington-Graniteville"
+  },
+  {
+    "sample_site": "58150",
+    "sample_station": "SS - IFO 3262 W/S Richmond Ave, 1st SS N/O Gurley Ave, 12\"",
+    "latitude": 40.559719304,
+    "longitude": -74.1697124618,
+    "borough": "Staten Island",
+    "neighborhood": "Great Kills-Eltingville"
+  },
+  {
+    "sample_site": "58250",
+    "sample_station": "SS - IFO 578 E/S Drumgoole Rd East, 2nd SS N/O Arden Ave, 12\"",
+    "latitude": 40.5470034914,
+    "longitude": -74.1799314431,
+    "borough": "Staten Island",
+    "neighborhood": "Great Kills-Eltingville"
+  },
+  {
+    "sample_site": "58300",
+    "sample_station": "SS - IFO 4299 NW/S Hylan Blvd, BTW W\"ester & Thornycroft Aves, 48\"",
+    "latitude": 40.5359049994,
+    "longitude": -74.1523007489,
+    "borough": "Staten Island",
+    "neighborhood": "Great Kills-Eltingville"
+  },
+  {
+    "sample_site": "58350",
+    "sample_station": "SS - IFO 139 NE/S W\"ester Ave, 2nd SS N/O Hylan Blvd, 8\"",
+    "latitude": 40.5365938124,
+    "longitude": -74.1544573048,
+    "borough": "Staten Island",
+    "neighborhood": "Great Kills-Eltingville"
+  },
+  {
+    "sample_site": "58400",
+    "sample_station": "SS - IFO 408 W/S Woodrow Rd, BTW Arden Ave & Almond St, 20\"",
+    "latitude": 40.5498919842,
+    "longitude": -74.1879095843,
+    "borough": "Staten Island",
+    "neighborhood": "Arden Heights-Rossville"
+  },
+  {
+    "sample_site": "58600",
+    "sample_station": "SS - N/S Hylan Blvd, 1st SS E/O Page Ave, 20\"",
+    "latitude": 40.5079827125,
+    "longitude": -74.2294131173,
+    "borough": "Staten Island",
+    "neighborhood": "Tottenville-Charleston"
+  },
+  {
+    "sample_site": "58650",
+    "sample_station": "SS - IFO 510 W/S Main St, 2nd SS S/O Hylan Blvd, 12\"",
+    "latitude": 40.5023133224,
+    "longitude": -74.2446686367,
+    "borough": "Staten Island",
+    "neighborhood": "Tottenville-Charleston"
+  },
+  {
+    "sample_site": "58850",
+    "sample_station": "SS - IFO 255 N/S Westwood Ave, 1st SS W/O Franklin Pl, 12\"",
+    "latitude": 40.6065900128,
+    "longitude": -74.1191705617,
+    "borough": "Staten Island",
+    "neighborhood": "Todt Hill-Emerson Hill-Lighthouse Hill-Manor Heights"
+  },
+  {
+    "sample_site": "58950",
+    "sample_station": "SS - IFO 1085-15 N/S Castleton Ave, 2nd SS W/O Broadway, 12\"",
+    "latitude": 40.6344857743,
+    "longitude": -74.1187664096,
+    "borough": "Staten Island",
+    "neighborhood": "West New Brighton-Silver Lake-Grymes Hill"
+  },
+  {
+    "sample_site": "59050",
+    "sample_station": "SS - IFO 989 N/S Forest Ave, 2nd SS W/O Clove Rd, 12\"",
+    "latitude": 40.6274798287,
+    "longitude": -74.1225618236,
+    "borough": "Staten Island",
+    "neighborhood": "Port Richmond"
+  },
+  {
+    "sample_site": "59300",
+    "sample_station": "SS - N/S Victory Blvd, 1st SS E/O Royal Oak Rd, 16\"",
+    "latitude": 40.6139000546,
+    "longitude": -74.1130965636,
+    "borough": "Staten Island",
+    "neighborhood": "Westerleigh-Castleton Corners"
+  },
+  {
+    "sample_site": "59350",
+    "sample_station": "SS - IFO 1824 S/S Victory Blvd, BTW Raymond Ave & Lester St, 12\"",
+    "latitude": 40.6129224808,
+    "longitude": -74.1241486811,
+    "borough": "Staten Island",
+    "neighborhood": "Westerleigh-Castleton Corners"
+  },
+  {
+    "sample_site": "76150",
+    "sample_station": "SS - IFO 160-20 S/S 85th Ave, BTW 160th & 161st Sts",
+    "latitude": 40.7123453924,
+    "longitude": -73.8038807232,
+    "borough": "Queens",
+    "neighborhood": "Jamaica Hills-Briarwood"
+  },
+  {
+    "sample_site": "76300",
+    "sample_station": "SS - N/S Hillside Ave & BTW 213 Pl & 214 St, 16\"",
+    "latitude": 40.725496528,
+    "longitude": -73.7530255468,
+    "borough": "Queens",
+    "neighborhood": "Queens Village"
+  },
+  {
+    "sample_site": "76450",
+    "sample_station": "SS - OPP 139-50 N/S 85th Dr, 2nd SS E/O 139th St",
+    "latitude": 40.7088900212,
+    "longitude": -73.8156855881,
+    "borough": "Queens",
+    "neighborhood": "Jamaica Hills-Briarwood"
+  },
+  {
+    "sample_site": "76550",
+    "sample_station": "SS - N/S Baisley Blvd, W/O Smith St",
+    "latitude": 40.6787154898,
+    "longitude": -73.7791354228,
+    "borough": "Queens",
+    "neighborhood": "Baisley Park"
+  },
+  {
+    "sample_site": "76650",
+    "sample_station": "SS - IFO 87-60 W/S Chevy Chase St, 2nd S/O Henley Rd",
+    "latitude": 40.7168609238,
+    "longitude": -73.7755423296,
+    "borough": "Queens",
+    "neighborhood": "Jamaica Estates-Holliswood"
+  },
+  {
+    "sample_site": "76750",
+    "sample_station": "SS - IFO 160-10 S/S 89th Ave, 2nd E/O Parsons Blvd",
+    "latitude": 40.7060679612,
+    "longitude": -73.8006025859,
+    "borough": "Queens",
+    "neighborhood": "Jamaica"
+  },
+  {
+    "sample_site": "76850",
+    "sample_station": "SS - IFO 111-46 W/S Farmers Blvd, 1st SS N/O Keeseville Ave",
+    "latitude": 40.7009275904,
+    "longitude": -73.764585286,
+    "borough": "Queens",
+    "neighborhood": "St. Albans"
+  },
+  {
+    "sample_site": "76950",
+    "sample_station": "SS - IFO 90-20 W/S Francis Lewis Blvd, 1st SS S/O 90th Ave",
+    "latitude": 40.717388379,
+    "longitude": -73.7568469767,
+    "borough": "Queens",
+    "neighborhood": "Hollis"
+  },
+  {
+    "sample_site": "77050",
+    "sample_station": "SS - IFO 93-40 E/S 217th St, S/O 94th Ave (IFO - Queens Village Library)",
+    "latitude": 40.7200070542,
+    "longitude": -73.7393588452,
+    "borough": "Queens",
+    "neighborhood": "Queens Village"
+  },
+  {
+    "sample_site": "77150",
+    "sample_station": "SS - N/S Linden Blvd, 1st SS W/O 230th St",
+    "latitude": 40.6925470015,
+    "longitude": -73.7316229981,
+    "borough": "Queens",
+    "neighborhood": "Cambria Heights"
+  },
+  {
+    "sample_site": "77350",
+    "sample_station": "SS - S/S Merrick Blvd, BTW 222nd St & 223rd St, IFO 222-18 Merrick Blvd",
+    "latitude": 40.6780498902,
+    "longitude": -73.7465170697,
+    "borough": "Queens",
+    "neighborhood": "Laurelton"
+  },
+  {
+    "sample_site": "77550",
+    "sample_station": "SS - IFO E/S 222nd St, 2nd S/O 91st Rd",
+    "latitude": 40.7270290687,
+    "longitude": -73.7349405289,
+    "borough": "Queens",
+    "neighborhood": "Queens Village"
+  },
+  {
+    "sample_site": "77650",
+    "sample_station": "SS - OPP 110-52 E/S 207th St, 1st N/O 111th Ave",
+    "latitude": 40.7059735171,
+    "longitude": -73.7494694473,
+    "borough": "Queens",
+    "neighborhood": "Queens Village"
+  },
+  {
+    "sample_site": "77750",
+    "sample_station": "SS - OPP 120-11 W/S 237th St, 1st SS S/O 120th Ave",
+    "latitude": 40.6853008587,
+    "longitude": -73.7281510522,
+    "borough": "Queens",
+    "neighborhood": "Cambria Heights"
+  },
+  {
+    "sample_site": "77850",
+    "sample_station": "SS - N/S 90th Ave, BTW 179th & 180th Sts",
+    "latitude": 40.711007843,
+    "longitude": -73.7820439244,
+    "borough": "Queens",
+    "neighborhood": "Jamaica"
+  },
+  {
+    "sample_site": "78050",
+    "sample_station": "SS - OPP 110-38 E/S Springfield Blvd, 1st S/O 110th Rd",
+    "latitude": 40.7073826362,
+    "longitude": -73.7388275011,
+    "borough": "Queens",
+    "neighborhood": "Queens Village"
+  },
+  {
+    "sample_site": "78150",
+    "sample_station": "SS - IFO 85-31 E/S 120th St, 2nd SS N/O Hillside Ave",
+    "latitude": 40.7022160097,
+    "longitude": -73.8308120007,
+    "borough": "Queens",
+    "neighborhood": "Kew Gardens"
+  },
+  {
+    "sample_site": "78350",
+    "sample_station": "SS - N/S Hillside Ave, BTW 189th & 190th Sts",
+    "latitude": 40.7156197525,
+    "longitude": -73.772473082,
+    "borough": "Queens",
+    "neighborhood": "Jamaica Estates-Holliswood"
+  },
+  {
+    "sample_site": "78450",
+    "sample_station": "SS - IFO 88-18 W/S Hollis Court Blvd, 2nd SS S/O Hillside Ave",
+    "latitude": 40.7232342512,
+    "longitude": -73.7540332699,
+    "borough": "Queens",
+    "neighborhood": "Queens Village"
+  },
+  {
+    "sample_site": "78550",
+    "sample_station": "SS - W/S Springfield Blvd, 2nd SS S/O 116th Ave",
+    "latitude": 40.6974154771,
+    "longitude": -73.7433203614,
+    "borough": "Queens",
+    "neighborhood": "Cambria Heights"
+  },
+  {
+    "sample_site": "78650",
+    "sample_station": "SS -N/S Linden Blvd, 1st SS E/O 191st St (IFO Queens Library)",
+    "latitude": 40.6924036311,
+    "longitude": -73.7599094811,
+    "borough": "Queens",
+    "neighborhood": "St. Albans"
+  },
+  {
+    "sample_site": "78850",
+    "sample_station": "SS - OPP 109-36 E/S 160th St, 2nd SS N/O 110th Ave",
+    "latitude": 40.6933846267,
+    "longitude": -73.7914593763,
+    "borough": "Queens",
+    "neighborhood": "South Jamaica"
+  },
+  {
+    "sample_site": "79050",
+    "sample_station": "SS - S/S South Conduit Ave, 1st SS E/O 221st St",
+    "latitude": 40.6654211395,
+    "longitude": -73.7566939789,
+    "borough": "Queens",
+    "neighborhood": "Springfield Gardens (South)-Brookville"
+  },
+  {
+    "sample_site": "79150",
+    "sample_station": "SS - IFO 127-11 E/S Farmers Blvd (Keyspan), 2nd SS N/O Merrick Blvd",
+    "latitude": 40.680847935,
+    "longitude": -73.7611480874,
+    "borough": "Queens",
+    "neighborhood": "St. Albans"
+  },
+  {
+    "sample_site": "79450",
+    "sample_station": "SS - OPP 127-18 N/S Foch Blvd, 1st SS W/O 128th St",
+    "latitude": 40.6758938006,
+    "longitude": -73.8098390859,
+    "borough": "Queens",
+    "neighborhood": "South Ozone Park"
+  },
+  {
+    "sample_site": "79550",
+    "sample_station": "SS - OPP 109-11 W/S 127th St, 2nd SS S/O 109th Ave",
+    "latitude": 40.6836561382,
+    "longitude": -73.814951291,
+    "borough": "Queens",
+    "neighborhood": "South Ozone Park"
+  }
+]
