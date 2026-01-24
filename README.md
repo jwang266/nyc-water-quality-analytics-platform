@@ -1,9 +1,9 @@
 # NYC Water Quality Analytics Platform
 
-A full-stack Node.js + Express + MongoDB web application for analyzing and visualizing NYC drinking water quality by borough, featuring interactive dashboards and community engagement.
+A full-stack Node.js + Express (TypeScript) + MongoDB web application for analyzing and visualizing NYC drinking water quality by borough, featuring interactive dashboards and community engagement.
 
 ## Tech Stack
-- Node.js / Express
+- Node.js / Express (TypeScript)
 - MongoDB / Mongoose
 - Handlebars (server-rendered views)
 - Client-side AJAX (fetch)
@@ -17,6 +17,9 @@ A full-stack Node.js + Express + MongoDB web application for analyzing and visua
 ```bash
 npm install
 npm run seed
+# development (TypeScript, tsx)
+npm run dev
+# production (compiled JavaScript)
 npm start
 ```
 The application uses a local MongoDB database. You must seed the database before starting the server.
@@ -52,17 +55,18 @@ For security reasons, administrator accounts are not publicly creatable and can 
 
 ```
 .
-├── config
-├── data
-├── helper
-├── model
 ├── public
-│   ├── css
-│   │   └── videos
-│   ├── geojson
-│   └── js
-├── routes
+│   ├── css
+│   │   └── videos
+│   ├── geojson
+│   └── js
 ├── seedData
+├── src
+│   ├── config
+│   ├── data
+│   ├── helper
+│   ├── model
+│   └── routes
 └── views
     └── layouts
 
