@@ -1,9 +1,10 @@
 import { boroughCollection, sampleSiteCollection, waterSampleCollection } from '../model/index.js';
-import fs from 'fs';
+import fs from 'node:fs';
+import path from 'node:path';
 
 const boroughDes = JSON.parse(
   fs.readFileSync(
-    new URL('../seedData/boroughsDescription.json', import.meta.url),
+    path.join(process.cwd(), 'seedData', 'boroughsDescription.json'),
     'utf-8'
   )
 );

@@ -2,10 +2,12 @@
   "name": "waterqualityapp",
   "version": "1.0.0",
   "description": "Local version of Water Quality Explorer",
-  "main": "app.js",
+  "main": "dist/index.js",
   "type": "module",
   "scripts": {
-    "start": "node app.js",
+    "dev": "tsx watch src/index.ts",
+    "build": "tsc",
+    "start": "node dist/index.js",
     "seed": "node seed.js"
   },
   "keywords": [],
@@ -20,5 +22,14 @@
     "mongoose": "^9.0.0",
     "papaparse": "^5.5.3",
     "passport": "^0.7.0"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.6",
+    "@types/express-session": "^1.18.2",
+    "@types/node": "^25.0.10",
+    "@types/passport": "^1.0.17",
+    "ts-node-dev": "^2.0.0",
+    "tsx": "^4.21.0",
+    "typescript": "^5.9.3"
   }
 }
