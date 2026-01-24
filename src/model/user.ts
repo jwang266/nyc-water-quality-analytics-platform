@@ -1,13 +1,11 @@
-import mongoose from "mongoose";
-
-const { Schema, model } = mongoose;
+import mongoose, { InferSchemaType, Schema, model } from "mongoose";
 
 const userSchema = new Schema(
   {
     lowerEmail: { type: String, required: true, trim: true },
     hashedPwd: { type: String, required: true },
-    fname: { type: String, trim: true, default: '' },
-    lname: { type: String, trim: true, default: '' },
+    fname: { type: String, trim: true, default: "" },
+    lname: { type: String, trim: true, default: "" },
     role: { type: String, default: "user" },
     comments: [{ type: Schema.Types.ObjectId, ref: "Comment" }],
     likedBoroughs: [{ type: Schema.Types.ObjectId, ref: "Borough" }],
@@ -19,10 +17,14 @@ const userSchema = new Schema(
 );
 
 // Unique index only for non-deleted users
-userSchema.index({ lowerEmail: 1, isDeleted: 1 }, { 
-  unique: true,
-  partialFilterExpression: { isDeleted: false }
-});
+userSchema.index(
+  { lowerEmail: 1, isDeleted: 1 },
+  {
+    unique: true,
+    partialFilterExpression: { isDeleted: false }
+  }
+);
 
-const userCollection = model("User", userSchema)
+export type User = InferSchemaType<typeof userSchema>;
+const userCollection = model("User", userSchema);
 export default userCollection;
