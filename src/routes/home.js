@@ -41,7 +41,7 @@ router.get('/', async (req, res) => {
 
       res.render('home', {
         title: 'Welcome to Water Monitor',
-        css: '/public/css/styles.css',
+        css: '/css/styles.css',
         boroughSnapshots: boroughSnapshots,
         isAuthenticated: !!req.session.user
       });

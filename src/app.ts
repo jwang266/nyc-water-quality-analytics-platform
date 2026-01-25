@@ -52,7 +52,7 @@ app.use((req, res, next) => {
 app.use(logMdw);
 
 // Static + Views are at project root (not inside src)
-app.use("/public", express.static(path.join(process.cwd(), "public")));
+app.use(express.static(path.join(process.cwd(), 'public')));
 
 // Handlebars Configuration
 app.engine(
@@ -115,7 +115,7 @@ app.engine(
 );
 
 app.set("view engine", "handlebars");
-app.set("views", path.join(process.cwd(), "views"));
+app.set('views', path.join(process.cwd(), 'views'));
 
 // Configure Routes
 configRoutes(app);

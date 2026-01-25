@@ -6,7 +6,7 @@ router.get('/', async (req, res) => {
   try {
     res.render('watersamples', {
       title: 'Water Quality Samples',
-      css: '/public/css/styles.css'
+      css: '/css/styles.css'
     });
   } catch (e) {
     res.status(500).render('error', { error: e.message || e });

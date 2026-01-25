@@ -390,7 +390,7 @@
   }
 
   let boroughLayer;
-  fetch("/public/geojson/new-york-city-boroughs.geojson")
+  fetch("/geojson/new-york-city-boroughs.geojson")
     .then(res => res.json())
     .then(data => {
       boroughLayer = L.geoJSON(data, {

@@ -39,7 +39,7 @@ router.get('/profile', requireAuth, async (req, res) => {
       user: req.session.user,
       likedBoroughs: likedBoroughsDetails,
       userComments,
-      css: '/public/css/styles.css'
+      css: '/css/styles.css'
     });
   } catch (e) {
     console.error('Profile Load Error:', e);
@@ -50,7 +50,7 @@ router.get('/profile', requireAuth, async (req, res) => {
 router.get('/edit-profile', requireAuth, (req, res) => {
   res.render('edit-profile', {
     title: 'Edit Profile',
-    css: '/public/css/styles.css',
+    css: '/css/styles.css',
     user: req.session.user
   });
 });
@@ -71,7 +71,7 @@ router.post('/edit-profile', requireAuth, async (req, res) => {
   } catch (e) {
     res.status(400).render('edit-profile', {
       title: 'Edit Profile',
-      css: '/public/css/styles.css',
+      css: '/css/styles.css',
       user: req.session.user,
       error: e.toString(),
       hasErrors: true
@@ -109,7 +109,7 @@ router.get('/login', (req, res) => {
   if (req.session.user) return res.redirect('/');
   res.render('login', {
     title: 'Login',
-    css: '/public/css/styles.css',
+    css: '/css/styles.css',
     redirect: req.query.redirect || '/'
   });
 });
@@ -128,7 +128,7 @@ router.post('/login', async (req, res) => {
       hasErrors: true,
       email,
       redirect,
-      css: '/public/css/styles.css'
+      css: '/css/styles.css'
     });
   }
 });
@@ -137,7 +137,7 @@ router.get('/register', (req, res) => {
   if (req.session.user) return res.redirect('/');
   res.render('register', {
     title: 'Create Account',
-    css: '/public/css/styles.css'
+    css: '/css/styles.css'
   });
 });
 
@@ -160,7 +160,7 @@ router.post('/register', async (req, res) => {
       error: e,
       hasErrors: true,
       reqBody: { fname, lname, email },
-      css: '/public/css/styles.css'
+      css: '/css/styles.css'
     });
   }
 });
@@ -168,7 +168,7 @@ router.post('/register', async (req, res) => {
 router.get('/forgot-password', (req, res) => {
   res.render('forgot-password', {
     title: 'Forgot Password',
-    css: '/public/css/styles.css'
+    css: '/css/styles.css'
   });
 });
 
@@ -191,14 +191,14 @@ router.post('/forgot-password', async (req, res) => {
       title: 'Forgot Password',
       message,
       resetLink,
-      css: '/public/css/styles.css'
+      css: '/css/styles.css'
     });
   } catch (e) {
     res.render('forgot-password', {
       title: 'Forgot Password',
       error: e,
       hasErrors: true,
-      css: '/public/css/styles.css'
+      css: '/css/styles.css'
     });
   }
 });
@@ -207,7 +207,7 @@ router.get('/reset-password/:token', (req, res) => {
   res.render('reset-password', {
     title: 'Reset Password',
     token: req.params.token,
-    css: '/public/css/styles.css'
+    css: '/css/styles.css'
   });
 });
 
@@ -223,7 +223,7 @@ router.post('/reset-password/:token', async (req, res) => {
     res.render('login', {
       title: 'Login',
       message: 'Password reset successful! Please log in.',
-      css: '/public/css/styles.css'
+      css: '/css/styles.css'
     });
   } catch (e) {
     res.status(400).render('reset-password', {
@@ -231,7 +231,7 @@ router.post('/reset-password/:token', async (req, res) => {
       token,
       error: e,
       hasErrors: true,
-      css: '/public/css/styles.css'
+      css: '/css/styles.css'
     });
   }
 });

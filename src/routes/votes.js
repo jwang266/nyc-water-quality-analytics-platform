@@ -74,7 +74,7 @@ router.get('/best', async (req, res) => {
       user: req.session.user || null,
       userHasVoted,
       toast,
-      css: '/public/css/styles.css'
+      css: '/css/styles.css'
     });
 
   } catch (e) {

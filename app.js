@@ -46,7 +46,7 @@ app.use((req, res, next) => {
 // Logging Middleware
 app.use(logMdw);
 
-app.use('/public', express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'public')));
 
 // Handlebars Configuration
 app.engine(
