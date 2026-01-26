@@ -6,9 +6,9 @@ A full-stack Node.js + Express (TypeScript) + MongoDB web application for analyz
 - Node.js / Express (TypeScript)
 - MongoDB / Mongoose
 - Handlebars (server-rendered views)
-- Client-side AJAX (fetch)
+- React island (Vite) for interactive sample browsing
+- Client-side data fetching (fetch / AJAX)
 - Custom CSS + Dark Mode
-- Charts/diagrams for trends and comparisons
 
 ---
 
@@ -55,10 +55,15 @@ For security reasons, administrator accounts are not publicly creatable and can 
 
 ```
 .
+├── islands
+│   └── watersamples
+│       └── src
 ├── public
 │   ├── css
 │   │   └── videos
 │   ├── geojson
+│   ├── islands
+│   │   └── watersamples
 │   └── js
 ├── seedData
 ├── src
@@ -69,11 +74,10 @@ For security reasons, administrator accounts are not publicly creatable and can 
 │   └── routes
 └── views
     └── layouts
-
-14 directories
-
-
 ```
+
+- islands/watersamples/ contains the React island (Vite) used to render and paginate the Water Samples list.
+- The rest of the app remains server-rendered with Handlebars.
 
 ---
 
@@ -87,7 +91,8 @@ For security reasons, administrator accounts are not publicly creatable and can 
 - Data overview comparison table  
 - User profiles with liked boroughs and comments  
 - Admin comment moderation
-- Client-side AJAX interactions  
+- Client-side AJAX interactions for comments, likes, and voting
+- React island for interactive water sample browsing
 - Simple health tips 
 
 ## Extra Features
@@ -134,7 +139,7 @@ Displays detailed information for a selected borough, including:
 **method**: `GET`  
 **route**: `/waterSamples`
 
-Renders the water samples browse/search page. Sample results are loaded dynamically via AJAX.
+Sample results are rendered by a React island and fetched from /api/water-samples on the client.
 
 ---
 
@@ -210,9 +215,9 @@ while the data layer is designed to scale to the full NYC Open Data dataset
 
 ## Notes
 
-* AJAX is used for dynamic content loading
+* AJAX is used for dynamic interactions such as comments and likes
+* The water samples page uses a React island for client-side rendering and pagination
 * Custom CSS is used throughout the application
 * MongoDB is accessed via Mongoose models
 * Password reset links are displayed in the UI for local development and demonstration purposes.
 * The application has been tested to ensure core features function as intended
-
