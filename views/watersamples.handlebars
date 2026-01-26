@@ -3,25 +3,12 @@
     <div>
       <h2 class="bb-title">Recent Water Quality Data</h2>
       <p class="ws-description">
-        Showing water quality samples collected in the last year. Data is loaded dynamically via AJAX.
+        Showing water quality samples collected in the last year. Data is loaded dynamically on the client.
       </p>
     </div>
   </div>
 
-  <div id="error-div" class="ws-error hidden"></div>
-
-  <p id="loading-msg" class="ws-status-text hidden">Loading data...</p>
-
-  <ul id="sample-list" class="ws-list"></ul>
-
-  <button id="btn-load-more" class="ws-load-more-btn hidden">
-    Load More
-  </button>
-
-  <p id="no-more-data" class="ws-status-text hidden">
-    No more samples to load.
-  </p>
+  <div id="ws-react-root" data-endpoint="/api/water-samples"></div>
 </div>
 
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="/js/watersamples.js"></script>
+<script type="module" src="/islands/watersamples/main.js"></script>

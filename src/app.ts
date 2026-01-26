@@ -7,7 +7,7 @@ import path from "node:path";
 
 import configRoutes from "./routes/index.js";
 import connectDB from "./config/mongoConnection.js";
-import { logMdw } from "../middleware.js";
+import { logMdw } from "./middleware.js";
 
 dotenv.config();
 

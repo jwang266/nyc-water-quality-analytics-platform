@@ -4,7 +4,7 @@
     "module": "NodeNext",
     "moduleResolution": "NodeNext",
 
-    "rootDir": ".",
+    "rootDir": "src",
     "outDir": "dist",
 
     "strict": true,
@@ -16,6 +16,6 @@
     "allowJs": true,
     "checkJs": false
   },
-  "include": ["**/*.ts", "**/*.js"],
+  "include": ["src/**/*.ts", "src/**/*.js"],
   "exclude": ["node_modules", "dist"]
 }
