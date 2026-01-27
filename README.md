@@ -1,14 +1,17 @@
 # NYC Water Quality Analytics Platform
 
+http://nyc-water-quality-analytics-env.eba-etgqypky.us-east-1.elasticbeanstalk.com
+
 A full-stack Node.js + Express (TypeScript) + MongoDB web application for analyzing and visualizing NYC drinking water quality by borough, featuring interactive dashboards and community engagement.
 
 ## Tech Stack
 - Node.js / Express (TypeScript)
-- MongoDB / Mongoose
+- MongoDB Atlas / Mongoose
 - Handlebars (server-rendered views)
 - React island (Vite) for interactive sample browsing
 - Client-side data fetching (fetch / AJAX)
 - Custom CSS + Dark Mode
+- Deployed on AWS Elastic Beanstalk
 
 ---
 
