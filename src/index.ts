@@ -4,11 +4,13 @@ import { disconnectDB } from "./config/mongoConnection.js";
 const PORT = Number(process.env.PORT) || 3000;
 
 app.listen(PORT, () => {
-  console.log(`Server running at http://localhost:${PORT}`);
+  console.log(`Server running on port ${PORT}`);
 });
 
-process.on("SIGINT", async () => {
-  console.log("Shutting down...");
-  await disconnectDB();
-  process.exit(0);
-});
+for (const sig of ["SIGINT", "SIGTERM"] as const) {
+  process.on(sig, async () => {
+    console.log("Shutting down...");
+    await disconnectDB();
+    process.exit(0);
+  });
+}

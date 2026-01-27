@@ -1,7 +1,6 @@
 import express from "express";
 import session from "express-session";
 import passport from "passport";
-import dotenv from "dotenv";
 import exphbs from "express-handlebars";
 import path from "node:path";
 
@@ -9,7 +8,10 @@ import configRoutes from "./routes/index.js";
 import connectDB from "./config/mongoConnection.js";
 import { logMdw } from "./middleware.js";
 
-dotenv.config();
+if (process.env.NODE_ENV !== "production") {
+  const { default: dotenv } = await import("dotenv");
+  dotenv.config();
+}
 
 // Connect to Local MongoDB
 await connectDB();
