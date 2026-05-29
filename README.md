@@ -2,7 +2,7 @@
 
 http://nyc-water-quality-analytics-env.eba-etgqypky.us-east-1.elasticbeanstalk.com
 
-A full-stack Node.js + Express (TypeScript) + MongoDB web application for analyzing and visualizing NYC drinking water quality by borough, featuring interactive dashboards and community engagement.
+Full-stack Node.js + Express (TypeScript) + MongoDB Atlas — borough water-quality analytics, dashboards, and community engagement.
 
 ## Tech Stack
 - Node.js / Express — full-stack TypeScript (strict mode)
@@ -17,22 +17,16 @@ A full-stack Node.js + Express (TypeScript) + MongoDB web application for analyz
 
 ## Running the Application
 
+Set `MONGODB_URI` in `.env` to your **MongoDB Atlas** cluster (no local MongoDB).
+
 ```bash
-npm install
-npm run seed
-# development (TypeScript, tsx)
-npm run dev
-# production (compiled JavaScript)
-npm start
+npm install          # resolve dependencies
+npm run data:sync    # sole data pipeline: rolling 2-year NYC Open Data → Atlas (src/scripts/ingestWaterData.ts)
+npm run dev          # local dev: tsx hot-reload on src/index.ts (http://localhost:3000)
+npm run build        # local compile: tsc → dist/, PostCSS → public/css/main.css, Vite → public/islands/watersamples/
+npm start            # production run: node dist/index.js
 ```
-The application uses a local MongoDB database. You must seed the database before starting the server.
 
-The server will start on:
-
-```text
-http://localhost:3000
-
-```
 ---
 
 ## Test Accounts
@@ -47,66 +41,52 @@ The following test accounts are provided for testing purposes:
 - Email: `admin123@gmail.com`
 - Password: `Password123!`
 
-These accounts are pre-seeded in the database and can be used to test user features and admin moderation functionality.
-For security reasons, administrator accounts are not publicly creatable and can only be provisioned via database seeding.
-
+Use these credentials against the Atlas-backed deployment to test user features and admin moderation.
+Administrator accounts are not publicly creatable.
 
 ---
-
 
 ## Project Structure
 
 ```
 .
+├── dist/                  # compiled JS (build locally; deployed to AWS)
 ├── islands
 ├── public
 │   ├── css
 │   ├── geojson
 │   ├── islands
 │   └── js
-├── seedData
-│   └── sampleSites.json
 ├── src
 │   ├── config
 │   ├── data
 │   ├── helper
 │   ├── model
 │   ├── routes
+│   ├── scripts
 │   ├── styles
 │   ├── types
 │   ├── app.ts
 │   ├── index.ts
-│   ├── middleware.ts
-│   └── seed.ts
+│   └── middleware.ts
 └── views
     └── layouts
 ```
 
-- islands/watersamples/ contains the React island (Vite) used to render and paginate the Water Samples list.
-- The view layer combines server-rendered Handlebars templates with dynamic React functional components (Islands).
-- Client-side network calls use the centralized ES Module API client at public/js/apiClient.js.
+**Deploy:** Run `npm run build` locally before packaging for AWS Elastic Beanstalk. Upload prebuilt `dist/`, CSS, and island bundles — EB runs `npm start` only (no cloud `tsc`).
 
 ---
 
-## Core Features
+## Feature Matrix
 
-- Borough-level water quality summaries  
-- Detailed borough indicator pages  
-- Community comments and likes  
-- Weekly voting for the cleanest borough
-- Trend analysis across years  
-- Data overview comparison table  
-- User profiles with liked boroughs and comments  
-- Admin comment moderation
-- Client-side fetch interactions for comments, likes, and voting via `public/js/apiClient.js`
-- React island for interactive water sample browsing
-- Simple health tips 
-
-## Extra Features
-
-- Map visualization  
-- Dark mode support  
-- Statistical charts and diagrams  
+| Area | Capabilities |
+|------|----------------|
+| **Borough analytics** | Five-borough summaries, per-borough indicators (Cl, turbidity, coliform, E. coli, F), trends, health notices |
+| **Samples** | Paginated React island; API-driven browse/filter |
+| **Community** | Borough comments & likes; weekly “cleanest borough” vote |
+| **Accounts** | Auth, profiles (liked boroughs + comment history) |
+| **Admin** | Global comment moderation |
+| **Presentation** | Borough map, trend charts, dark mode, comparison table |
 
 ---
 
@@ -165,6 +145,7 @@ Requires authentication. Displays the logged-in user's account information, like
 Displays the weekly voting page and current results.
 
 ---
+
 ### Community Comments
 **method**: `GET`, `POST`, `DELETE`  
 **route**: `/api/comments`
@@ -200,28 +181,8 @@ Requires authentication. Toggles the like/unlike status for the selected borough
 
 ---
 
+## Data Pipeline
 
-## Data Seeding & Optimization Strategy
-
-### Data Source & Ingestion
-- Uses NYC Open Data via `npm run data:sync` (`src/scripts/ingestWaterData.ts`) for the rolling 2-year water sample window
-- Local `seedData/sampleSites.json` seeds reference sample sites for borough validation
-
-
-### Data Integrity
-- All records are validated through Mongoose schemas
-- Database constraints help prevent invalid or conflicting records
-
-### Borough Aggregation
-- Borough-level statistics (chlorine, turbidity, coliform, E. coli, fluoride)
-  are pre-computed during seeding to support fast page rendering
-
----
-
-## Notes
-
-* Dynamic interactions (comments, likes, borough dashboard stats/trends) use native `async/await` `fetch` via `public/js/apiClient.js`
-* The water samples page uses a React island (Vite) for client-side rendering and pagination
-* Styling uses Tailwind CSS v3 compiled through PostCSS to `public/css/main.css`
-* MongoDB is accessed via Mongoose models
-* The application has been tested to ensure core features function as intended
+- **Ingest:** `npm run data:sync` — 24-month rolling window from [NYC Open Data](https://data.cityofnewyork.us/resource/bkwf-xfky.json) → **MongoDB Atlas** (`src/scripts/ingestWaterData.ts`)
+- **Integrity:** Mongoose schema validation + DB constraints on insert
+- **Aggregation:** Borough stats (chlorine, turbidity, coliform, E. coli, fluoride) computed from Atlas sample data
