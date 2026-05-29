@@ -1,10 +1,11 @@
-(function ($) {
-  const likeButton = $('#like-button');
-  const likeStatus = $('#like-status');
+import { likeBorough } from './apiClient.js';
+import { showToast } from './toast.js';
 
-  // No like button on this page
-  if (likeButton.length === 0) return;
+const $ = window.jQuery;
+const likeButton = $('#like-button');
+const likeStatus = $('#like-status');
 
+if (likeButton.length > 0) {
   function setDisabled(v) {
     likeButton.prop('disabled', !!v);
   }
@@ -13,57 +14,42 @@
     likeStatus.text(isLiked ? 'Liked!' : 'Like This Borough');
   }
 
-  // Toggle button style based on like state
   function setStyle(isLiked) {
     if (isLiked) {
-      likeButton.removeClass('btn-outline').addClass('btn-danger');
+      likeButton
+        .removeClass('bg-white text-red-600 hover:bg-red-50 border-red-300')
+        .addClass('bg-red-600 text-white hover:bg-red-700 border-red-600');
     } else {
-      likeButton.removeClass('btn-danger').addClass('btn-outline');
+      likeButton
+        .removeClass('bg-red-600 text-white hover:bg-red-700 border-red-600')
+        .addClass('bg-white text-red-600 hover:bg-red-50 border-red-300');
     }
   }
 
-  function showError(msg) {
-    alert('Error: ' + msg);
-  }
+  likeButton.on('click', async function (e) {
+    e.preventDefault();
 
-  function apiPost(url) {
-    return $.ajax({
-      method: 'POST',
-      url,
-      contentType: 'application/json'
-    });
-  }
-
-  function toggleLike() {
     const boroughId = likeButton.data('borough-id');
     if (!boroughId) {
-      showError('Missing borough id.');
-      return $.Deferred()
-        .reject({ responseJSON: { error: 'Missing borough ID.' } })
-        .promise();
+      showToast('Missing borough id.', { error: true });
+      return;
     }
-    return apiPost(`/boroughs/${boroughId}/like`);
-  }
 
-  likeButton.on('click', function (e) {
-    e.preventDefault();
     setDisabled(true);
 
-    toggleLike()
-      .then(function (response) {
-        if (!response || !response.success) return;
-        setStyle(!!response.isLiked);
-        setText(!!response.isLiked);
-      })
-      .catch(function (jqXHR) {
-        const msg =
-          jqXHR && jqXHR.responseJSON && jqXHR.responseJSON.error
-            ? jqXHR.responseJSON.error
-            : 'Failed to toggle like.';
-        showError(msg);
-      })
-      .always(function () {
-        setDisabled(false);
-      });
+    try {
+      const response = await likeBorough(boroughId);
+      if (!response || !response.success) return;
+
+      setStyle(!!response.isLiked);
+      setText(!!response.isLiked);
+      showToast(response.isLiked ? 'Borough liked!' : 'Like removed.');
+    } catch (err) {
+      const msg =
+        (err.data && err.data.error) || err.message || 'Failed to toggle like.';
+      showToast(msg, { error: true });
+    } finally {
+      setDisabled(false);
+    }
   });
-})(window.jQuery);
+}

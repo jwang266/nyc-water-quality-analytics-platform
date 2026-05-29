@@ -1,11 +1,4 @@
-document.addEventListener('DOMContentLoaded', () => {
-  const flash = document.getElementById('server-flash-global');
-  if (!flash) return;
-
-  const error = flash.dataset.error && flash.dataset.error.trim();
-  const message = flash.dataset.message && flash.dataset.message.trim();
-  const resend = flash.dataset.resend && flash.dataset.resend.trim();
-  const text = error || message || '';
+export function showToast(text, { error = false, duration = 4000, resendLink = '' } = {}) {
   if (!text) return;
 
   const toast = document.createElement('div');
@@ -16,22 +9,32 @@ document.addEventListener('DOMContentLoaded', () => {
   textNode.textContent = text;
   toast.appendChild(textNode);
 
-  if (resend) {
-    const a = document.createElement('a');
-    a.href = resend;
-    a.textContent = 'Resend';
-    a.style.marginLeft = '8px';
-    toast.appendChild(a);
+  if (resendLink) {
+    const link = document.createElement('a');
+    link.href = resendLink;
+    link.textContent = 'Resend';
+    link.style.marginLeft = '8px';
+    toast.appendChild(link);
   }
 
   document.body.appendChild(toast);
-
-  // trigger animation
   requestAnimationFrame(() => toast.classList.add('show'));
 
-  // auto-hide after 4s
   setTimeout(() => {
     toast.classList.remove('show');
     setTimeout(() => toast.remove(), 300);
-  }, 4000);
+  }, duration);
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  const flash = document.getElementById('server-flash-global');
+  if (!flash) return;
+
+  const error = flash.dataset.error && flash.dataset.error.trim();
+  const message = flash.dataset.message && flash.dataset.message.trim();
+  const resend = flash.dataset.resend && flash.dataset.resend.trim();
+  const text = error || message || '';
+  if (!text) return;
+
+  showToast(text, { error: Boolean(error), resendLink: resend });
 });

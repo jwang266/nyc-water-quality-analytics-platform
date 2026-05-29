@@ -1,6 +1,6 @@
-<section class="bb-container bb-mt-4">
-  <h1 class="bb-title bb-mb-3">Best Borough of the Week</h1>
-  <p class="text-muted bb-mb-3">Week starting (UTC, starts Monday) {{weekStart}}</p>
+<section class="bb-container max-w-[1150px] mx-auto px-6 mt-10">
+  <h1 class="bb-title text-[2.6rem] font-extrabold mb-3 text-[var(--text-main)]">Best Borough of the Week</h1>
+  <p class="text-muted text-[var(--text-muted)] mb-6">Week starting (UTC, starts Monday) {{weekStart}}</p>
 
   {{!-- server-driven toast for this page --}}
   {{#if toast}}
@@ -11,46 +11,46 @@
 
   {{!-- Winner summary --}}
   {{#if bestBorough}}
-  <div class="bb-card">
-    <div class="bb-card-body">
-      <h3 class="bb-card-title">{{bestBorough.name}}</h3>
-      <p class="bb-card-text">{{bestBorough.description}}</p>
-      <p class="bb-card-meta"><strong>Total votes this week:</strong> {{bestBorough.voteCount}}</p>
+  <div class="bb-card bg-[var(--surface)] border border-[var(--border)] rounded-2xl shadow-[var(--shadow-soft)] overflow-hidden">
+    <div class="bb-card-body p-5">
+      <h3 class="bb-card-title m-0 mb-2 text-[1.75rem] font-extrabold text-[var(--text-main)]">{{bestBorough.name}}</h3>
+      <p class="bb-card-text m-0 mb-4 text-[var(--text-muted)] leading-relaxed">{{bestBorough.description}}</p>
+      <p class="bb-card-meta m-0 text-[var(--text-main)]"><strong>Total votes this week:</strong> {{bestBorough.voteCount}}</p>
     </div>
   </div>
   {{else}}
-  <p class="bb-helptext">No votes have been cast this week yet. Be the first to vote below!</p>
+  <p class="bb-helptext text-[var(--text-muted)] mb-4">No votes have been cast this week yet. Be the first to vote below!</p>
   {{/if}}
 
-  <hr class="bb-hr">
+  <hr class="bb-hr border-0 border-t border-[var(--border)] my-7">
 
-  <h2 class="bb-section-title">Cast Your Vote</h2>
+  <h2 class="bb-section-title text-[1.6rem] font-extrabold mb-3 text-[var(--text-main)]">Cast Your Vote</h2>
 
   {{#if isAuthenticated}}
 
   {{#if userHasVoted}}
-  <p class="bb-helptext">
+  <p class="bb-helptext text-[var(--text-muted)] mb-4">
     You have already voted this week. Here is the borough you chose:
   </p>
   {{else}}
-  <p class="bb-helptext">
+  <p class="bb-helptext text-[var(--text-muted)] mb-4">
     Select the borough you think deserves to be Best Borough this week. You can vote once per week.
   </p>
   {{/if}}
 
-  <div class="bb-grid">
+  <div class="bb-grid grid grid-cols-1 md:grid-cols-3 gap-4">
     {{#each boroughs}}
 
-    <div class="bb-mini-card">
-      <div class="bb-card-body">
-        <h5 class="bb-mini-title">{{this.name}}</h5>
-        <div class="bb-btn-row">
+    <div class="bb-mini-card bg-[var(--surface-soft)] border border-[var(--border)] rounded-[14px]">
+      <div class="bb-card-body p-4">
+        <h5 class="bb-mini-title m-0 mb-3 text-lg font-extrabold text-[var(--text-main)]">{{this.name}}</h5>
+        <div class="bb-btn-row mt-2">
           {{#if ../userHasVoted}}
-          <button class="btn btn-success" disabled>✓ Voted this week</button>
+          <button class="btn btn-success w-full px-4 py-2 rounded-full text-sm font-semibold bg-green-600 border border-green-600 text-white cursor-not-allowed opacity-100" disabled>✓ Voted this week</button>
           {{else}}
           <form method="POST" action="/votes">
             <input type="hidden" name="boroughId" value="{{this._id}}">
-            <button class="btn btn-outline" type="submit">
+            <button class="btn btn-outline w-full px-4 py-2 rounded-full text-sm font-semibold border border-[var(--border)] bg-[var(--surface)] text-[var(--text-main)] hover:border-[var(--primary)] hover:text-[var(--primary)] cursor-pointer transition-colors" type="submit">
               Vote for {{this.name}}
             </button>
           </form>
@@ -63,9 +63,9 @@
   </div>
 
   {{else}}
-  <p class="bb-helptext">
+  <p class="bb-helptext text-[var(--text-muted)] mb-4">
     You need to be signed in to vote for the Best Borough.
   </p>
-  <a href="/users/login?redirect=/votes/best" class="btn btn-primary">Sign in to vote</a>
+  <a href="/users/login?redirect=/votes/best" class="btn btn-primary inline-block px-4 py-2 rounded-full text-sm font-semibold bg-[var(--primary)] border border-[var(--primary)] text-white hover:bg-[var(--primary-hover)] no-underline transition-colors">Sign in to vote</a>
   {{/if}}
 </section>

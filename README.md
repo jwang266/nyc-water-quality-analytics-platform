@@ -5,12 +5,12 @@ http://nyc-water-quality-analytics-env.eba-etgqypky.us-east-1.elasticbeanstalk.c
 A full-stack Node.js + Express (TypeScript) + MongoDB web application for analyzing and visualizing NYC drinking water quality by borough, featuring interactive dashboards and community engagement.
 
 ## Tech Stack
-- Node.js / Express (TypeScript)
+- Node.js / Express — full-stack TypeScript (strict mode)
 - MongoDB Atlas / Mongoose
-- Handlebars (server-rendered views)
-- React island (Vite) for interactive sample browsing
-- Client-side data fetching (fetch / AJAX)
-- Custom CSS + Dark Mode
+- Handlebars (fully responsive server-rendered views)
+- React functional components (Islands via Vite build pipeline) for interactive sample browsing
+- Tailwind CSS v3 (PostCSS compilation) + Dark Mode
+- Centralized native ES Module client (`public/js/apiClient.js`) with `async/await` and native `fetch`
 - Deployed on AWS Elastic Beanstalk
 
 ---
@@ -59,28 +59,32 @@ For security reasons, administrator accounts are not publicly creatable and can 
 ```
 .
 ├── islands
-│   └── watersamples
-│       └── src
 ├── public
 │   ├── css
-│   │   └── videos
 │   ├── geojson
 │   ├── islands
-│   │   └── watersamples
 │   └── js
 ├── seedData
+│   └── sampleSites.json
 ├── src
 │   ├── config
 │   ├── data
 │   ├── helper
 │   ├── model
-│   └── routes
+│   ├── routes
+│   ├── styles
+│   ├── types
+│   ├── app.ts
+│   ├── index.ts
+│   ├── middleware.ts
+│   └── seed.ts
 └── views
     └── layouts
 ```
 
 - islands/watersamples/ contains the React island (Vite) used to render and paginate the Water Samples list.
-- The rest of the app remains server-rendered with Handlebars.
+- The view layer combines server-rendered Handlebars templates with dynamic React functional components (Islands).
+- Client-side network calls use the centralized ES Module API client at public/js/apiClient.js.
 
 ---
 
@@ -94,7 +98,7 @@ For security reasons, administrator accounts are not publicly creatable and can 
 - Data overview comparison table  
 - User profiles with liked boroughs and comments  
 - Admin comment moderation
-- Client-side AJAX interactions for comments, likes, and voting
+- Client-side fetch interactions for comments, likes, and voting via `public/js/apiClient.js`
 - React island for interactive water sample browsing
 - Simple health tips 
 
@@ -166,7 +170,7 @@ Displays the weekly voting page and current results.
 **route**: `/api/comments`
 
 Allows authenticated users to post comments on borough pages.  
-Comments are submitted via AJAX.  
+Comments are submitted via the centralized API client (`public/js/apiClient.js`) using native `fetch`.  
 Users can delete their own comments after refreshing the page, and admins can moderate all comments.
 
 ---
@@ -200,10 +204,8 @@ Requires authentication. Toggles the like/unlike status for the selected borough
 ## Data Seeding & Optimization Strategy
 
 ### Data Source & Ingestion
-- Uses a local snapshot of NYC drinking water data stored in `seedData/`
-- CSV files are parsed with Papa Parse and written into MongoDB using batch inserts
-- Only a recent subset of sample records is seeded locally by default to keep startup fast,
-while the data layer is designed to scale to the full NYC Open Data dataset
+- Uses NYC Open Data via `npm run data:sync` (`src/scripts/ingestWaterData.ts`) for the rolling 2-year water sample window
+- Local `seedData/sampleSites.json` seeds reference sample sites for borough validation
 
 
 ### Data Integrity
@@ -218,9 +220,8 @@ while the data layer is designed to scale to the full NYC Open Data dataset
 
 ## Notes
 
-* AJAX is used for dynamic interactions such as comments and likes
-* The water samples page uses a React island for client-side rendering and pagination
-* Custom CSS is used throughout the application
+* Dynamic interactions (comments, likes, borough dashboard stats/trends) use native `async/await` `fetch` via `public/js/apiClient.js`
+* The water samples page uses a React island (Vite) for client-side rendering and pagination
+* Styling uses Tailwind CSS v3 compiled through PostCSS to `public/css/main.css`
 * MongoDB is accessed via Mongoose models
-* Password reset links are displayed in the UI for local development and demonstration purposes.
 * The application has been tested to ensure core features function as intended

@@ -4,6 +4,7 @@ import passport from "passport";
 import exphbs from "express-handlebars";
 import path from "node:path";
 
+import "./types/session.js";
 import configRoutes from "./routes/index.js";
 import connectDB from "./config/mongoConnection.js";
 import { logMdw } from "./middleware.js";

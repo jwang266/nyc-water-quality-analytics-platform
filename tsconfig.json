@@ -13,9 +13,8 @@
     "esModuleInterop": true,
     "resolveJsonModule": true,
 
-    "allowJs": true,
-    "checkJs": false
+    "allowJs": false
   },
-  "include": ["src/**/*.ts", "src/**/*.js"],
+  "include": ["src/**/*.ts"],
   "exclude": ["node_modules", "dist"]
 }

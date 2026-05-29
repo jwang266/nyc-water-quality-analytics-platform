@@ -5,7 +5,13 @@ import { boroughsData, waterSamplesData } from '../data/index.js';
 
 const router = express.Router();
 
-router.get('/borough-overall', async (req, res) => {
+function queryParam(value: unknown): string | undefined {
+  if (typeof value === 'string') return value;
+  if (Array.isArray(value) && typeof value[0] === 'string') return value[0];
+  return undefined;
+}
+
+router.get('/borough-overall', async (_req, res) => {
   try {
     const boroughs = await boroughCollection.find().lean();
 
@@ -31,27 +37,31 @@ router.get('/borough-overall', async (req, res) => {
 router.get('/borough-stats', async (req, res) => {
   try {
     const { year, month, day } = req.query;
-    const results = await boroughsData.getBoroughsDataByDayMonthYear(year, month, day);
+    const results = await boroughsData.getBoroughsDataByDayMonthYear(
+      queryParam(year),
+      queryParam(month),
+      queryParam(day)
+    );
     res.json(results);
   } catch (e) {
-    res.status(500).json({ error: e.toString() });
+    res.status(500).json({ error: String(e) });
   }
 });
 
-router.get('/data-dates', async (req, res) => {
+router.get('/data-dates', async (_req, res) => {
   try {
     const results = await waterSamplesData.getDataDates();
     res.json(results);
   } catch (e) {
     console.error(e);
-    res.status(500).json({ error: e.toString() });
+    res.status(500).json({ error: String(e) });
   }
 });
 
 router.get('/water-samples', async (req, res) => {
   try {
-    const page = parseInt(req.query.page, 10) || 1;
-    const limit = parseInt(req.query.limit, 10) || 20;
+    const page = parseInt(queryParam(req.query.page) ?? '1', 10) || 1;
+    const limit = parseInt(queryParam(req.query.limit) ?? '20', 10) || 20;
 
     const results = await waterSamplesData.getRecentWaterSamples({
       page,
@@ -61,18 +71,23 @@ router.get('/water-samples', async (req, res) => {
     res.json(results);
   } catch (e) {
     console.error(e);
-    res.status(500).json({ error: e.toString() });
+    res.status(500).json({ error: String(e) });
   }
 });
 
 router.get('/borough-trends', async (req, res) => {
   try {
     const { borough, year, month, metric } = req.query;
-    const results = await waterSamplesData.getTrendData(borough, year, month, metric);
+    const results = await waterSamplesData.getTrendData(
+      queryParam(borough),
+      queryParam(year),
+      queryParam(month),
+      queryParam(metric)
+    );
     res.json(results);
   } catch (e) {
     console.error(e);
-    res.status(500).json({ error: e.toString() });
+    res.status(500).json({ error: String(e) });
   }
 });
 

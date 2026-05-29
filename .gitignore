@@ -1,6 +1,18 @@
+# === Node Dependencies ===
 node_modules/
+
+# === Secrets & Local Env ===
 .env
-.DS_Store
+.env.*
+
+# === Build Outputs ===
 dist/
-.ebignore
+
+# === Deployment Packets ===
+deploy.zip
 deploy/
+
+# === OS & Editor Garbage ===
+.DS_Store
+.vscode/
+.cursor/

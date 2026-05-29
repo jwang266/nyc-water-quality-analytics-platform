@@ -1,22 +1,44 @@
 import { waterSampleCollection, sampleSiteCollection } from '../model/index.js';
 
+export interface RecentWaterSamplesOptions {
+  sample_number?: string;
+  sample_site?: string;
+  borough?: string;
+  page?: number | string;
+  limit?: number | string;
+}
+
+export interface FormattedWaterSample {
+  _id: string;
+  sample_number: string;
+  sample_site: string;
+  borough: string;
+  date: string;
+  chlorine: number | null | undefined;
+  turbidity: number | null | undefined;
+  fluoride: number | null | undefined;
+  coliform: number | null | undefined;
+  ecoli: number | null | undefined;
+}
+
+const escapeRegex = (s: string): string => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+
 export const getRecentWaterSamples = async ({
   sample_number,
   sample_site,
   borough,
   page = 1,
   limit = 50
-} = {}) => {
-  const query = {};
+}: RecentWaterSamplesOptions = {}): Promise<FormattedWaterSample[]> => {
+  const query: Record<string, unknown> = {};
 
   if (sample_number) {
     query.sample_number = sample_number;
   }
 
-  let sampleSiteRegex = null;
+  let sampleSiteRegex: RegExp | null = null;
   if (sample_site) {
-    const esc = (s) => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-    sampleSiteRegex = new RegExp(esc(sample_site), 'i');
+    sampleSiteRegex = new RegExp(escapeRegex(sample_site), 'i');
     query.sample_site = sampleSiteRegex;
   }
 
@@ -45,10 +67,9 @@ export const getRecentWaterSamples = async ({
   );
   query.sample_date = { $gte: startUTC, $lte: endUTC };
 
-  let siteFilter = null;
+  let siteFilter: string[] | null = null;
   if (borough) {
-    const esc = (s) => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-    const boroughRegex = new RegExp('^' + esc(borough) + '$', 'i');
+    const boroughRegex = new RegExp('^' + escapeRegex(borough) + '$', 'i');
 
     const sites = await sampleSiteCollection
       .find({ borough: boroughRegex })
@@ -59,7 +80,7 @@ export const getRecentWaterSamples = async ({
     if (siteVals.length === 0) return [];
 
     if (sampleSiteRegex) {
-      const filtered = siteVals.filter((val) => sampleSiteRegex.test(val));
+      const filtered = siteVals.filter((val) => sampleSiteRegex!.test(val));
       if (filtered.length === 0) return [];
       siteFilter = filtered;
     } else {
@@ -70,10 +91,10 @@ export const getRecentWaterSamples = async ({
   const parsedLimit = Number(limit);
   const lim =
     !isNaN(parsedLimit) && parsedLimit > 0 ? Math.max(1, parsedLimit) : 10;
-  const pageNum = Math.max(1, parseInt(page) || 1);
+  const pageNum = Math.max(1, parseInt(String(page), 10) || 1);
   const skip = (pageNum - 1) * lim;
 
-  const mongoQuery = { ...query };
+  const mongoQuery: Record<string, unknown> = { ...query };
   if (siteFilter) mongoQuery.sample_site = { $in: siteFilter };
   else if (sampleSiteRegex) mongoQuery.sample_site = sampleSiteRegex;
 
@@ -86,13 +107,15 @@ export const getRecentWaterSamples = async ({
 
   if (samples.length === 0) return [];
 
-  const siteIds = [...new Set(samples.map((s) => s.sample_site))];
+  const siteIds = [
+    ...new Set(samples.map((s) => s.sample_site).filter((id): id is string => Boolean(id)))
+  ];
   const siteDocs = await sampleSiteCollection
     .find({ sample_site: { $in: siteIds } })
     .select('sample_site borough')
     .lean();
 
-  const siteMap = {};
+  const siteMap: Record<string, string> = {};
   siteDocs.forEach((doc) => {
     siteMap[doc.sample_site] = doc.borough || 'Unknown';
   });
@@ -101,7 +124,7 @@ export const getRecentWaterSamples = async ({
     _id: s._id.toString(),
     sample_number: s.sample_number,
     sample_site: s.sample_site || 'N/A',
-    borough: siteMap[s.sample_site] || 'Unknown',
+    borough: (s.sample_site && siteMap[s.sample_site]) || 'Unknown',
     date: s.sample_date ? s.sample_date.toISOString().split('T')[0] : 'N/A',
     chlorine: s.residual_free_chlorine_mg_l,
     turbidity: s.turbidity_ntu,
@@ -112,7 +135,9 @@ export const getRecentWaterSamples = async ({
 };
 
 export const getDataDates = async () => {
-  const docs = await waterSampleCollection.aggregate([
+  const docs = await waterSampleCollection.aggregate<{
+    _id: { year: number; month: number };
+  }>([
     {
       $match: {
         sample_date: { $type: 'date' }
@@ -128,8 +153,8 @@ export const getDataDates = async () => {
     }
   ]);
 
-  const yearsSet = new Set();
-  const monthsByYearMap = {};
+  const yearsSet = new Set<number>();
+  const monthsByYearMap: Record<number, Set<number>> = {};
 
   for (const doc of docs) {
     const y = doc._id.year;
@@ -141,20 +166,34 @@ export const getDataDates = async () => {
   }
 
   const years = Array.from(yearsSet).sort((a, b) => a - b);
-  const monthsByYear = {};
+  const monthsByYear: Record<number, number[]> = {};
 
   for (const y of years) {
-    monthsByYear[y] = Array.from(monthsByYearMap[y] || []).sort(
-      (a, b) => a - b
-    );
+    monthsByYear[y] = Array.from(monthsByYearMap[y] || []).sort((a, b) => a - b);
   }
 
   return { years, monthsByYear };
 };
 
-export const getTrendData = async (borough, year, month, metric) => {
+const metricFieldMap = {
+  avg_chlorine: 'residual_free_chlorine_mg_l',
+  avg_turbidity: 'turbidity_ntu',
+  avg_coliform: 'coliform_quanti_tray_mpn_100ml',
+  avg_e_coli: 'e_coli_quanti_tray_mpn_100ml',
+  avg_fluoride: 'fluoride_mg_l'
+} as const;
+
+type TrendMetric = keyof typeof metricFieldMap;
+
+export const getTrendData = async (
+  borough: unknown,
+  year: unknown,
+  month: unknown,
+  metric: unknown
+) => {
   if (!borough || !year || !metric) return [];
 
+  const boroughStr = String(borough);
   const y = Number(year);
   const m =
     month !== undefined && month !== null && month !== ''
@@ -168,21 +207,14 @@ export const getTrendData = async (borough, year, month, metric) => {
     throw 'Invalid month for trend data';
   }
 
-  const metricFieldMap = {
-    avg_chlorine: 'residual_free_chlorine_mg_l',
-    avg_turbidity: 'turbidity_ntu',
-    avg_coliform: 'coliform_quanti_tray_mpn_100ml',
-    avg_e_coli: 'e_coli_quanti_tray_mpn_100ml',
-    avg_fluoride: 'fluoride_mg_l'
-  };
-
-  const field = metricFieldMap[metric];
+  const metricKey = String(metric) as TrendMetric;
+  const field = metricFieldMap[metricKey];
   if (!field) {
     throw `Unsupported metric: ${metric}`;
   }
 
-  let start;
-  let end;
+  let start: Date;
+  let end: Date;
   if (m !== null) {
     start = new Date(y, m - 1, 1);
     end = new Date(y, m, 0, 23, 59, 59, 999);
@@ -191,8 +223,7 @@ export const getTrendData = async (borough, year, month, metric) => {
     end = new Date(y, 11, 31, 23, 59, 59, 999);
   }
 
-  const esc = (s) => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-  const boroughRegex = new RegExp('^' + esc(borough) + '$', 'i');
+  const boroughRegex = new RegExp('^' + escapeRegex(boroughStr) + '$', 'i');
 
   const dateFormat = m !== null ? '%Y-%m-%d' : '%Y-%m-01';
 
@@ -230,7 +261,7 @@ export const getTrendData = async (borough, year, month, metric) => {
         avgValue: { $avg: `$${field}` }
       }
     },
-    { $sort: { '_id.date': 1 } },
+    { $sort: { '_id.date': 1 as const } },
     {
       $project: {
         _id: 0,
@@ -240,6 +271,5 @@ export const getTrendData = async (borough, year, month, metric) => {
     }
   ];
 
-  const results = await waterSampleCollection.aggregate(pipeline);
-  return results;
+  return waterSampleCollection.aggregate(pipeline);
 };

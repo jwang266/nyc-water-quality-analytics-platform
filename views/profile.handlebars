@@ -1,91 +1,87 @@
-<div class="profile-container">
-  <div class="profile-card">
-    <h1>My Profile</h1>
+<div class="profile-container max-w-[600px] mx-auto my-8 px-4">
+  <div class="profile-card bg-[var(--surface)] border border-[var(--border)] rounded-xl p-6 sm:p-8 shadow-[var(--shadow-soft)]">
+    <h1 class="mt-0 mb-6 text-3xl font-bold text-[var(--text-main)]">My Profile</h1>
 
     {{#if user}}
-    <div class="profile-section">
-      <h2>Account Information</h2>
+    <div class="profile-section mb-8">
+      <h2 class="text-[var(--text-main)] text-xl font-semibold mt-0 mb-4 pb-2 border-b-2 border-[var(--border)]">Account Information</h2>
 
-      <div class="profile-field">
-        <label>Email:</label>
-        <p>{{user.email}}</p>
+      <div class="profile-field flex flex-col mb-4">
+        <label class="font-semibold text-[var(--text-main)] mb-1">Email:</label>
+        <p class="m-0 text-[var(--text-muted)]">{{user.email}}</p>
       </div>
 
       {{#if user.fname}}
-      <div class="profile-field">
-        <label>First Name:</label>
-        <p>{{user.fname}}</p>
+      <div class="profile-field flex flex-col mb-4">
+        <label class="font-semibold text-[var(--text-main)] mb-1">First Name:</label>
+        <p class="m-0 text-[var(--text-muted)]">{{user.fname}}</p>
       </div>
       {{/if}}
 
       {{#if user.lname}}
-      <div class="profile-field">
-        <label>Last Name:</label>
-        <p>{{user.lname}}</p>
+      <div class="profile-field flex flex-col mb-4">
+        <label class="font-semibold text-[var(--text-main)] mb-1">Last Name:</label>
+        <p class="m-0 text-[var(--text-muted)]">{{user.lname}}</p>
       </div>
       {{/if}}
 
       {{#if user.role}}
-      <div class="profile-field">
-        <label>Role:</label>
-        <p>{{user.role}}</p>
+      <div class="profile-field flex flex-col mb-4">
+        <label class="font-semibold text-[var(--text-main)] mb-1">Role:</label>
+        <p class="m-0 text-[var(--text-muted)]">{{user.role}}</p>
       </div>
       {{/if}}
     </div>
 
     {{!--Add "Liked Boroughs" --}}
-    <div class="profile-section">
-      <h2>Community</h2>
-      <div class="comment-header">
-        
+    <div class="profile-section mb-8">
+      <h2 class="text-[var(--text-main)] text-xl font-semibold mt-0 mb-4 pb-2 border-b-2 border-[var(--border)]">Community</h2>
+      <div class="comment-header text-sm">
 
-        <details class="comment-details">
-          <summary class="comment-summary">
-            <h3 class="comment-title">Liked Boroughs</h3>
-            <span class="comment-pill">Display</span>
+        <details class="comment-details group mt-3">
+          <summary class="comment-summary list-none cursor-pointer flex items-center justify-between gap-3 [&::-webkit-details-marker]:hidden">
+            <h3 class="comment-title m-0 text-lg font-semibold">Liked Boroughs</h3>
+            <span class="comment-pill inline-flex items-center gap-2 px-3.5 py-2 rounded-full border border-[var(--border)] bg-[var(--surface)] font-semibold text-sm before:content-['▶'] before:text-xs before:transition-transform group-open:before:rotate-90">Display</span>
           </summary>
 
-          <div class="borough-card">
+          <div class="borough-card mt-3 px-[18px] py-4 bg-[var(--surface)] border border-[var(--border)] rounded-[14px]">
             {{#if likedBoroughs}}
-            <ul class="liked-list">
+            <ul class="liked-list list-none m-0 p-0">
               {{#each likedBoroughs}}
-              <li class="liked-item">
-                <span class="liked-name">{{this.name}}</span>
-                <a href="/boroughs/{{this._id}}" class="btn btn-primary liked-btn">
+              <li class="liked-item flex items-center justify-end gap-10 py-2 border-t border-dashed border-[var(--border)] first:border-t-0">
+                <span class="liked-name font-bold text-[15px] m-0">{{this.name}}</span>
+                <a href="/boroughs/{{this._id}}" class="btn btn-primary liked-btn inline-block px-4 py-2 rounded-full text-sm font-semibold bg-[var(--primary)] border border-[var(--primary)] text-white hover:bg-[var(--primary-hover)] no-underline">
                   View Details
                 </a>
               </li>
               {{/each}}
             </ul>
             {{else}}
-            <p class="text-muted">You have not liked any boroughs yet.</p>
+            <p class="text-muted text-[var(--text-muted)]">You have not liked any boroughs yet.</p>
             {{/if}}
           </div>
         </details>
 
       </div>
 
-
-
-
       {{!-- Comments history with borough link --}}
-      <div class="comment-header">
-        <details class="comment-details">
-          <summary class="comment-summary">
-            <h3 class="comment-title">Your Comments</h3>
-            <span class="comment-pill">Display</span>
+      <div class="comment-header text-sm">
+        <details class="comment-details group mt-3">
+          <summary class="comment-summary list-none cursor-pointer flex items-center justify-between gap-3 [&::-webkit-details-marker]:hidden">
+            <h3 class="comment-title m-0 text-lg font-semibold">Your Comments</h3>
+            <span class="comment-pill inline-flex items-center gap-2 px-3.5 py-2 rounded-full border border-[var(--border)] bg-[var(--surface)] font-semibold text-sm before:content-['▶'] before:text-xs before:transition-transform group-open:before:rotate-90">Display</span>
           </summary>
 
-          <div class="comment-card">
+          <div class="comment-card mt-3 px-[18px] py-4 bg-[var(--surface)] border border-[var(--border)] rounded-[14px]">
             {{#if userComments}}
-            <ul class="comment-list">
+            <ul class="comment-list list-none m-0 p-0">
               {{#each userComments}}
-              <li class="comment-item">
-                <p class="comment-text">{{this.comment}}</p>
-                <small class="comment-meta">
+              <li class="comment-item py-2.5 px-[15px] mb-3 flex flex-col items-stretch bg-[var(--surface-soft)] border border-[var(--border)] rounded-xl">
+                <p class="comment-text block m-0 mb-1.5 text-[15px] leading-snug before:content-['\201C'] after:content-['\201D']">{{this.comment}}</p>
+                <small class="comment-meta block text-right text-[13px] w-full text-[var(--text-muted)] mt-1">
                   on
                   {{#if this.borough}}
-                  <a href="/boroughs/{{this.borough._id}}"><strong>{{this.borough.name}}</strong></a>
+                  <a href="/boroughs/{{this.borough._id}}" class="text-[var(--primary)] hover:underline"><strong>{{this.borough.name}}</strong></a>
                   {{else}}[Deleted Borough]{{/if}}
                   — {{this.commentDate}}
                 </small>
@@ -93,24 +89,23 @@
               {{/each}}
             </ul>
             {{else}}
-            <p class="text-muted">You have not posted any comments yet.</p>
+            <p class="text-muted text-[var(--text-muted)]">You have not posted any comments yet.</p>
             {{/if}}
           </div>
         </details>
       </div>
     </div>
 
-
-    <div class="profile-actions">
-      <a href="/users/edit-profile" class="btn btn-primary">Edit Profile</a>
-      <a href="/users/logout" class="btn btn-outline">Sign Out</a>
-      <button id="deleteAccountBtn" class="btn btn-danger">Delete Account</button>
+    <div class="profile-actions flex flex-col sm:flex-row gap-4 mt-8 pt-8 border-t border-[var(--border)]">
+      <a href="/users/edit-profile" class="btn btn-primary flex-1 text-center inline-block px-4 py-2 rounded-full text-sm font-semibold bg-[var(--primary)] border border-[var(--primary)] text-white hover:bg-[var(--primary-hover)] no-underline">Edit Profile</a>
+      <a href="/users/logout" class="btn btn-outline flex-1 text-center inline-block px-4 py-2 rounded-full text-sm font-semibold border border-[var(--border)] bg-[var(--surface)] text-[var(--text-main)] hover:border-[var(--primary)] hover:text-[var(--primary)] no-underline transition-colors">Sign Out</a>
+      <button id="deleteAccountBtn" class="btn btn-danger flex-1 px-4 py-2 rounded-full text-sm font-semibold bg-red-600 border border-red-600 text-white hover:bg-red-700 cursor-pointer transition-colors">Delete Account</button>
     </div>
     {{else}}
-    <div class="profile-section">
-      <p class="text-muted">
+    <div class="profile-section mb-8">
+      <p class="text-muted text-[var(--text-muted)]">
         You are not logged in. Please
-        <a href="/users/login">sign in</a>
+        <a href="/users/login" class="text-[var(--primary)] hover:underline">sign in</a>
         to view your profile.
       </p>
     </div>
@@ -119,14 +114,14 @@
 </div>
 
 <!-- Delete Account Confirmation Modal -->
-<div id="deleteAccountModal" class="modal">
-  <div class="modal-content">
-    <h2>Delete Account</h2>
-    <p>Are you sure you want to delete your account? This action cannot be undone.</p>
-    <p style="color: #dc3545; font-weight: 600;">All your data will be permanently deleted.</p>
-    <div class="modal-actions">
-      <button class="btn-confirm" id="confirmDeleteBtn">Yes, Delete</button>
-      <button class="btn-cancel" id="cancelDeleteBtn">Cancel</button>
+<div id="deleteAccountModal" class="modal fixed inset-0 z-[1000] hidden items-center justify-center bg-black/40 p-4">
+  <div class="modal-content bg-[var(--surface)] p-8 rounded-xl max-w-[400px] w-full text-center shadow-xl">
+    <h2 class="mt-0 text-red-600 text-xl font-bold">Delete Account</h2>
+    <p class="text-[var(--text-muted)] my-4">Are you sure you want to delete your account? This action cannot be undone.</p>
+    <p class="text-red-600 font-semibold my-4">All your data will be permanently deleted.</p>
+    <div class="modal-actions flex gap-4 mt-6">
+      <button class="btn-confirm flex-1 py-3 border-0 rounded-lg cursor-pointer font-semibold bg-red-600 text-white hover:bg-red-700 transition-colors" id="confirmDeleteBtn">Yes, Delete</button>
+      <button class="btn-cancel flex-1 py-3 border-0 rounded-lg cursor-pointer font-semibold bg-[var(--border)] text-[var(--text-main)] hover:bg-gray-300 transition-colors" id="cancelDeleteBtn">Cancel</button>
     </div>
   </div>
 </div>

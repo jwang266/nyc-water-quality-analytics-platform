@@ -30,7 +30,7 @@
   <!-- Map -->
   <section class="map-container">
     {{!-- <h3 class="section-title">Borough Water Quality Heat Map</h3> --}}
-    <div id="boroughMap" class="map-frame"></div>
+    <div id="boroughMap" class="map-frame block w-full max-w-[900px] h-[600px] !block mx-auto overflow-hidden rounded-[14px] border border-gray-200 bg-[#eaeaea] relative z-0 mt-[50px] mb-[50px] clear-both"></div>
   </section>
 
 
@@ -195,8 +195,8 @@
       </ol>
     </div>
 
-    <div class="trend-controls">
-      <div class="field borough-field">
+    <div class="trend-controls grid grid-cols-1 md:grid-cols-2 gap-[14px_18px] items-start">
+      <div class="field borough-field col-start-1 mt-5">
         <label class="field-label">Borough</label>
         <select id="trendBorough" class="input">
           {{#each boroughs}}
@@ -213,7 +213,7 @@
 
 
 
-      <div class="field compare-field" id="compareBoroughBox" style="display:none;">
+      <div class="field compare-field col-start-1 row-start-2" id="compareBoroughBox" style="display:none;">
         <label class="field-label">Compare With</label>
         <select id="compareBorough" class="input">
           {{#each boroughs}}
@@ -230,18 +230,18 @@
       </div> --}}
 
 
-      <div class="field year-field">
+      <div class="field year-field col-start-2 row-start-1 mt-5">
         <label class="field-label">Year</label>
         <select id="trendYear" class="input"></select>
         <label class="check month-toggle"><input type="checkbox" id="trendMonthCheck"> <span>Month</span></label>
       </div>
 
-      <div class="field month-field" id="trendMonthBox" style="display:none;">
+      <div class="field month-field col-start-2 row-start-2" id="trendMonthBox" style="display:none;">
         <label class="field-label">Month</label>
         <select id="trendMonth" class="input"></select>
       </div>
 
-      <div class="field metrics-field">
+      <div class="field metrics-field col-span-full row-start-4">
         <label class="field-label">Metrics</label>
         <div class="metrics-row">
           <label class="check"><input type="checkbox" class="metricCheck" value="avg_chlorine" checked> <span>Avg
@@ -258,7 +258,7 @@
       </div>
     </div>
 
-    <div class="trend-chart">
+    <div class="trend-chart mt-4 p-[14px] border border-gray-200 rounded-[16px] bg-gray-50/50">
       <canvas id="trendChart" height="120"></canvas>
     </div>
   </section>
@@ -405,8 +405,37 @@
           layer.bindPopup(makePopup(boroughName));
 
           const center = getPolygonCentroid(layer.getLatLngs());
+          let customOffset = L.point([-25, 45]); // Default backup
+
+          switch (boroughName) {
+            case 'Brooklyn':
+              // Move slightly top-left relative to current position: decrease Y (up), decrease X (left)
+              customOffset = L.point([-50, 20]);
+              break;
+            case 'Queens':
+              // Move straight up relative to current position: decrease Y (up), keep X
+              customOffset = L.point([-10, -20]);
+              break;
+            case 'Bronx':
+              // Move slightly left relative to current position: decrease X (left), keep Y
+              customOffset = L.point([-50, 30]);
+              break;
+            case 'Manhattan':
+              customOffset = L.point([-35, 60]);
+              break;
+            case 'Staten Island':
+              customOffset = L.point([0, 30]);
+              break;
+          }
+
           L.marker(center, { interactive: false, opacity: 0 })
-            .bindTooltip(boroughName, { permanent: true, direction: "center", className: "borough-label", opacity: 0.9 })
+            .bindTooltip(boroughName, {
+              permanent: true,
+              direction: "top",
+              className: "borough-label",
+              opacity: 0.9,
+              offset: customOffset
+            })
             .addTo(map);
         }
       }).addTo(map);
@@ -437,13 +466,35 @@
 
   let availableYears = [], monthsByYear = {};
 
-  function loadDataDates() {
-    return $.get("/api/data-dates")
-      .then(res => {
-        availableYears = res.years || [];
-        monthsByYear = res.monthsByYear || {};
-        populateYearDropdown();
-      }).catch(() => console.error("Failed to load data dates"));
+  async function fetchJson(url) {
+    const response = await fetch(url, {
+      headers: { Accept: 'application/json' }
+    });
+
+    let data = null;
+    try {
+      data = await response.json();
+    } catch {
+      data = null;
+    }
+
+    if (!response.ok) {
+      console.error('Fetch failed:', url, response.status, data);
+      throw new Error((data && data.error) || `Request failed: ${response.status}`);
+    }
+
+    return data;
+  }
+
+  async function loadDataDates() {
+    try {
+      const res = await fetchJson('/api/data-dates');
+      availableYears = res.years || [];
+      monthsByYear = res.monthsByYear || {};
+      populateYearDropdown();
+    } catch (err) {
+      console.error('Failed to load data dates', err);
+    }
   }
 
   function populateYearDropdown() {
@@ -532,36 +583,49 @@
     if (y && m && d && $("#dateCheck").is(":checked")) fetchAndRefreshMap(y, m, d);
   });
 
-  function fetchAndRefreshMap(year, month, day) {
-    const params = {};
-    if (year) params.year = year;
-    if (month) params.month = month;
-    if (day) params.day = day;
+  async function fetchAndRefreshMap(year, month, day) {
+    const params = new URLSearchParams();
+    if (year) params.set('year', String(year));
+    if (month) params.set('month', String(month));
+    if (day) params.set('day', String(day));
 
-    $.get("/api/borough-stats", params)
-      .done(data => {
-        data.forEach(b => {
-          boroughDict[b.borough] = { chlorine: b.avg_chlorine, turbidity: b.avg_turbidity, coliform: b.avg_coliform, ecoli: b.avg_e_coli, fluoride: b.avg_fluoride, _id: b._id, sample_count: b.sample_count || 0 };
+    const query = params.toString();
+    const url = query ? `/api/borough-stats?${query}` : '/api/borough-stats';
+
+    try {
+      const data = await fetchJson(url);
+
+      data.forEach(b => {
+        boroughDict[b.borough] = {
+          chlorine: b.avg_chlorine,
+          turbidity: b.avg_turbidity,
+          coliform: b.avg_coliform,
+          ecoli: b.avg_e_coli,
+          fluoride: b.avg_fluoride,
+          _id: b._id,
+          sample_count: b.sample_count || 0
+        };
+      });
+
+      if (boroughLayer && boroughLayer.setStyle) {
+        boroughLayer.setStyle(feature => {
+          const name = feature.properties.BoroName;
+          const q = boroughDict[name];
+          const fillColor = q ? getColor(q.chlorine, q.turbidity) : "#bbbbbb";
+          return { color: "black", weight: 2, fillColor, fillOpacity: 0.7 };
         });
 
-        if (boroughLayer && boroughLayer.setStyle) {
-          boroughLayer.setStyle(feature => {
-            const name = feature.properties.BoroName;
-            const q = boroughDict[name];
-            const fillColor = q ? getColor(q.chlorine, q.turbidity) : "#bbbbbb";
-            return { color: "black", weight: 2, fillColor, fillOpacity: 0.7 };
-          });
+        boroughLayer.eachLayer(layer => {
+          const name = layer.feature.properties.BoroName;
+          layer.bindPopup(makePopup(name));
+        });
+      }
 
-          boroughLayer.eachLayer(layer => {
-            const name = layer.feature.properties.BoroName;
-            layer.bindPopup(makePopup(name));
-          });
-        }
-
-        populateTableBody(data);
-        console.log("Updated map + cards", data);
-      })
-      .fail(err => console.error("Error loading borough stats:", err));
+      populateTableBody(data);
+      console.log("Updated map + cards", data);
+    } catch (err) {
+      console.error("Error loading borough stats:", err);
+    }
   }
 
   $("#compareToggle").on("change", () => $("#compareBoroughBox").toggle($("#compareToggle").is(":checked")));
@@ -573,8 +637,29 @@
   let trendYears = [];
   let trendMonthsByYear = {};
 
-  function loadTrendDates() {
-    return $.get("/api/data-dates").then(res => {
+  async function fetchJson(url) {
+    const response = await fetch(url, {
+      headers: { Accept: 'application/json' }
+    });
+
+    let data = null;
+    try {
+      data = await response.json();
+    } catch {
+      data = null;
+    }
+
+    if (!response.ok) {
+      console.error('Fetch failed:', url, response.status, data);
+      throw new Error((data && data.error) || `Request failed: ${response.status}`);
+    }
+
+    return data;
+  }
+
+  async function loadTrendDates() {
+    try {
+      const res = await fetchJson('/api/data-dates');
       trendYears = res.years || [];
       trendMonthsByYear = res.monthsByYear || {};
 
@@ -588,7 +673,9 @@
       if (trendYears.length) {
         yearSel.val(trendYears[trendYears.length - 1]).trigger("change");
       }
-    });
+    } catch (err) {
+      console.error('Failed to load trend dates', err);
+    }
   }
 
   function populateTrendMonths(year) {
@@ -659,8 +746,13 @@
         const params = new URLSearchParams({ borough, year, metric });
         if (month) params.append("month", month);
 
-        const res = await fetch(`/api/borough-trends?${params}`);
-        const data = await res.json();
+        let data;
+        try {
+          data = await fetchJson(`/api/borough-trends?${params}`);
+        } catch (err) {
+          console.error('Error loading borough trends:', err);
+          continue;
+        }
 
         const cleanData = data
           .map(d => ({

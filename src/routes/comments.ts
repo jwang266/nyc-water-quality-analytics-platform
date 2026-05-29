@@ -1,24 +1,24 @@
-import { Router } from 'express';
+import { Router, type Request, type Response, type NextFunction } from 'express';
 import commentData from '../data/comments.js';
 import { commentCollection as Comment } from '../model/index.js';
 import { isValidId } from '../helper/helper.js';
 
 const router = Router();
 
-const requireAuth = (req, res, next) => {
+const requireAuth = (req: Request, res: Response, next: NextFunction): void => {
   if (!req.session?.user) {
-    return res.status(401).json({ error: 'You must be logged in to perform this action.' });
+    res.status(401).json({ error: 'You must be logged in to perform this action.' });
+    return;
   }
   next();
 };
 
-// Get all comments for a borough
 router.get('/borough/:boroughId', async (req, res) => {
   try {
     const comments = await commentData.getCommentsByBorough(req.params.boroughId);
     res.json(comments);
   } catch (e) {
-    res.status(500).json({ error: e.toString() });
+    res.status(500).json({ error: String(e) });
   }
 });
 
@@ -27,20 +27,21 @@ router.get('/:id', async (req, res) => {
     const comment = await commentData.getCommentById(req.params.id);
     res.json(comment);
   } catch (e) {
+    const message = String(e);
     res
-      .status(e.toString().includes('not found') ? 404 : 500)
-      .json({ error: e.toString() });
+      .status(message.includes('not found') ? 404 : 500)
+      .json({ error: message });
   }
 });
 
-// Create a new comment
 router.post('/', requireAuth, async (req, res) => {
   try {
-    const userId = String(req.session.user._id || req.session.user.id || '');
-    const { boroughId, comment } = req.body;
+    const userId = String(req.session.user!._id || req.session.user!.id || '');
+    const { boroughId, comment } = req.body as { boroughId?: string; comment?: string };
 
     if (!userId || !boroughId) {
-      return res.status(400).json({ error: 'Missing userId or boroughId' });
+      res.status(400).json({ error: 'Missing userId or boroughId' });
+      return;
     }
 
     const created = await commentData.createComment(userId, boroughId, comment);
@@ -51,29 +52,32 @@ router.post('/', requireAuth, async (req, res) => {
 
     res.status(201).json(populated);
   } catch (e) {
-    res.status(400).json({ error: e.toString() });
+    res.status(400).json({ error: String(e) });
   }
 });
 
-// DELETE /api/comments/:id, admin or owner
 router.delete('/:id', requireAuth, async (req, res) => {
   try {
     const commentId = isValidId(req.params.id);
     const comment = await Comment.findById(commentId).lean();
-    if (!comment) return res.status(404).json({ error: 'Comment not found' });
+    if (!comment) {
+      res.status(404).json({ error: 'Comment not found' });
+      return;
+    }
 
-    const userId = String(req.session.user._id || req.session.user.id);
+    const userId = String(req.session.user!._id || req.session.user!.id);
     const isOwner = comment.user?.toString() === userId;
-    const isAdmin = req.session.user.role === 'admin';
+    const isAdmin = req.session.user!.role === 'admin';
 
     if (!isAdmin && !isOwner) {
-      return res.status(403).json({ error: 'You do not have permission to delete this comment.' });
+      res.status(403).json({ error: 'You do not have permission to delete this comment.' });
+      return;
     }
 
     await commentData.deleteComment(commentId);
     res.json({ deleted: true });
   } catch (e) {
-    res.status(500).json({ error: e.toString() });
+    res.status(500).json({ error: String(e) });
   }
 });
 

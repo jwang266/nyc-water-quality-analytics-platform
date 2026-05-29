@@ -1,57 +1,54 @@
-<div class="borough-page container">
+<div class="max-w-3xl mx-auto px-4 py-6">
 
-  <a href="/boroughs" class="back-btn">← Back to Overview</a>
+  <a href="/boroughs" class="inline-block text-gray-600 hover:text-gray-900 font-medium mb-4">&larr; Back to Overview</a>
 
   {{!-- Header Section & like --}}
-  <div class="stats-header" style="margin-top: 10px;">
-    <h1 class="page-title mb-0">{{borough.name}}</h1>
+  <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mt-2 mb-2">
+    <h1 class="text-3xl font-bold mb-2 sm:mb-0">{{borough.name}}</h1>
 
     {{!-- Like/Unlike button for authenticated users --}}
     {{#if isAuthenticated}}
     <button id="like-button" data-borough-id="{{borough._id}}"
-      class="btn {{#if isLiked}}btn-danger{{else}}btn-outline{{/if}}">
+      class="inline-flex items-center gap-2 px-4 py-2 rounded-md shadow-sm border border-gray-300 {{#if isLiked}}bg-red-600 text-white hover:bg-red-700{{else}}bg-white text-red-600 hover:bg-red-50 border-red-300{{/if}} transition">
       <i class="fas fa-heart"></i>
       <span id="like-status">{{#if isLiked}}Liked!{{else}}Like This
         Borough{{/if}}</span>
     </button>
     {{/if}}
   </div>
-  <p class="page-desc">{{borough.description}}</p>
+  <p class="text-gray-700 mb-4">{{borough.description}}</p>
 
-  <hr>
+  <hr class="my-7">
 
   {{!-- Borough Desc. and Average --}}
-  <div class="section-card">
-    <div class="stats-header">
-      <h3 class="section-title">
-        Borough Statistics
-      </h3>
-
+  <div class="bg-white border rounded-lg shadow-sm p-6 mb-7">
+    <div class="flex flex-wrap items-center justify-between mb-4 gap-y-2">
+      <h3 class="text-xl font-semibold text-gray-900">Borough Statistics</h3>
       {{!-- health --}}
-      <div class="tips-popover">
-        <button type="button" class="tips-btn" aria-label="Show health tips">
+      <div class="relative tips-popover">
+        <button type="button" class="tips-btn px-3 py-1.5 bg-blue-100 text-blue-700 rounded hover:bg-blue-200 font-medium text-sm shadow-sm" aria-label="Show health tips" aria-expanded="false" aria-controls="health-tips-panel">
           Health Tips
         </button>
 
-        <div class="tips-panel" role="tooltip">
+        <div id="health-tips-panel" class="tips-panel hidden absolute z-20 mt-2 right-0 w-80 bg-white border border-gray-200 rounded shadow-lg p-4" role="tooltip">
           {{#if combinedNotice}}
-          <div class="health-notice">
+          <div class="mb-3 px-3 py-2 bg-yellow-50 border-l-4 border-yellow-400 text-yellow-800 rounded">
             <strong>Notice:</strong> {{combinedNotice}}
           </div>
           {{/if}}
 
           {{#if hasTips}}
-          <div class="health-tip-card">
+          <div class="mb-3 px-3 py-2 bg-green-50 border-l-4 border-green-400 text-green-900 rounded">
             <strong>Tips:</strong>
-            <div class="health-tip-lines">
+            <div class="mt-2 space-y-1">
               {{#each tips}}
-              <div class="health-tip-line">{{this}}</div>
+              <div class="pl-2 text-sm">{{this}}</div>
               {{/each}}
             </div>
           </div>
           {{/if}}
 
-          <p class="health-disclaimer">
+          <p class="text-xs text-gray-500 mt-2">
             * These tips are informational (non-medical) and based on average water quality indicators.
           </p>
         </div>
@@ -59,178 +56,193 @@
     </div>
 
     {{#if borough.stats.[0]}}
-    <ul class="stats-list">
-      <li class="stats-row">
-        <span class="stats-label">Avg Chlorine:</span>
-        <span class="stats-value">{{toFixed3 borough.stats.[0].avg_chlorine}} mg/L</span>
+    <ul class="divide-y divide-gray-200 mb-0">
+      <li class="flex justify-between items-center py-2">
+        <span class="text-gray-700 font-medium">Avg Chlorine:</span>
+        <span class="text-gray-900 font-mono">{{toFixed3 borough.stats.[0].avg_chlorine}} mg/L</span>
       </li>
-      <li class="stats-row">
-        <span class="stats-label">Avg Turbidity:</span>
-        <span class="stats-value">{{toFixed3 borough.stats.[0].avg_turbidity}} NTU</span>
+      <li class="flex justify-between items-center py-2">
+        <span class="text-gray-700 font-medium">Avg Turbidity:</span>
+        <span class="text-gray-900 font-mono">{{toFixed3 borough.stats.[0].avg_turbidity}} NTU</span>
       </li>
-      <li class="stats-row">
-        <span class="stats-label">Avg Coliform:</span>
-        <span class="stats-value">{{toFixed3 borough.stats.[0].avg_coliform}} MPN/100mL</span>
+      <li class="flex justify-between items-center py-2">
+        <span class="text-gray-700 font-medium">Avg Coliform:</span>
+        <span class="text-gray-900 font-mono">{{toFixed3 borough.stats.[0].avg_coliform}} MPN/100mL</span>
       </li>
-      <li class="stats-row">
-        <span class="stats-label">Avg E. Coli:</span>
-        <span class="stats-value">{{toFixed3 borough.stats.[0].avg_e_coli}} MPN/100mL</span>
+      <li class="flex justify-between items-center py-2">
+        <span class="text-gray-700 font-medium">Avg E. Coli:</span>
+        <span class="text-gray-900 font-mono">{{toFixed3 borough.stats.[0].avg_e_coli}} MPN/100mL</span>
       </li>
-      <li class="stats-row">
-        <span class="stats-label">Avg Fluoride:</span>
-        <span class="stats-value">{{toFixed3 borough.stats.[0].avg_fluoride}} mg/L</span>
+      <li class="flex justify-between items-center py-2">
+        <span class="text-gray-700 font-medium">Avg Fluoride:</span>
+        <span class="text-gray-900 font-mono">{{toFixed3 borough.stats.[0].avg_fluoride}} mg/L</span>
       </li>
     </ul>
     {{else}}
-    <p class="text-muted"><em>No statistics available for this borough.</em></p>
+    <p class="text-gray-500"><em>No statistics available for this borough.</em></p>
     {{/if}}
-
   </div>
 
-
-
-
-
-
-
   {{!-- Neighborhoods --}}
-  {{!-- <section class="soft-panel section-gap"> --}}
-    <h3 class="soft-title">Browse Through Neighborhoods</h3>
+  <h3 class="text-lg font-semibold mt-8 mb-4">Browse Through Neighborhoods</h3>
 
-    {{#if borough.neighborhoods}}
+  {{#if borough.neighborhoods}}
 
-    <select id="neighborhoodSelect" class="form-select mb-3">
-      <option value="">Select a neighborhood</option>
-      {{#each borough.neighborhoods}}
-      <option value="{{this.name}}" data-chlorine="{{this.stats.avg_chlorine}}"
-        data-turbidity="{{this.stats.avg_turbidity}}" data-coliform="{{this.stats.avg_coliform}}"
-        data-ecoli="{{this.stats.avg_e_coli}}" data-fluoride="{{this.stats.avg_fluoride}}"
-        data-latest="{{this.stats.latest_sample_date}}">
-        {{this.name}}
-      </option>
-      {{/each}}
-    </select>
-    <p class="text-muted">
-      {{!-- <strong>Choose a neighborhood from the dropdown.</strong><br> --}}
-      Water quality details for the selected neighborhood will appear below.
-    </p>
+  <select id="neighborhoodSelect" class="block w-full max-w-sm border-gray-300 bg-white rounded shadow-sm py-2 px-3 text-base mb-3 focus:ring-2 focus:ring-blue-200">
+    <option value="">Select a neighborhood</option>
+    {{#each borough.neighborhoods}}
+    <option value="{{this.name}}" data-chlorine="{{this.stats.avg_chlorine}}"
+      data-turbidity="{{this.stats.avg_turbidity}}" data-coliform="{{this.stats.avg_coliform}}"
+      data-ecoli="{{this.stats.avg_e_coli}}" data-fluoride="{{this.stats.avg_fluoride}}"
+      data-latest="{{this.stats.latest_sample_date}}">
+      {{this.name}}
+    </option>
+    {{/each}}
+  </select>
+  <p class="text-gray-500 mb-4">
+    Water quality details for the selected neighborhood will appear below.
+  </p>
 
-    <div id="neighborhoodDetails" class="neighborhood-stats" style="display:none;">
-      {{!-- <h3 id="nbName" class="neighborhood-name"></h3> --}}
+  <div id="neighborhoodDetails" class="space-y-1 bg-blue-50 border border-blue-100 rounded p-4 text-sm mb-6" style="display:none;">
+    <div><strong>Avg Chlorine:</strong> <span id="chlorine"></span> mg/L</div>
+    <div><strong>Avg Turbidity:</strong> <span id="turbidity"></span> NTU</div>
+    <div><strong>Avg Coliform:</strong> <span id="coliform"></span> MPN/100mL</div>
+    <div><strong>Avg E. Coli:</strong> <span id="ecoli"></span> MPN/100mL</div>
+    <div><strong>Avg Fluoride:</strong> <span id="fluoride"></span> mg/L</div>
+    <div><strong>Latest Sample:</strong> <span id="latest"></span></div>
+  </div>
 
-      <div><strong>Avg Chlorine:</strong> <span id="chlorine"></span> mg/L</div>
-      <div><strong>Avg Turbidity:</strong> <span id="turbidity"></span> NTU</div>
-      <div><strong>Avg Coliform:</strong> <span id="coliform"></span> MPN/100mL</div>
-      <div><strong>Avg E. Coli:</strong> <span id="ecoli"></span> MPN/100mL</div>
-      <div><strong>Avg Fluoride:</strong> <span id="fluoride"></span> mg/L</div>
-      <div><strong>Latest Sample:</strong> <span id="latest"></span></div>
+  {{else}}
+  <p class="text-gray-500"><em>No neighborhoods listed.</em></p>
+  {{/if}}
+
+  {{!-- Water Quality Samples --}}
+  {{#if samples}}
+  <div class="bg-white border rounded-lg shadow-sm p-6 mb-7">
+    <h3 class="text-xl font-semibold mb-4">Water Quality Samples</h3>
+    <div class="overflow-x-auto">
+      <table class="min-w-full text-sm border border-gray-200 rounded table-auto">
+        <thead class="bg-gray-50">
+          <tr>
+            <th class="px-3 py-2 text-left font-semibold text-gray-600">Date</th>
+            <th class="px-3 py-2 text-left font-semibold text-gray-600">Site</th>
+            <th class="px-3 py-2 text-left font-semibold text-gray-600">Chlorine (mg/L)</th>
+            <th class="px-3 py-2 text-left font-semibold text-gray-600">Turbidity (NTU)</th>
+            <th class="px-3 py-2 text-left font-semibold text-gray-600">Coliform</th>
+            <th class="px-3 py-2 text-left font-semibold text-gray-600">E. Coli</th>
+            <th class="px-3 py-2 text-left font-semibold text-gray-600">Fluoride (mg/L)</th>
+          </tr>
+        </thead>
+        <tbody>
+          {{#each samples}}
+          <tr class="even:bg-gray-50">
+            <td class="px-3 py-2">{{this.sample_date}}</td>
+            <td class="px-3 py-2">{{this.sample_site}}</td>
+            <td class="px-3 py-2">{{toFixed3 this.residual_free_chlorine_mg_l}}</td>
+            <td class="px-3 py-2">{{toFixed3 this.turbidity_ntu}}</td>
+            <td class="px-3 py-2">{{this.coliform_quanti_tray_mpn_100ml}}</td>
+            <td class="px-3 py-2">{{this.e_coli_quanti_tray_mpn_100ml}}</td>
+            <td class="px-3 py-2">{{toFixed3 this.fluoride_mg_l}}</td>
+          </tr>
+          {{/each}}
+        </tbody>
+      </table>
     </div>
+  </div>
+  {{/if}}
 
+  <hr class="my-12">
+
+  {{!-- Comment posting and comment list --}}
+  <section id="comments-section" class="mb-10 mt-7">
+    <h2 class="text-xl font-semibold mb-4">Community Feedback ({{len comments}})</h2>
+
+    {{#if isAuthenticated}}
+    <div id="add-comment-form-container" class="bg-white border rounded-lg shadow-sm p-5 mb-6 mt-4">
+      <form id="comment-form" data-borough-id="{{borough._id}}">
+        <div class="mb-2">
+          <textarea class="block w-full border border-gray-300 rounded p-2 text-base resize-none focus:ring-2 focus:ring-blue-200" id="comment-text" name="comment" rows="3" maxlength="200"
+            placeholder="Leave a comment (max 200 characters)"></textarea>
+        </div>
+        <button type="submit" class="inline-block px-4 py-2 border border-transparent rounded bg-blue-600 text-white font-medium hover:bg-blue-700 transition mt-2">Post Comment</button>
+        <div id="comment-error" class="text-red-600 text-sm hidden mt-2"></div>
+      </form>
+    </div>
     {{else}}
-    <p class="text-muted"><em>No neighborhoods listed.</em></p>
+    <p class="text-gray-500 mt-4">
+      Please <a href="/users/login?redirect=/boroughs/{{borough._id}}" class="text-blue-600 underline hover:text-blue-800">login</a> to post a comment and share your feedback.
+    </p>
     {{/if}}
 
+    <ul id="comment-list" class="space-y-4 mt-6">
+      {{#each comments}}
+      <li class="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-4 bg-gray-50 px-4 py-3 rounded border border-gray-200" data-comment-id="{{this._id}}">
+        <div>
+          <p class="mb-1 text-gray-900">{{this.comment}}</p>
+          <small class="text-gray-500">
+            Posted by
+            {{#if this.user}}
+            <strong>{{this.user.fname}} {{this.user.lname}}</strong>
+            {{else}}
+            <span class="text-red-700">Deleted User</span>
+            {{/if}}
+            on {{this.commentDate}}
+          </small>
+        </div>
 
-    
-    {{!-- Water Quality Samples --}}
-    {{#if samples}}
-    <div class="section-card">
-      <h3 class="section-title">Water Quality Samples</h3>
+        {{!-- Admin or user Delete--}}
+        {{#if ../isAuthenticated}}
+        {{#if (or (eq ../currentUser.role 'admin') (eq ../currentUser.id this.user._id))}}
+        <button class="delete-comment-btn delete-button px-3 py-1.5 bg-red-600 text-white rounded text-xs font-semibold hover:bg-red-700 mt-4 sm:mt-0" data-comment-id="{{this._id}}" style="flex-shrink: 0; font-size: 0.8rem;">
+          Delete
+        </button>
+        {{/if}}
+        {{/if}}
+      </li>
+      {{/each}}
+    </ul>
 
-      <div class="table-wrap">
-        <table class="samples-table">
-          <thead>
-            <tr>
-              <th>Date</th>
-              <th>Site</th>
-              <th>Chlorine (mg/L)</th>
-              <th>Turbidity (NTU)</th>
-              <th>Coliform</th>
-              <th>E. Coli</th>
-              <th>Fluoride (mg/L)</th>
-            </tr>
-          </thead>
-          <tbody>
-            {{#each samples}}
-            <tr>
-              <td>{{this.sample_date}}</td>
-              <td>{{this.sample_site}}</td>
-              <td>{{toFixed3 this.residual_free_chlorine_mg_l}}</td>
-              <td>{{toFixed3 this.turbidity_ntu}}</td>
-              <td>{{this.coliform_quanti_tray_mpn_100ml}}</td>
-              <td>{{this.e_coli_quanti_tray_mpn_100ml}}</td>
-              <td>{{toFixed3 this.fluoride_mg_l}}</td>
-            </tr>
-            {{/each}}
-          </tbody>
-        </table>
-      </div>
-    </div>
-    {{/if}}
-
-    <hr style="margin-top: 50px; margin-bottom: 40px;">
-
-    {{!-- Comment posting and comment list --}}
-    <section id="comments-section">
-      <h2>Community Feedback ({{len comments}})</h2>
-
-      {{#if isAuthenticated}}
-      <div id="add-comment-form-container" class="section-card" style="margin-top: 20px;">
-        <form id="comment-form" data-borough-id="{{borough._id}}">
-          <div class="field">
-
-            <textarea class="input" id="comment-text" name="comment" rows="3" maxlength="200"
-              placeholder="Leave a comment (max 200 characters)"></textarea>
-
-          </div>
-
-          <button type="submit" class="btn btn-primary" style="margin-top: 10px;">Post Comment</button>
-          <div id="comment-error" class="error-text hidden" style="margin-top: 10px;"></div>
-        </form>
-      </div>
-      {{else}}
-      <p class="text-muted" style="margin-top: 15px;">
-        Please <a href="/users/login?redirect=/boroughs/{{borough._id}}">login</a> to post a comment and share your feedback.
-      </p>
-      {{/if}}
-
-      <ul id="comment-list" class="list-group mt-4">
-        {{#each comments}}
-        <li class="list-group-item comment-item d-flex justify-content-between align-items-start"
-          data-comment-id="{{this._id}}">
-          <div class="comment-actual">
-            <p class="mb-1">{{this.comment}}</p>
-            <small class="text-muted">
-              Posted by
-              {{#if this.user}}
-              <strong>{{this.user.fname}} {{this.user.lname}}</strong>
-              {{else}}
-              <span class="text-danger">Deleted User</span>
-              {{/if}}
-              on {{this.commentDate}}
-            </small>
-          </div>
-
-          {{!-- Admin or user Delete--}}
-          {{#if ../isAuthenticated}}
-          {{#if (or (eq ../currentUser.role 'admin') (eq ../currentUser.id this.user._id))}}
-          <button class="btn btn-sm btn-danger delete-comment-btn ms-3 delete-button" data-comment-id="{{this._id}}"
-            style="flex-shrink: 0; padding: 5px 10px; margin-top: 20px; font-size: 0.8rem;">
-            Delete
-          </button>
-          {{/if}}
-          {{/if}}
-        </li>
-        {{/each}}
-      </ul>
-
-      {{#unless (gt (len comments) 0)}}
-      <p class="text-muted mt-3">Be the first to leave a comment!</p>
-      {{/unless}}
-    </section>
+    {{#unless (gt (len comments) 0)}}
+    <p class="text-gray-500 mt-3">Be the first to leave a comment!</p>
+    {{/unless}}
+  </section>
 
 </div>
 <script>
+  (function () {
+    const $popover = $(".tips-popover");
+    const $btn = $popover.find(".tips-btn");
+    const $panel = $popover.find(".tips-panel");
+
+    function closeTipsPanel() {
+      $panel.addClass("hidden");
+      $btn.attr("aria-expanded", "false");
+    }
+
+    $btn.on("click", function (e) {
+      e.preventDefault();
+      e.stopPropagation();
+      const willOpen = $panel.hasClass("hidden");
+      closeTipsPanel();
+      if (willOpen) {
+        $panel.removeClass("hidden");
+        $btn.attr("aria-expanded", "true");
+      }
+    });
+
+    $popover.on("click", function (e) {
+      e.stopPropagation();
+    });
+
+    $(document).on("click", function () {
+      closeTipsPanel();
+    });
+
+    $(document).on("keydown", function (e) {
+      if (e.key === "Escape") closeTipsPanel();
+    });
+  })();
+
   $("#neighborhoodSelect").on("change", function () {
     const selected = $(this).find(":selected");
 
@@ -239,7 +251,6 @@
       return;
     }
 
-    $("#nbName").text(selected.val());
     $("#chlorine").text(Number(selected.data("chlorine")).toFixed(3));
     $("#turbidity").text(Number(selected.data("turbidity")).toFixed(3));
     $("#coliform").text(Number(selected.data("coliform")).toFixed(3));
@@ -252,5 +263,5 @@
 
 </script>
 
-<script src="/js/likes.js"></script>
-<script src="/js/comments.js"></script>
+<script type="module" src="/js/likes.js"></script>
+<script type="module" src="/js/comments.js"></script>

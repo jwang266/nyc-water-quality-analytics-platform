@@ -1,18 +1,20 @@
-import { Router } from 'express';
+import { Router, type Request, type Response, type NextFunction } from 'express';
 import voteData from '../data/votes.js';
 import { getCurrentWeekStart } from '../helper/helper.js';
 
 const router = Router();
 
-const requireLogin = (req, res, next) => {
-  if (!req.session.user) return res.redirect('/users/login');
+const requireLogin = (req: Request, res: Response, next: NextFunction): void => {
+  if (!req.session.user) {
+    res.redirect('/users/login');
+    return;
+  }
   next();
 };
 
-// POST /votes
 router.post('/', requireLogin, async (req, res) => {
-  const { boroughId } = req.body;
-  const userId = req.session.user.id;
+  const { boroughId } = req.body as { boroughId?: string };
+  const userId = req.session.user!.id;
   const weekStart = getCurrentWeekStart();
 
   try {
@@ -23,19 +25,19 @@ router.post('/', requireLogin, async (req, res) => {
       message: 'Your vote has been recorded!'
     };
   } catch (e) {
+    const message = e instanceof Error ? e.message : String(e);
     req.session.toast = {
       type: 'error',
-      message: e.message || e.toString()
+      message
     };
   }
 
-  return res.redirect('/votes/best');
+  res.redirect('/votes/best');
 });
 
-// GET /votes/best
 router.get('/best', async (req, res) => {
   const weekStartObj = getCurrentWeekStart();
-  const weekStartDisplay = weekStartObj.toISOString().slice(0, 10); // YYYY-MM-DD
+  const weekStartDisplay = weekStartObj.toISOString().slice(0, 10);
 
   try {
     let toast = null;
@@ -47,7 +49,7 @@ router.get('/best', async (req, res) => {
     const bestBorough = await voteData.getBestBorough(weekStartObj);
     const allBoroughs = await voteData.getAllBoroughs();
 
-    let userVoteBoroughId = null;
+    let userVoteBoroughId: string | null = null;
     let userHasVoted = false;
     let votingBoroughs = allBoroughs;
 
@@ -60,7 +62,7 @@ router.get('/best', async (req, res) => {
       if (userVoteBoroughId) {
         userHasVoted = true;
         votingBoroughs = allBoroughs.filter(
-          b => b._id.toString() === userVoteBoroughId.toString()
+          (b) => b._id.toString() === userVoteBoroughId
         );
       }
     }
@@ -76,7 +78,6 @@ router.get('/best', async (req, res) => {
       toast,
       css: '/css/styles.css'
     });
-
   } catch (e) {
     console.error('Vote page error:', e);
     res.status(500).render('error', {

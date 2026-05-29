@@ -93,16 +93,22 @@ export function WaterSamplesIsland(props: { endpoint: string }) {
   }, []); // run once
 
   return (
-    <div className="ws-container">
-      <div id="error-div" className={`ws-error ${error ? "" : "hidden"}`}>
+    <div>
+      <div
+        id="error-div"
+        className={`mb-6 rounded-lg border border-red-500/20 bg-red-500/10 p-4 font-semibold text-red-600 ${error ? "" : "hidden"}`}
+      >
         {error}
       </div>
 
-      <p id="loading-msg" className={`ws-status-text ${isLoading ? "" : "hidden"}`}>
+      <p
+        id="loading-msg"
+        className={`mt-6 text-center italic text-[var(--text-muted)] ${isLoading ? "" : "hidden"}`}
+      >
         Loading data...
       </p>
 
-      <ul id="sample-list" className="ws-list">
+      <ul id="sample-list" className="m-0 list-none p-0">
         {items.map((s, idx) => {
           const title = buildTitle(s);
           const row1 =
@@ -116,10 +122,19 @@ export function WaterSamplesIsland(props: { endpoint: string }) {
             `Sample #: ${textOrNA(s.sample_number)}`;
 
           return (
-            <li className="ws-item" key={`${title}-${idx}`}>
-              <span className="ws-title">{title}</span>
-              <div className="ws-details">{row1}</div>
-              <div className="ws-details">{row2}</div>
+            <li
+              className="mb-4 rounded-xl border border-[var(--border)] bg-[var(--surface)] p-6 shadow-[var(--shadow-soft)] transition duration-200 hover:-translate-y-0.5 hover:shadow-lg"
+              key={`${title}-${idx}`}
+            >
+              <span className="mb-3 block cursor-default text-xl font-bold text-[var(--text-main)]">
+                {title}
+              </span>
+              <div className="mt-1.5 border-l-[3px] border-[var(--border)] pl-2 text-sm leading-relaxed text-[var(--text-muted)]">
+                {row1}
+              </div>
+              <div className="mt-1.5 border-l-[3px] border-[var(--border)] pl-2 text-sm leading-relaxed text-[var(--text-muted)]">
+                {row2}
+              </div>
             </li>
           );
         })}
@@ -127,7 +142,7 @@ export function WaterSamplesIsland(props: { endpoint: string }) {
 
       <button
         id="btn-load-more"
-        className={`ws-load-more-btn ${canLoadMore && items.length > 0 ? "" : "hidden"}`}
+        className={`mx-auto my-8 block w-full max-w-[200px] cursor-pointer rounded-full border-0 bg-[var(--primary)] px-6 py-3 font-semibold text-white transition-colors hover:bg-[var(--primary-hover)] ${canLoadMore && items.length > 0 ? "" : "hidden"}`}
         onClick={(e) => {
           e.preventDefault();
           void loadNext();
@@ -136,7 +151,10 @@ export function WaterSamplesIsland(props: { endpoint: string }) {
         Load More
       </button>
 
-      <p id="no-more-data" className={`ws-status-text ${noMore ? "" : "hidden"}`}>
+      <p
+        id="no-more-data"
+        className={`mt-6 text-center italic text-[var(--text-muted)] ${noMore ? "" : "hidden"}`}
+      >
         No more samples to load.
       </p>
     </div>
